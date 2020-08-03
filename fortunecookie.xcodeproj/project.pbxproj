@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
+		1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */; };
+		1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */; };
+		1ADA4EA324D8B8500078B01F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA224D8B8500078B01F /* ContentView.swift */; };
+		1ADA4EA524D8B8510078B01F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA424D8B8510078B01F /* Assets.xcassets */; };
+		1ADA4EA824D8B8510078B01F /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA724D8B8510078B01F /* Preview Assets.xcassets */; };
+		1ADA4EAB24D8B8510078B01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */; };
+		1ADA4EB624D8B8520078B01F /* fortunecookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */; };
+		1ADA4EC124D8B8520078B01F /* fortunecookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		1ADA4EB224D8B8520078B01F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ADA4E9024D8B8500078B01F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ADA4E9724D8B8500078B01F;
+			remoteInfo = fortunecookie;
+		};
+		1ADA4EBD24D8B8520078B01F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 1ADA4E9024D8B8500078B01F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1ADA4E9724D8B8500078B01F;
+			remoteInfo = fortunecookie;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		1ADA4EA024D8B8500078B01F /* fortunecookie.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = fortunecookie.xcdatamodel; sourceTree = "<group>"; };
+		1ADA4EA224D8B8500078B01F /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1ADA4EA424D8B8510078B01F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		1ADA4EA724D8B8510078B01F /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		1ADA4EAA24D8B8510078B01F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1ADA4EAC24D8B8510078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADA4EB124D8B8520078B01F /* fortunecookieTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fortunecookieTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortunecookieTests.swift; sourceTree = "<group>"; };
+		1ADA4EB724D8B8520078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADA4EBC24D8B8520078B01F /* fortunecookieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fortunecookieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortunecookieUITests.swift; sourceTree = "<group>"; };
+		1ADA4EC224D8B8520078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1ADA4E9524D8B8500078B01F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EAE24D8B8510078B01F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EB924D8B8520078B01F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1ADA4E8F24D8B8500078B01F = {
+			isa = PBXGroup;
+			children = (
+				1ADA4E9A24D8B8500078B01F /* fortunecookie */,
+				1ADA4EB424D8B8520078B01F /* fortunecookieTests */,
+				1ADA4EBF24D8B8520078B01F /* fortunecookieUITests */,
+				1ADA4E9924D8B8500078B01F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		1ADA4E9924D8B8500078B01F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA4E9824D8B8500078B01F /* fortunecookie.app */,
+				1ADA4EB124D8B8520078B01F /* fortunecookieTests.xctest */,
+				1ADA4EBC24D8B8520078B01F /* fortunecookieUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1ADA4E9A24D8B8500078B01F /* fortunecookie */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */,
+				1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */,
+				1ADA4EA224D8B8500078B01F /* ContentView.swift */,
+				1ADA4EA424D8B8510078B01F /* Assets.xcassets */,
+				1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */,
+				1ADA4EAC24D8B8510078B01F /* Info.plist */,
+				1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */,
+				1ADA4EA624D8B8510078B01F /* Preview Content */,
+			);
+			path = fortunecookie;
+			sourceTree = "<group>";
+		};
+		1ADA4EA624D8B8510078B01F /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA4EA724D8B8510078B01F /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		1ADA4EB424D8B8520078B01F /* fortunecookieTests */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */,
+				1ADA4EB724D8B8520078B01F /* Info.plist */,
+			);
+			path = fortunecookieTests;
+			sourceTree = "<group>";
+		};
+		1ADA4EBF24D8B8520078B01F /* fortunecookieUITests */ = {
+			isa = PBXGroup;
+			children = (
+				1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */,
+				1ADA4EC224D8B8520078B01F /* Info.plist */,
+			);
+			path = fortunecookieUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1ADA4E9724D8B8500078B01F /* fortunecookie */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADA4EC524D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookie" */;
+			buildPhases = (
+				1ADA4E9424D8B8500078B01F /* Sources */,
+				1ADA4E9524D8B8500078B01F /* Frameworks */,
+				1ADA4E9624D8B8500078B01F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = fortunecookie;
+			productName = fortunecookie;
+			productReference = 1ADA4E9824D8B8500078B01F /* fortunecookie.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1ADA4EB024D8B8510078B01F /* fortunecookieTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADA4EC824D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookieTests" */;
+			buildPhases = (
+				1ADA4EAD24D8B8510078B01F /* Sources */,
+				1ADA4EAE24D8B8510078B01F /* Frameworks */,
+				1ADA4EAF24D8B8510078B01F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ADA4EB324D8B8520078B01F /* PBXTargetDependency */,
+			);
+			name = fortunecookieTests;
+			productName = fortunecookieTests;
+			productReference = 1ADA4EB124D8B8520078B01F /* fortunecookieTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		1ADA4EBB24D8B8520078B01F /* fortunecookieUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1ADA4ECB24D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookieUITests" */;
+			buildPhases = (
+				1ADA4EB824D8B8520078B01F /* Sources */,
+				1ADA4EB924D8B8520078B01F /* Frameworks */,
+				1ADA4EBA24D8B8520078B01F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				1ADA4EBE24D8B8520078B01F /* PBXTargetDependency */,
+			);
+			name = fortunecookieUITests;
+			productName = fortunecookieUITests;
+			productReference = 1ADA4EBC24D8B8520078B01F /* fortunecookieUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		1ADA4E9024D8B8500078B01F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1160;
+				LastUpgradeCheck = 1160;
+				ORGANIZATIONNAME = "Arthur Takahashi";
+				TargetAttributes = {
+					1ADA4E9724D8B8500078B01F = {
+						CreatedOnToolsVersion = 11.6;
+					};
+					1ADA4EB024D8B8510078B01F = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 1ADA4E9724D8B8500078B01F;
+					};
+					1ADA4EBB24D8B8520078B01F = {
+						CreatedOnToolsVersion = 11.6;
+						TestTargetID = 1ADA4E9724D8B8500078B01F;
+					};
+				};
+			};
+			buildConfigurationList = 1ADA4E9324D8B8500078B01F /* Build configuration list for PBXProject "fortunecookie" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 1ADA4E8F24D8B8500078B01F;
+			productRefGroup = 1ADA4E9924D8B8500078B01F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1ADA4E9724D8B8500078B01F /* fortunecookie */,
+				1ADA4EB024D8B8510078B01F /* fortunecookieTests */,
+				1ADA4EBB24D8B8520078B01F /* fortunecookieUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1ADA4E9624D8B8500078B01F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADA4EAB24D8B8510078B01F /* LaunchScreen.storyboard in Resources */,
+				1ADA4EA824D8B8510078B01F /* Preview Assets.xcassets in Resources */,
+				1ADA4EA524D8B8510078B01F /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EAF24D8B8510078B01F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EBA24D8B8520078B01F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1ADA4E9424D8B8500078B01F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */,
+				1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */,
+				1ADA4EA324D8B8500078B01F /* ContentView.swift in Sources */,
+				1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EAD24D8B8510078B01F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADA4EB624D8B8520078B01F /* fortunecookieTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1ADA4EB824D8B8520078B01F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1ADA4EC124D8B8520078B01F /* fortunecookieUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		1ADA4EB324D8B8520078B01F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ADA4E9724D8B8500078B01F /* fortunecookie */;
+			targetProxy = 1ADA4EB224D8B8520078B01F /* PBXContainerItemProxy */;
+		};
+		1ADA4EBE24D8B8520078B01F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1ADA4E9724D8B8500078B01F /* fortunecookie */;
+			targetProxy = 1ADA4EBD24D8B8520078B01F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1ADA4EAA24D8B8510078B01F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1ADA4EC324D8B8520078B01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		1ADA4EC424D8B8520078B01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1ADA4EC624D8B8520078B01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"fortunecookie/Preview Content\"";
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = fortunecookie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1ADA4EC724D8B8520078B01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_ASSET_PATHS = "\"fortunecookie/Preview Content\"";
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = fortunecookie/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookie;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		1ADA4EC924D8B8520078B01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				INFOPLIST_FILE = fortunecookieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fortunecookie.app/fortunecookie";
+			};
+			name = Debug;
+		};
+		1ADA4ECA24D8B8520078B01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				INFOPLIST_FILE = fortunecookieTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookieTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/fortunecookie.app/fortunecookie";
+			};
+			name = Release;
+		};
+		1ADA4ECC24D8B8520078B01F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				INFOPLIST_FILE = fortunecookieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fortunecookie;
+			};
+			name = Debug;
+		};
+		1ADA4ECD24D8B8520078B01F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 9BSKT95LPX;
+				INFOPLIST_FILE = fortunecookieUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.arthdeveloper.fortunecookieUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = fortunecookie;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1ADA4E9324D8B8500078B01F /* Build configuration list for PBXProject "fortunecookie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADA4EC324D8B8520078B01F /* Debug */,
+				1ADA4EC424D8B8520078B01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADA4EC524D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookie" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADA4EC624D8B8520078B01F /* Debug */,
+				1ADA4EC724D8B8520078B01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADA4EC824D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookieTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADA4EC924D8B8520078B01F /* Debug */,
+				1ADA4ECA24D8B8520078B01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1ADA4ECB24D8B8520078B01F /* Build configuration list for PBXNativeTarget "fortunecookieUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1ADA4ECC24D8B8520078B01F /* Debug */,
+				1ADA4ECD24D8B8520078B01F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1ADA4EA024D8B8500078B01F /* fortunecookie.xcdatamodel */,
+			);
+			currentVersion = 1ADA4EA024D8B8500078B01F /* fortunecookie.xcdatamodel */;
+			path = fortunecookie.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 1ADA4E9024D8B8500078B01F /* Project object */;
+}
