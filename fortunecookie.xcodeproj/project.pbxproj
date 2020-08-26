@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
+		1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */; };
 		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
 		1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */; };
 		1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */; };
@@ -16,6 +18,7 @@
 		1ADA4EAB24D8B8510078B01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */; };
 		1ADA4EB624D8B8520078B01F /* fortunecookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */; };
 		1ADA4EC124D8B8520078B01F /* fortunecookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */; };
+		1AF5789F24DBBAE60065B002 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5789E24DBBAE60065B002 /* Data.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bone-crack-1.wav"; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -51,6 +56,7 @@
 		1ADA4EBC24D8B8520078B01F /* fortunecookieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fortunecookieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortunecookieUITests.swift; sourceTree = "<group>"; };
 		1ADA4EC224D8B8520078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1AF5789E24DBBAE60065B002 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +84,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A8B5C2724F6024F00FDE954 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
 		1ADA4E8F24D8B8500078B01F = {
 			isa = PBXGroup;
 			children = (
@@ -101,9 +115,12 @@
 		1ADA4E9A24D8B8500078B01F /* fortunecookie */ = {
 			isa = PBXGroup;
 			children = (
+				1A8B5C2724F6024F00FDE954 /* Resources */,
 				1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */,
+				1AF5789E24DBBAE60065B002 /* Data.swift */,
 				1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */,
 				1ADA4EA224D8B8500078B01F /* ContentView.swift */,
+				1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */,
 				1ADA4EA424D8B8510078B01F /* Assets.xcassets */,
 				1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */,
 				1ADA4EAC24D8B8510078B01F /* Info.plist */,
@@ -246,6 +263,7 @@
 				1ADA4EAB24D8B8510078B01F /* LaunchScreen.storyboard in Resources */,
 				1ADA4EA824D8B8510078B01F /* Preview Assets.xcassets in Resources */,
 				1ADA4EA524D8B8510078B01F /* Assets.xcassets in Resources */,
+				1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,6 +289,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */,
+				1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */,
+				1AF5789F24DBBAE60065B002 /* Data.swift in Sources */,
 				1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */,
 				1ADA4EA324D8B8500078B01F /* ContentView.swift in Sources */,
 				1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */,
