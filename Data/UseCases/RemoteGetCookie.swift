@@ -10,9 +10,11 @@ public final class RemoteGetCookie {
         self.httpClient = httpClient
     }
     
-    public func get() -> GetCookieModel? {
+    public func get(completion: @escaping (DomainError) -> Void) -> GetCookieModel? {
         let getCookieModel = GetCookieModel()
-        let data = self.httpClient.get(from: url)
+        let data = self.httpClient.get(from: url) { error in
+            completion(.unexpected)
+        }
         let cookie = getCookieModel.convertFromData(data)
         return cookie
     }
