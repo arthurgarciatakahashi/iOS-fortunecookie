@@ -5,11 +5,10 @@ import Domain
 class RemoteGetCookieTests: XCTestCase {
 
     func test_get_should_call_httpGetClient_with_correct_url() {
-        let url = URL(string: "https://any_url.com")!
+        let url = makeURL()
         let (sut, httpClientSpy) = makeSut(url: url)
         let _ = sut.get() { _ in}
         XCTAssertEqual(httpClientSpy.urls, [url])
-
     }
     
     func test_get_should_gets_a_correct_cookie_model_data() {
@@ -22,34 +21,26 @@ class RemoteGetCookieTests: XCTestCase {
     
     func test_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
-        let exp = expectation(description: "waiting")
-        let _ = sut.get() { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .unexpected)
-            case .success: XCTFail("expected error received \(result) instead")
-            }
-            
-            exp.fulfill()
-        }
-        httpClientSpy.completeWithError(.noConnectivity)
-        wait(for: [exp], timeout: 1)
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.noConnectivity)
+        })
     }
     
-    func test_should_complete_with_error_if_client_completes_returning_valid_data() {
+    func test_should_complete_with_success_if_client_completes_returning_valid_data() {
         let (sut, httpClientSpy) = makeSut()
-        let exp = expectation(description: "waiting")
-        let expectedCookie = makeCookieModel()
-        let _ = sut.get() { result in
-            switch result{
-            case .failure: XCTFail("expected success received \(result) instead")
-            case .success(let receivedCookie): XCTAssertEqual(receivedCookie, expectedCookie)
-            }
-            
-            exp.fulfill()
+        let cookie = makeCookieModel()
+        expect(sut, completeWith: .success(cookie)) {
+            httpClientSpy.completeWithData(cookie.toData()!)
         }
-        httpClientSpy.completeWithData(expectedCookie.toData()!)
-        wait(for: [exp], timeout: 1)
     }
+    
+    func test_should_complete_with_error_if_client_completes_returning_invalid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected)) {
+            httpClientSpy.completeWithData(makeInvalidData())
+        }
+    }
+    
 }
 
 extension RemoteGetCookieTests {
@@ -73,6 +64,24 @@ extension RemoteGetCookieTests {
     
     func makeData() -> Data? {
         return Data("any_fortune".utf8)
+    }
+    
+    func makeInvalidData() -> Data {
+        return Data("invalid_data".utf8)
+    }
+    
+    func expect(_ sut: RemoteGetCookie, completeWith expectResult: Result<CookieModel, DomainError>, when action: () -> Void) {
+        let exp = expectation(description: "waiting")
+        sut.get() { receivedResult in
+            switch (expectResult, receivedResult) {
+            case (.failure(let expectedError), .failure): XCTAssertEqual(expectedError, .unexpected)
+            case (.success(let expectedCookie), .success(let receivedCookie)): XCTAssertEqual(expectedCookie, receivedCookie)
+            default: XCTFail("expected \(expectResult) but received \(receivedResult) instead")
+            }
+            exp.fulfill()
+        }
+        action()
+        wait(for: [exp], timeout: 1)
     }
     
     class HttpClientSpy: HttpGetClient {
