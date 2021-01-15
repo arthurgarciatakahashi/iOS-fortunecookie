@@ -21,9 +21,12 @@ class AlamofireAdapter {
     
     func get(from url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         session.request(url, method: .get).resume().responseData() { dataResponse in
+            guard dataResponse.response?.statusCode != nil else {
+                return completion(.failure(.noConnectivity))
+            }
             switch dataResponse.result {
             case .failure: completion(.failure(.noConnectivity))
-            case .success: break
+            case .success(let data): completion(.success(data))
             }
         }
     }
@@ -45,14 +48,29 @@ class AlamofireAdapterTests: XCTestCase {
         }
     }
     
-    func test_get_should_complete_with_error_quen_request_finish_with_error() {
+    func test_get_should_complete_with_error_wuen_request_finish_with_error() {
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: makeError())  )
+    }
+    
+    func test_get_should_complete_with_error_on_all_invalid_cases() {
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(), error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: nil))
+        expectResult(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: makeError()))
+        //expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: nil))
+        //expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: nil))
+        
+    }
+    
+    func expectResult(_ expectedResult: Result<Data, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) {
         let sut = makeSut()
-        UrlProtocolStub.simulate(data: nil, response: nil, error: makeError())
+        UrlProtocolStub.simulate(data: stub.data, response: stub.response, error: stub.error)
         let exp = expectation(description: "waiting")
-        sut.get(from: makeURL()) { result in
-            switch result {
-            case .failure(let error): XCTAssertEqual(error, .noConnectivity)
-            case .success: XCTFail("Expect error got \(result) instead")
+        sut.get(from: makeURL()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
+            default: XCTFail("Expect \(expectedResult) got \(receivedResult) instead")
             }
             exp.fulfill()
         }
