@@ -47,7 +47,9 @@ extension AlamofireAdapterTests {
         let configuration = URLSessionConfiguration.default
         configuration.protocolClasses = [UrlProtocolStub.self]
         let session = Session(configuration: configuration)
-        return AlamofireAdapter(session: session)
+        let sut = AlamofireAdapter(session: session)
+        checkMemoryLeak(for: sut)
+        return sut
     }
     
     func testRequestFor(url: URL = makeURL(), action: @escaping (URLRequest) -> Void) {
