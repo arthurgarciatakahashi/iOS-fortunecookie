@@ -22,6 +22,7 @@
 		1A402D6D25B1360300B43A06 /* HttpGetClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D6C25B1360300B43A06 /* HttpGetClient.swift */; };
 		1A402D9125B13B3400B43A06 /* DomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D9025B13B3400B43A06 /* DomainError.swift */; };
 		1A402DA925B145E800B43A06 /* HttpError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402DA825B145E800B43A06 /* HttpError.swift */; };
+		1A6A8FA625B155160025FDB4 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FA525B155160025FDB4 /* ExtensionHelpers.swift */; };
 		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
 		1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */; };
 		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
@@ -109,6 +110,7 @@
 		1A402D6C25B1360300B43A06 /* HttpGetClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpGetClient.swift; sourceTree = "<group>"; };
 		1A402D9025B13B3400B43A06 /* DomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DomainError.swift; sourceTree = "<group>"; };
 		1A402DA825B145E800B43A06 /* HttpError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpError.swift; sourceTree = "<group>"; };
+		1A6A8FA525B155160025FDB4 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bone-crack-1.wav"; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -214,6 +216,7 @@
 		1A22A92725B0EB1C004049BE /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				1A6A8FA425B155000025FDB4 /* Helpers */,
 				1A402D7E25B136DF00B43A06 /* UseCases */,
 				1A402D7F25B136EA00B43A06 /* Http */,
 				1A22A92925B0EB1C004049BE /* Info.plist */,
@@ -296,6 +299,14 @@
 				1A402D9025B13B3400B43A06 /* DomainError.swift */,
 			);
 			path = Errors;
+			sourceTree = "<group>";
+		};
+		1A6A8FA425B155000025FDB4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A6A8FA525B155160025FDB4 /* ExtensionHelpers.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1A8B5C2724F6024F00FDE954 /* Resources */ = {
@@ -708,6 +719,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */,
+				1A6A8FA625B155160025FDB4 /* ExtensionHelpers.swift in Sources */,
 				1A402DA925B145E800B43A06 /* HttpError.swift in Sources */,
 				1A402D6D25B1360300B43A06 /* HttpGetClient.swift in Sources */,
 			);

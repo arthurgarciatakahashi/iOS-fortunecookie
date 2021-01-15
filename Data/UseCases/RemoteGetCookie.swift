@@ -1,7 +1,7 @@
 import Foundation
 import Domain
 
-public final class RemoteGetCookie {
+public final class RemoteGetCookie: GetCookie {
     private let url: URL
     private let httpClient: HttpGetClient
     
@@ -10,12 +10,17 @@ public final class RemoteGetCookie {
         self.httpClient = httpClient
     }
     
-    public func get(completion: @escaping (DomainError) -> Void) -> GetCookieModel? {
-        let getCookieModel = GetCookieModel()
-        let data = self.httpClient.get(from: url) { error in
-            completion(.unexpected)
+    public func get(completion: @escaping (Result<CookieModel, DomainError>) -> Void) {
+        self.httpClient.get(from: url) { result in
+            switch result {
+            case .success(let data):
+                if let cookie : CookieModel = data.toModel() {
+                    completion(.success(cookie))
+                } else {
+                    completion(.failure(.unexpected))
+                }
+            case .failure: completion(.failure(.unexpected))
+            }
         }
-        let cookie = getCookieModel.convertFromData(data)
-        return cookie
     }
 }

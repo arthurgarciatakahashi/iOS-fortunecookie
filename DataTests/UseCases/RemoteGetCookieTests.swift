@@ -20,14 +20,34 @@ class RemoteGetCookieTests: XCTestCase {
         XCTAssertEqual(httpClientSpy.data, data)
     }
     
-    func test_should_complete_with_error_if_client_fails() {
+    func test_should_complete_with_error_if_client_completes_with_error() {
         let (sut, httpClientSpy) = makeSut()
         let exp = expectation(description: "waiting")
-        let _ = sut.get() { error in
-            XCTAssertEqual(error, .unexpected)
+        let _ = sut.get() { result in
+            switch result {
+            case .failure(let error): XCTAssertEqual(error, .unexpected)
+            case .success: XCTFail("expected error received \(result) instead")
+            }
+            
             exp.fulfill()
         }
         httpClientSpy.completeWithError(.noConnectivity)
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func test_should_complete_with_error_if_client_completes_returning_valid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let exp = expectation(description: "waiting")
+        let expectedCookie = makeCookieModel()
+        let _ = sut.get() { result in
+            switch result{
+            case .failure: XCTFail("expected success received \(result) instead")
+            case .success(let receivedCookie): XCTAssertEqual(receivedCookie, expectedCookie)
+            }
+            
+            exp.fulfill()
+        }
+        httpClientSpy.completeWithData(expectedCookie.toData()!)
         wait(for: [exp], timeout: 1)
     }
 }
@@ -39,6 +59,10 @@ extension RemoteGetCookieTests {
 
     func makeGetCookieModel() -> GetCookieModel {
         return GetCookieModel(fortune: "any_fortune")
+    }
+    
+    func makeCookieModel() -> CookieModel {
+        return CookieModel(fortune: "any_fortune")
     }
     
     func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteGetCookie, httpClientSpy: HttpClientSpy) {
@@ -54,18 +78,22 @@ extension RemoteGetCookieTests {
     class HttpClientSpy: HttpGetClient {
         var urls = [URL]()
         var data: Data?
-        var completion: ((HttpError) -> Void)?
+        var completion: ((Result<Data, HttpError>) -> Void)?
         
-        func get(from url: URL, completion: @escaping (HttpError) -> Void) -> Data? {
+        func get(from url: URL, completion: @escaping (Result<Data, HttpError>) -> Void) {
             self.urls.append(url)
             self.data = Data("{\"fortune\":\"any_fortune\"}".utf8)
             self.completion = completion
-
-            return self.data
         }
         
         func completeWithError(_ error: HttpError) {
-            completion?(error)        }
+            completion?(.failure(error))
+            
+        }
+        
+        func completeWithData(_ data: Data) {
+            completion?(.success(data))
+        }
     }
 }
 
