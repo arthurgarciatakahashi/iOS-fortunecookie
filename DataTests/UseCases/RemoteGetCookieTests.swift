@@ -41,6 +41,11 @@ class RemoteGetCookieTests: XCTestCase {
         }
     }
     
+    func checkMemoryLeak(for instance: AnyObject) {
+        addTeardownBlock { [weak instance] in
+            XCTAssertNil(instance)
+        }
+    }
 }
 
 extension RemoteGetCookieTests {
@@ -59,6 +64,9 @@ extension RemoteGetCookieTests {
     func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteGetCookie, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
         let sut = RemoteGetCookie(url: url, httpClient: httpClientSpy)
+        checkMemoryLeak(for: sut)
+        checkMemoryLeak(for: httpClientSpy)
+
         return (sut, httpClientSpy)
     }
     
@@ -70,13 +78,13 @@ extension RemoteGetCookieTests {
         return Data("invalid_data".utf8)
     }
     
-    func expect(_ sut: RemoteGetCookie, completeWith expectResult: Result<CookieModel, DomainError>, when action: () -> Void) {
+    func expect(_ sut: RemoteGetCookie, completeWith expectResult: Result<CookieModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.get() { receivedResult in
             switch (expectResult, receivedResult) {
-            case (.failure(let expectedError), .failure): XCTAssertEqual(expectedError, .unexpected)
-            case (.success(let expectedCookie), .success(let receivedCookie)): XCTAssertEqual(expectedCookie, receivedCookie)
-            default: XCTFail("expected \(expectResult) but received \(receivedResult) instead")
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedCookie), .success(let receivedCookie)): XCTAssertEqual(expectedCookie, receivedCookie, file: file, line: line)
+            default: XCTFail("expected \(expectResult) but received \(receivedResult) instead", file: file, line: line)
             }
             exp.fulfill()
         }
