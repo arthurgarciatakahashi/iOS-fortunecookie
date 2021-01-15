@@ -11,7 +11,10 @@ public final class RemoteGetCookie: GetCookie {
     }
     
     public func get(completion: @escaping (Result<CookieModel, DomainError>) -> Void) {
-        self.httpClient.get(from: url) { result in
+        self.httpClient.get(from: url) { [weak self] result in
+            
+            guard self != nil else { return }
+            
             switch result {
             case .success(let data):
                 if let cookie : CookieModel = data.toModel() {

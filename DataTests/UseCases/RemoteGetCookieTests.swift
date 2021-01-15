@@ -40,6 +40,17 @@ class RemoteGetCookieTests: XCTestCase {
             httpClientSpy.completeWithData(makeInvalidData())
         }
     }
+
+    func test_should_not_complete_if_sut_has_been_deallocated() {
+        let httpClientSpy = HttpClientSpy()
+        var sut: RemoteGetCookie? = RemoteGetCookie(url: makeURL(), httpClient: httpClientSpy)
+        var result: Result<CookieModel, DomainError>?
+        
+        sut?.get() { result = $0 }
+        sut = nil
+        httpClientSpy.completeWithError(.noConnectivity)
+        XCTAssertNil(result)
+    }
     
     func checkMemoryLeak(for instance: AnyObject) {
         addTeardownBlock { [weak instance] in
