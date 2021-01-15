@@ -8,10 +8,10 @@
 
 import Foundation
 
-func makeURL() -> URL {
+public func makeURL() -> URL {
     return URL(string: "http://yerkee.com/api/fortune/all")!
 }
 
-func makeInvalidData() -> Data {
+public func makeInvalidData() -> Data {
     return Data("invalid_data".utf8)
 }

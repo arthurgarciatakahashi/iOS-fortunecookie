@@ -8,32 +8,60 @@
 
 import XCTest
 @testable import Infra
+import Alamofire
 
 class AlamofireAdapter {
+    
+    private let session: Session
+    
+    init(session: Session = .default) {
+        self.session = session
+    }
+    
     func get(from url: URL) {
-        
+        session.request(url).resume()
     }
 }
+
 class AlamofireAdapterTests: XCTestCase {
 
-    override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
     func test_() throws {
-        let sut = AlamofireAdapter()
+        let url = makeURL()
+        let configuration = URLSessionConfiguration.default
+        configuration.protocolClasses = [UrlProtocolStub.self]
+        let session = Session(configuration: configuration)
+        let sut = AlamofireAdapter(session: session)
+        sut.get(from: url)
+        let exp = expectation(description: "waiting")
+        UrlProtocolStub.observerRequest(completion: { request in
+            XCTAssertEqual(url, request.url)
+            exp.fulfill()
+        })
+        wait(for: [exp], timeout: 1)
+    }
+}
+
+class UrlProtocolStub: URLProtocol {
+    static var emit: ((URLRequest) -> Void)?
+    
+    static func observerRequest(completion: @escaping (URLRequest) -> Void) {
+        UrlProtocolStub.emit = completion
+    }
+    
+    override open class func canInit(with request: URLRequest) -> Bool {
+        //setado como true intercepta todas as chamadas
+        return true
+    }
+    
+    override open class func canonicalRequest(for request: URLRequest) -> URLRequest {
+        return request
+    }
+    
+    override open func startLoading() {
+        UrlProtocolStub.emit?(request)
+    }
+    
+    override open func stopLoading() {
         
     }
-
-    func testPerformanceExample() throws {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
-    }
-
 }
