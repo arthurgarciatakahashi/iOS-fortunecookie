@@ -15,3 +15,11 @@ public func makeURL() -> URL {
 public func makeInvalidData() -> Data {
     return Data("invalid_data".utf8)
 }
+
+public func makeValidData() -> Data {
+    return Data("{\"fortune\":\"any_fortune\"}".utf8)
+}
+
+public func makeError() -> NSError {
+    return NSError(domain: "default_error", code: 100)
+}
