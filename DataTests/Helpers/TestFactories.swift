@@ -16,6 +16,10 @@ public func makeInvalidData() -> Data {
     return Data("invalid_data".utf8)
 }
 
+public func makeEmptyData() -> Data {
+    return Data()
+}
+
 public func makeValidData() -> Data {
     return Data("{\"fortune\":\"any_fortune\"}".utf8)
 }
