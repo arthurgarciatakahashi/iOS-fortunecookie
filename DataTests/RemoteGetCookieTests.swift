@@ -3,27 +3,6 @@ import Domain
 
 @testable import Data
 
-class RemoteGetCookie {
-    private let url: URL
-    private let httpClient: HttpGetClient
-    
-    init(url : URL, httpClient: HttpGetClient) {
-        self.url = url
-        self.httpClient = httpClient
-    }
-    
-    func get() -> GetCookieModel? {
-        let getCookieModel = GetCookieModel()
-        let data = self.httpClient.get(from: url)
-        let cookie = getCookieModel.convertFromData(data)
-        return cookie
-    }
-}
-
-protocol HttpGetClient {
-    func get(from url: URL) -> Data?
-}
-
 class RemoteGetCookieTests: XCTestCase {
 
     func test_get_should_call_httpGetClient_with_correct_url() {
