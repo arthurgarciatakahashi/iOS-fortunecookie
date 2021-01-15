@@ -1,6 +1,5 @@
 import XCTest
 import Domain
-
 @testable import Data
 
 class RemoteGetCookieTests: XCTestCase {

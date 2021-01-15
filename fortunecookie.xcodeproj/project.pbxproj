@@ -13,7 +13,6 @@
 		1A22A91625B0E925004049BE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1A22A91525B0E925004049BE /* Alamofire */; };
 		1A22A92F25B0EB1C004049BE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
-		1A22A93625B0EB1C004049BE /* Data.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A22A92825B0EB1C004049BE /* Data.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
 		1A402D4725B12F1300B43A06 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
@@ -95,7 +94,6 @@
 		1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
 		1A22A90725B0E5AF004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A92625B0EB1C004049BE /* Data.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Data.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A22A92825B0EB1C004049BE /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
 		1A22A92925B0EB1C004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A92E25B0EB1C004049BE /* DataTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DataTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookieTests.swift; sourceTree = "<group>"; };
@@ -212,10 +210,9 @@
 		1A22A92725B0EB1C004049BE /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */,
-				1A22A92825B0EB1C004049BE /* Data.h */,
+				1A402D7E25B136DF00B43A06 /* UseCases */,
+				1A402D7F25B136EA00B43A06 /* Http */,
 				1A22A92925B0EB1C004049BE /* Info.plist */,
-				1A402D6C25B1360300B43A06 /* HttpGetClient.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -223,7 +220,7 @@
 		1A22A93225B0EB1C004049BE /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */,
+				1A402D8025B1370700B43A06 /* UseCases */,
 				1A22A93525B0EB1C004049BE /* Info.plist */,
 			);
 			path = DataTests;
@@ -232,10 +229,9 @@
 		1A402D2625B12EB800B43A06 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				1A402D1725B12CDE00B43A06 /* GetCookie.swift */,
+				1A402D7525B1364500B43A06 /* UseCase */,
+				1A402D7625B1367900B43A06 /* Models */,
 				1A402D2825B12EB800B43A06 /* Info.plist */,
-				1A402D5325B12FD800B43A06 /* CookieModel.swift */,
-				1A402D5C25B1350B00B43A06 /* Model.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -245,6 +241,47 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		1A402D7525B1364500B43A06 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				1A402D1725B12CDE00B43A06 /* GetCookie.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		1A402D7625B1367900B43A06 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				1A402D5325B12FD800B43A06 /* CookieModel.swift */,
+				1A402D5C25B1350B00B43A06 /* Model.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		1A402D7E25B136DF00B43A06 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		1A402D7F25B136EA00B43A06 /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				1A402D6C25B1360300B43A06 /* HttpGetClient.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		1A402D8025B1370700B43A06 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */,
+			);
+			path = UseCases;
 			sourceTree = "<group>";
 		};
 		1A8B5C2724F6024F00FDE954 /* Resources */ = {
@@ -345,7 +382,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A22A93625B0EB1C004049BE /* Data.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
