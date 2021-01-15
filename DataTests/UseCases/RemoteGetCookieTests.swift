@@ -51,26 +51,14 @@ class RemoteGetCookieTests: XCTestCase {
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
     }
-    
-    func checkMemoryLeak(for instance: AnyObject) {
-        addTeardownBlock { [weak instance] in
-            XCTAssertNil(instance)
-        }
-    }
 }
 
 extension RemoteGetCookieTests {
-    func makeURL() -> URL {
-        return URL(string: "http://yerkee.com/api/fortune/all")!
-    }
 
     func makeGetCookieModel() -> GetCookieModel {
         return GetCookieModel(fortune: "any_fortune")
     }
-    
-    func makeCookieModel() -> CookieModel {
-        return CookieModel(fortune: "any_fortune")
-    }
+
     
     func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteGetCookie, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()
@@ -83,10 +71,6 @@ extension RemoteGetCookieTests {
     
     func makeData() -> Data? {
         return Data("any_fortune".utf8)
-    }
-    
-    func makeInvalidData() -> Data {
-        return Data("invalid_data".utf8)
     }
     
     func expect(_ sut: RemoteGetCookie, completeWith expectResult: Result<CookieModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
@@ -102,26 +86,4 @@ extension RemoteGetCookieTests {
         action()
         wait(for: [exp], timeout: 1)
     }
-    
-    class HttpClientSpy: HttpGetClient {
-        var urls = [URL]()
-        var data: Data?
-        var completion: ((Result<Data, HttpError>) -> Void)?
-        
-        func get(from url: URL, completion: @escaping (Result<Data, HttpError>) -> Void) {
-            self.urls.append(url)
-            self.data = Data("{\"fortune\":\"any_fortune\"}".utf8)
-            self.completion = completion
-        }
-        
-        func completeWithError(_ error: HttpError) {
-            completion?(.failure(error))
-            
-        }
-        
-        func completeWithData(_ data: Data) {
-            completion?(.success(data))
-        }
-    }
 }
-
