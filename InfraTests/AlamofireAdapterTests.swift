@@ -19,7 +19,7 @@ class AlamofireAdapter {
     }
     
     func get(from url: URL) {
-        session.request(url).resume()
+        session.request(url, method: .get).resume()
     }
 }
 
@@ -35,6 +35,8 @@ class AlamofireAdapterTests: XCTestCase {
         let exp = expectation(description: "waiting")
         UrlProtocolStub.observerRequest(completion: { request in
             XCTAssertEqual(url, request.url)
+            XCTAssertEqual("GET", request.httpMethod)
+
             exp.fulfill()
         })
         wait(for: [exp], timeout: 1)
