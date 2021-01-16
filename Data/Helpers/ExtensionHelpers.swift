@@ -5,7 +5,7 @@ extension Data {
         return try? JSONDecoder().decode(T.self, from: self)
     }
     
-    func toJson() -> [String: Any]? {
-        return try? JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
-    }
+//    func toJson() -> [String: Any]? {
+//        return try? JSONSerialization.jsonObject(with: self, options: .allowFragments) as? [String: Any]
+//    }
 }

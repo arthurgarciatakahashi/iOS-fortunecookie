@@ -12,13 +12,13 @@ public struct GetCookieModel: Model {
     }
 }
 
-extension GetCookieModel {
-    
-    public func convertFromData(_ data: Data?) -> GetCookieModel? {
-        if let data = data {
-            return try? JSONDecoder().decode(GetCookieModel.self, from: data)
-        } else {
-            return GetCookieModel()
-        }
-     }
-}
+//extension GetCookieModel {
+//
+//    public func convertFromData(_ data: Data?) -> GetCookieModel? {
+//        if let data = data {
+//            return try? JSONDecoder().decode(GetCookieModel.self, from: data)
+//        } else {
+//            return GetCookieModel()
+//        }
+//     }
+//}
