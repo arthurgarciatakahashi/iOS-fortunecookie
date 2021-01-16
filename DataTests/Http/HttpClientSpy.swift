@@ -12,9 +12,9 @@ import Data
 class HttpClientSpy: HttpGetClient {
     var urls = [URL]()
     var data: Data?
-    var completion: ((Result<Data, HttpError>) -> Void)?
+    var completion: ((Result<Data?, HttpError>) -> Void)?
     
-    func get(from url: URL, completion: @escaping (Result<Data, HttpError>) -> Void) {
+    func get(from url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.urls.append(url)
         self.data = Data("{\"fortune\":\"any_fortune\"}".utf8)
         self.completion = completion
