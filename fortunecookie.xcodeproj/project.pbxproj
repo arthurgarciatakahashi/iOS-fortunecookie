@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		1A22A90125B0E5AF004049BE /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A8F825B0E5A5004049BE /* Infra.framework */; };
 		1A22A90625B0E5AF004049BE /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */; };
-		1A22A90825B0E5AF004049BE /* Infra.h in Headers */ = {isa = PBXBuildFile; fileRef = 1A22A8FA25B0E5A6004049BE /* Infra.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1A22A91625B0E925004049BE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1A22A91525B0E925004049BE /* Alamofire */; };
 		1A22A92F25B0EB1C004049BE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
@@ -31,6 +30,8 @@
 		1A6A8FF125B166040025FDB4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */; };
 		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
 		1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */; };
+		1A9BBD5325B28688007A8B5B /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBD5225B28688007A8B5B /* AlamofireAdapter.swift */; };
+		1A9BBD7325B28701007A8B5B /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBD7225B28701007A8B5B /* UrlProtocolStub.swift */; };
 		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
 		1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */; };
 		1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */; };
@@ -97,7 +98,6 @@
 
 /* Begin PBXFileReference section */
 		1A22A8F825B0E5A5004049BE /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A22A8FA25B0E5A6004049BE /* Infra.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Infra.h; sourceTree = "<group>"; };
 		1A22A8FB25B0E5A6004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A90025B0E5AF004049BE /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterTests.swift; sourceTree = "<group>"; };
@@ -123,6 +123,8 @@
 		1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieModelFactory.swift; sourceTree = "<group>"; };
 		1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bone-crack-1.wav"; sourceTree = "<group>"; };
+		1A9BBD5225B28688007A8B5B /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
+		1A9BBD7225B28701007A8B5B /* UrlProtocolStub.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UrlProtocolStub.swift; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -208,7 +210,7 @@
 		1A22A8F925B0E5A5004049BE /* Infra */ = {
 			isa = PBXGroup;
 			children = (
-				1A22A8FA25B0E5A6004049BE /* Infra.h */,
+				1A9BBD5B25B286E3007A8B5B /* Http */,
 				1A22A8FB25B0E5A6004049BE /* Info.plist */,
 			);
 			path = Infra;
@@ -217,7 +219,7 @@
 		1A22A90425B0E5AF004049BE /* InfraTests */ = {
 			isa = PBXGroup;
 			children = (
-				1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */,
+				1A9BBD6325B286F3007A8B5B /* Http */,
 				1A22A90725B0E5AF004049BE /* Info.plist */,
 			);
 			path = InfraTests;
@@ -347,6 +349,23 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		1A9BBD5B25B286E3007A8B5B /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BBD5225B28688007A8B5B /* AlamofireAdapter.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
+		1A9BBD6325B286F3007A8B5B /* Http */ = {
+			isa = PBXGroup;
+			children = (
+				1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */,
+				1A9BBD7225B28701007A8B5B /* UrlProtocolStub.swift */,
+			);
+			path = Http;
+			sourceTree = "<group>";
+		};
 		1ADA4E8F24D8B8500078B01F = {
 			isa = PBXGroup;
 			children = (
@@ -429,7 +448,6 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1A22A90825B0E5AF004049BE /* Infra.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -610,6 +628,7 @@
 				TargetAttributes = {
 					1A22A8F725B0E5A5004049BE = {
 						CreatedOnToolsVersion = 12.3;
+						LastSwiftMigration = 1230;
 					};
 					1A22A8FF25B0E5AF004049BE = {
 						CreatedOnToolsVersion = 12.3;
@@ -733,6 +752,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A9BBD5325B28688007A8B5B /* AlamofireAdapter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,6 +763,7 @@
 				1A6A8FF125B166040025FDB4 /* TestFactories.swift in Sources */,
 				1A6A8FE925B166000025FDB4 /* TextExtensions.swift in Sources */,
 				1A22A90625B0E5AF004049BE /* AlamofireAdapterTests.swift in Sources */,
+				1A9BBD7325B28701007A8B5B /* UrlProtocolStub.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -854,6 +875,7 @@
 		1A22A90925B0E5AF004049BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -875,6 +897,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -884,6 +907,7 @@
 		1A22A90A25B0E5AF004049BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -914,6 +938,7 @@
 		1A22A90B25B0E5AF004049BE /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
@@ -935,6 +960,7 @@
 		1A22A90C25B0E5AF004049BE /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
