@@ -9,11 +9,20 @@ class SignUpPresenter {
     }
     
     func signUp(viewModel: SignUpViewModel) {
-        if viewModel.category == nil || viewModel.category!.isEmpty {
-            self.alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: "Category is required"))
+        if let message = validate(viewModel: viewModel) {
+            self.alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
         }
     }
+    
+    private func validate(viewModel: SignUpViewModel) -> String? {
+        if viewModel.category == nil || viewModel.category!.isEmpty {
+            return "Category is required"
+        }
+        return nil
+    }
 }
+
+
 
 protocol AlertView {
     func showMessage(viewModel: AlertViewModel)
@@ -36,6 +45,7 @@ class SignUpPresentationTests: XCTestCase {
         sut.signUp(viewModel: signUpViewModel)
         XCTAssertEqual(alertViewSpy.viewModel, AlertViewModel(title: "Validation Failed", message: "Category is required"))
     }
+    
 }
 
 extension SignUpPresentationTests {
