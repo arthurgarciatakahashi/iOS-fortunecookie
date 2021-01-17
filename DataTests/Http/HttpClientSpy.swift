@@ -16,7 +16,7 @@ class HttpClientSpy: HttpGetClient {
     
     func get(from url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.urls.append(url)
-        self.data = Data("{\"category\":\"any_category\"}".utf8)
+        self.data = Data("{\"category\":\"all\"}".utf8)
         self.completion = completion
     }
     

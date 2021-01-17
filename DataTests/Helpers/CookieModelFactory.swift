@@ -14,5 +14,5 @@ func makeCookieModel() -> CookieModel {
 }
 
 func makeGetCookieModel() -> GetCookieModel {
-    return GetCookieModel(category: "any_category")
+    return GetCookieModel(category: .all)
 }

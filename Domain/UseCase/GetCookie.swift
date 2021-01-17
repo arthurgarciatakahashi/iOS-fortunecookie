@@ -5,9 +5,9 @@ public protocol GetCookie {
 }
 
 public struct GetCookieModel: Model {
-    public var category: String?
+    public var category: CategoryType?
     
-    public init(category: String? = "") {
+    public init(category: CategoryType? = nil) {
         self.category = category
     }
 }

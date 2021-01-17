@@ -7,17 +7,29 @@
 //
 
 import Foundation
+import Domain
 
 public class SignUpPresenter {
     private let alertView: AlertView
+    private let getCookie : GetCookie
     
-    public init(alertView: AlertView) {
+    public init(alertView: AlertView, getCookie: GetCookie) {
         self.alertView = alertView
+        self.getCookie = getCookie
     }
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
-            self.alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
+            alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
+        } else {
+            //let getCookieModel = GetCookieModel(category: viewModel.category)
+            getCookie.get() { result in
+                switch result {
+                case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
+                case .success: break
+                
+                }
+            }
         }
     }
     
@@ -27,20 +39,6 @@ public class SignUpPresenter {
         }
         return nil
     }
-}
-
-public enum CategoryType: String {
-    case all
-    case bible
-    case computers
-    case cookie
-    case definitions
-    case miscellaneous
-    case people
-    case platitudes
-    case politics
-    case science
-    case winsdom
 }
 
 public struct SignUpViewModel {

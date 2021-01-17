@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A19626225B4E87F008734DC /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A19626125B4E87F008734DC /* CategoryType.swift */; };
 		1A22A90125B0E5AF004049BE /* Infra.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A8F825B0E5A5004049BE /* Infra.framework */; };
 		1A22A90625B0E5AF004049BE /* AlamofireAdapterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A90525B0E5AF004049BE /* AlamofireAdapterTests.swift */; };
 		1A22A91625B0E925004049BE /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 1A22A91525B0E925004049BE /* Alamofire */; };
@@ -132,6 +133,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		1A19626125B4E87F008734DC /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		1A22A8F825B0E5A5004049BE /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A22A8FB25B0E5A6004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A90025B0E5AF004049BE /* InfraTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = InfraTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -346,6 +348,7 @@
 			children = (
 				1A402D5325B12FD800B43A06 /* CookieModel.swift */,
 				1A402D5C25B1350B00B43A06 /* Model.swift */,
+				1A19626125B4E87F008734DC /* CategoryType.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -1020,6 +1023,7 @@
 				1A402D5D25B1350B00B43A06 /* Model.swift in Sources */,
 				1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */,
 				1A402D9125B13B3400B43A06 /* DomainError.swift in Sources */,
+				1A19626225B4E87F008734DC /* CategoryType.swift in Sources */,
 				1A402D5425B12FD800B43A06 /* CookieModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
