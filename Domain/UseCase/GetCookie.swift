@@ -5,10 +5,10 @@ public protocol GetCookie {
 }
 
 public struct GetCookieModel: Model {
-    public var fortune: String
+    public var category: String?
     
-    public init(fortune: String = "") {
-        self.fortune = fortune
+    public init(category: String? = "") {
+        self.category = category
     }
 }
 

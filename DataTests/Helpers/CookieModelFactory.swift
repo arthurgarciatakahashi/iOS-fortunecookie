@@ -12,3 +12,7 @@ import Domain
 func makeCookieModel() -> CookieModel {
     return CookieModel(fortune: "any_fortune")
 }
+
+func makeGetCookieModel() -> GetCookieModel {
+    return GetCookieModel(category: "any_category")
+}

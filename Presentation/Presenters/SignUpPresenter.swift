@@ -22,17 +22,31 @@ public class SignUpPresenter {
     }
     
     private func validate(viewModel: SignUpViewModel) -> String? {
-        if viewModel.category == nil || viewModel.category!.isEmpty {
-            return "Category is required"
+        if viewModel.category == nil {
+            return "category is required"
         }
         return nil
     }
 }
 
+public enum CategoryType: String {
+    case all
+    case bible
+    case computers
+    case cookie
+    case definitions
+    case miscellaneous
+    case people
+    case platitudes
+    case politics
+    case science
+    case winsdom
+}
+
 public struct SignUpViewModel {
-    public init(category: String? = nil) {
+    public init(category: CategoryType? = nil) {
         self.category = category
     }
     
-    public var category: String?
+    public var category: CategoryType?
 }

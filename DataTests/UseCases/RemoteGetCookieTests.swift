@@ -54,11 +54,6 @@ class RemoteGetCookieTests: XCTestCase {
 }
 
 extension RemoteGetCookieTests {
-
-    func makeGetCookieModel() -> GetCookieModel {
-        return GetCookieModel(fortune: "any_fortune")
-    }
-
     
     func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteGetCookie, httpClientSpy: HttpClientSpy) {
         let httpClientSpy = HttpClientSpy()

@@ -16,13 +16,12 @@ class HttpClientSpy: HttpGetClient {
     
     func get(from url: URL, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.urls.append(url)
-        self.data = Data("{\"fortune\":\"any_fortune\"}".utf8)
+        self.data = Data("{\"category\":\"any_category\"}".utf8)
         self.completion = completion
     }
     
     func completeWithError(_ error: HttpError) {
         completion?(.failure(error))
-        
     }
     
     func completeWithData(_ data: Data) {
