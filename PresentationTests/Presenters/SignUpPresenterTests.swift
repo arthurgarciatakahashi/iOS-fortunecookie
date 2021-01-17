@@ -7,17 +7,28 @@ class SignUpPresenterTests: XCTestCase {
     func test_signup_should_show_error_message_if_category_is_not_provided() throws {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy)
-        let signUpViewModel = makeSignUpViewModel()
-        sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, makeRequiredAlertViewModel(fieldName: "category"))
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observer { [weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeRequiredAlertViewModel(fieldName: "category"))
+            exp.fulfill()
+        }
+        
+        sut.signUp(viewModel: makeSignUpViewModel())
+        wait(for: [exp], timeout: 1)
     }
     
     func test_signup_should_not_show_alert_error_with_computers_type() throws {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy)
         let signUpViewModel = makeSignUpViewModel(categoryType: .computers)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observer {viewModel in
+            XCTAssertEqual(viewModel, nil)
+            exp.fulfill()
+        }
+        
         sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, nil)
+        wait(for: [exp], timeout: 1)
     }
 
     func test_signup_should_call_getCookie_with_no_errors() throws {
@@ -31,10 +42,17 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let getCookieSpy = GetCookieSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
-        let signUpViewModel = makeSignUpViewModel()
-        getCookieSpy.completeWithError(.unexpected)
+        let signUpViewModel = makeSignUpViewModel(categoryType: .all)
+        let exp = expectation(description: "waiting")
+
+        alertViewSpy.observer { [weak self] viewModel in
+            XCTAssertEqual(viewModel,self?.makeErrorAlertViewModel(message:"unexpected error, try again in a few minutes"))
+            exp.fulfill()
+        }
+        
         sut.signUp(viewModel: signUpViewModel)
-        XCTAssertEqual(alertViewSpy.viewModel, makeErrorAlertViewModel(message:"unexpected error, try again in a few minutes"))
+        getCookieSpy.completeWithError(.unexpected)
+        wait(for: [exp], timeout: 1)
     }
     
 }
@@ -60,18 +78,18 @@ extension SignUpPresenterTests {
         return AlertViewModel(title: "Error", message: message)
     }
     
-    func makeSignUpViewModel(categoryType: CategoryType = .all) -> SignUpViewModel {
+    func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpViewModel {
         return SignUpViewModel(category: categoryType)
     }
     
     class AlertViewSpy: AlertView {
-        var viewModel: AlertViewModel?
+        var emit: ((AlertViewModel) -> Void)?
         
-//        func observer(completion @escaping (AlertViewMmodel)) -> Void {
-//            self.emit = completion
-//        }
+        func observer(completion: @escaping (AlertViewModel) -> Void) {
+            self.emit = completion
+        }
         func showMessage(viewModel: AlertViewModel) {
-//            self.emit? =
+            self.emit?(viewModel)
         }
     }
 }

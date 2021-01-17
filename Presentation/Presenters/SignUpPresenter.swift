@@ -26,7 +26,7 @@ public class SignUpPresenter {
             getCookie.get() { result in
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
-                case .success: break
+                case .success: var a = 1
                 
                 }
             }
