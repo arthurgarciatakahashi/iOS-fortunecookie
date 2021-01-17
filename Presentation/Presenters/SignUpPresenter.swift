@@ -1,32 +1,28 @@
-//
-//  SignUpPresenter.swift
-//  Presentation
-//
-//  Created by arthur takahashi on 16/01/21.
-//  Copyright © 2021 Arthur Takahashi. All rights reserved.
-//
-
 import Foundation
 import Domain
 
 public class SignUpPresenter {
     private let alertView: AlertView
+    private let loadingView: LoadingView
     private let getCookie : GetCookie
     
-    public init(alertView: AlertView, getCookie: GetCookie) {
+    public init(alertView: AlertView, getCookie: GetCookie, loadingView: LoadingView) {
         self.alertView = alertView
         self.getCookie = getCookie
+        self.loadingView = loadingView
     }
     
     public func signUp(viewModel: SignUpViewModel) {
         if let message = validate(viewModel: viewModel) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
         } else {
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             //let getCookieModel = GetCookieModel(category: viewModel.category)
-            getCookie.get() { result in
+            getCookie.get() { [weak self] result in
+                guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
-                case .success: var a = 1
+                case .success: break
                 
                 }
             }

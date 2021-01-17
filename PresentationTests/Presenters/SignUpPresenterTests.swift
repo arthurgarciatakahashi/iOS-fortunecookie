@@ -1,6 +1,7 @@
 import XCTest
 @testable import Presentation
 import Domain
+import Data
 
 class SignUpPresenterTests: XCTestCase {
 
@@ -17,19 +18,19 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-    func test_signup_should_not_show_alert_error_with_computers_type() throws {
-        let alertViewSpy = AlertViewSpy()
-        let sut = makeSut(alertViewSpy: alertViewSpy)
-        let signUpViewModel = makeSignUpViewModel(categoryType: .computers)
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observer {viewModel in
-            XCTAssertEqual(viewModel, nil)
-            exp.fulfill()
-        }
-        
-        sut.signUp(viewModel: signUpViewModel)
-        wait(for: [exp], timeout: 1)
-    }
+//    func test_signup_should_not_show_alert_error_with_computers_type() throws {
+//        let alertViewSpy = AlertViewSpy()
+//        let sut = makeSut(alertViewSpy: alertViewSpy)
+//        let signUpViewModel = makeSignUpViewModel(categoryType: .computers)
+//        let exp = expectation(description: "waiting")
+//        alertViewSpy.observer {viewModel in
+//            XCTAssertEqual(viewModel, nil)
+//            exp.fulfill()
+//        }
+//
+//        sut.signUp(viewModel: signUpViewModel)
+//        wait(for: [exp], timeout: 1)
+//    }
 
     func test_signup_should_call_getCookie_with_no_errors() throws {
         let getCookieSpy = GetCookieSpy()
@@ -55,12 +56,18 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
+    func test_signup_should_show_loading_before_call_getCookie() throws {
+        let loadingViewSpy = LoadingViewSpy()
+        let sut = makeSut(loadingView: loadingViewSpy)
+        sut.signUp(viewModel: makeSignUpViewModel(categoryType: .all))
+        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+    }
 }
 
 extension SignUpPresenterTests {
     
-    func makeSut(alertViewSpy: AlertViewSpy = AlertViewSpy(),getCookieSpy: GetCookieSpy = GetCookieSpy()) -> SignUpPresenter {
-        let sut = SignUpPresenter(alertView: alertViewSpy, getCookie: getCookieSpy)
+    func makeSut(alertViewSpy: AlertViewSpy = AlertViewSpy(),getCookieSpy: GetCookieSpy = GetCookieSpy(), loadingView: LoadingViewSpy = LoadingViewSpy()) -> SignUpPresenter {
+        let sut = SignUpPresenter(alertView: alertViewSpy, getCookie: getCookieSpy, loadingView: loadingView)
         
         return sut
     }
@@ -104,5 +111,13 @@ class GetCookieSpy: GetCookie {
     
     func completeWithError(_ error: DomainError) {
         completion?(.failure(error))
+    }
+}
+
+class LoadingViewSpy: LoadingView {
+    var viewModel : LoadingViewModel?
+    
+    func display(viewModel: LoadingViewModel) {
+        self.viewModel = viewModel
     }
 }
