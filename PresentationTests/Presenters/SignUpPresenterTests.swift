@@ -59,8 +59,17 @@ class SignUpPresenterTests: XCTestCase {
     func test_signup_should_show_loading_before_call_getCookie() throws {
         let loadingViewSpy = LoadingViewSpy()
         let sut = makeSut(loadingView: loadingViewSpy)
+        
+        let exp = expectation(description: "waiting")
+
+        loadingViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+        
         sut.signUp(viewModel: makeSignUpViewModel(categoryType: .all))
-        XCTAssertEqual(loadingViewSpy.viewModel, LoadingViewModel(isLoading: true))
+        wait(for: [exp], timeout: 1)
+
     }
 }
 
@@ -115,9 +124,13 @@ class GetCookieSpy: GetCookie {
 }
 
 class LoadingViewSpy: LoadingView {
-    var viewModel : LoadingViewModel?
+    var emit: ((LoadingViewModel) -> Void)?
+    
+    func observer(completion: @escaping (LoadingViewModel) -> Void) {
+        self.emit = completion
+    }
     
     func display(viewModel: LoadingViewModel) {
-        self.viewModel = viewModel
+        self.emit?(viewModel)
     }
 }
