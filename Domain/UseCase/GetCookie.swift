@@ -5,20 +5,20 @@ public protocol GetCookie {
 }
 
 public struct GetCookieModel: Model {
-    public var fortune: String
+    public var category: CategoryType?
     
-    public init(fortune: String = "") {
-        self.fortune = fortune
+    public init(category: CategoryType? = nil) {
+        self.category = category
     }
 }
 
-extension GetCookieModel {
-    
-    public func convertFromData(_ data: Data?) -> GetCookieModel? {
-        if let data = data {
-            return try? JSONDecoder().decode(GetCookieModel.self, from: data)
-        } else {
-            return GetCookieModel()
-        }
-     }
-}
+//extension GetCookieModel {
+//
+//    public func convertFromData(_ data: Data?) -> GetCookieModel? {
+//        if let data = data {
+//            return try? JSONDecoder().decode(GetCookieModel.self, from: data)
+//        } else {
+//            return GetCookieModel()
+//        }
+//     }
+//}

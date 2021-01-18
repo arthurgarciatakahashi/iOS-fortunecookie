@@ -15,3 +15,19 @@ public func makeURL() -> URL {
 public func makeInvalidData() -> Data {
     return Data("invalid_data".utf8)
 }
+
+public func makeEmptyData() -> Data {
+    return Data()
+}
+
+public func makeValidData() -> Data {
+    return Data("{\"fortune\":\"any_fortune\"}".utf8)
+}
+
+public func makeError() -> NSError {
+    return NSError(domain: "default_error", code: 100)
+}
+
+public func makeHttpResponse(statusCode: Int = 200) -> HTTPURLResponse {
+    return HTTPURLResponse(url: makeURL(), statusCode: statusCode, httpVersion: nil, headerFields: nil)!
+}

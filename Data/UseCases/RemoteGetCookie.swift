@@ -17,7 +17,7 @@ public final class RemoteGetCookie: GetCookie {
             
             switch result {
             case .success(let data):
-                if let cookie : CookieModel = data.toModel() {
+                if let cookie : CookieModel = data?.toModel() {
                     completion(.success(cookie))
                 } else {
                     completion(.failure(.unexpected))
