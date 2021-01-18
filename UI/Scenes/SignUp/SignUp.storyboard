@@ -5,6 +5,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -16,26 +17,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-ZB-aBI">
-                                <rect key="frame" x="188.5" y="434.5" width="37" height="37"/>
-                            </activityIndicatorView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-V9-egD">
-                                <rect key="frame" x="179" y="299" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99v-RX-NFj">
-                                <rect key="frame" x="159" y="185" width="97" height="34"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="📱" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NN6-dN-foq">
+                                <rect key="frame" x="158.5" y="64" width="97" height="108"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="90"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="FavLang" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CSv-n3-EM3">
+                                <rect key="frame" x="151.5" y="182" width="111" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="systemIndigoColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Category" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99v-RX-NFj">
+                                <rect key="frame" x="20" y="268" width="374" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="XqC-MX-4hP"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qW9-V9-egD">
+                                <rect key="frame" x="20" y="368" width="374" height="60"/>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="eWL-So-V4a"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                <inset key="contentEdgeInsets" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <state key="normal" title="Call">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="9ir-ZB-aBI">
+                                <rect key="frame" x="347" y="379.5" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W5G-vC-7eL"/>
-                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="9ir-ZB-aBI" firstAttribute="centerY" secondItem="W5G-vC-7eL" secondAttribute="centerY" id="0ZI-SH-A9a"/>
-                            <constraint firstItem="9ir-ZB-aBI" firstAttribute="centerX" secondItem="W5G-vC-7eL" secondAttribute="centerX" id="i7U-uF-DcZ"/>
+                            <constraint firstItem="W5G-vC-7eL" firstAttribute="trailing" secondItem="99v-RX-NFj" secondAttribute="trailing" constant="20" id="5hg-oM-m3R"/>
+                            <constraint firstItem="9ir-ZB-aBI" firstAttribute="trailing" secondItem="qW9-V9-egD" secondAttribute="trailing" constant="-10" id="Bh8-dh-YXB"/>
+                            <constraint firstItem="qW9-V9-egD" firstAttribute="top" secondItem="99v-RX-NFj" secondAttribute="bottom" constant="50" id="RqG-C6-1EU"/>
+                            <constraint firstItem="CSv-n3-EM3" firstAttribute="centerX" secondItem="W5G-vC-7eL" secondAttribute="centerX" id="S2j-al-wzr"/>
+                            <constraint firstItem="NN6-dN-foq" firstAttribute="centerX" secondItem="W5G-vC-7eL" secondAttribute="centerX" id="Vip-UD-NPF"/>
+                            <constraint firstItem="99v-RX-NFj" firstAttribute="leading" secondItem="W5G-vC-7eL" secondAttribute="leading" constant="20" id="WWJ-Jo-dKD"/>
+                            <constraint firstItem="qW9-V9-egD" firstAttribute="leading" secondItem="99v-RX-NFj" secondAttribute="leading" id="g6E-X2-gFQ"/>
+                            <constraint firstItem="99v-RX-NFj" firstAttribute="top" secondItem="CSv-n3-EM3" secondAttribute="bottom" constant="50" id="h1M-k9-K2v"/>
+                            <constraint firstItem="qW9-V9-egD" firstAttribute="trailing" secondItem="99v-RX-NFj" secondAttribute="trailing" id="lCI-0J-avb"/>
+                            <constraint firstItem="NN6-dN-foq" firstAttribute="top" secondItem="W5G-vC-7eL" secondAttribute="top" constant="20" id="r0Z-3h-nP8"/>
+                            <constraint firstItem="9ir-ZB-aBI" firstAttribute="centerY" secondItem="qW9-V9-egD" secondAttribute="centerY" id="yn4-Vv-ifQ"/>
+                            <constraint firstItem="CSv-n3-EM3" firstAttribute="top" secondItem="NN6-dN-foq" secondAttribute="bottom" constant="10" id="z7w-MP-wHe"/>
                         </constraints>
                     </view>
                     <connections>
@@ -46,7 +79,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MVW-fw-rji" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-138" y="-25"/>
+            <point key="canvasLocation" x="-139.13043478260872" y="-25.446428571428569"/>
         </scene>
     </scenes>
+    <resources>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
