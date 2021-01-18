@@ -39,9 +39,8 @@ extension SignUpViewController: LoadingView {
 
 extension SignUpViewController: AlertView {
     func showMessage(viewModel: AlertViewModel) {
-        
+        let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
+        present(alert, animated: true)
     }
-    
- 
 }
 
