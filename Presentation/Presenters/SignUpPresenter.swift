@@ -22,7 +22,7 @@ public class SignUpPresenter {
                 guard let self = self else { return }
                 switch result {
                 case .failure: self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
-                case .success: break
+                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "CooKie has been received"))
                 
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))

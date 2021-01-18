@@ -18,19 +18,20 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     
-//    func test_signup_should_not_show_alert_error_with_computers_type() throws {
-//        let alertViewSpy = AlertViewSpy()
-//        let sut = makeSut(alertViewSpy: alertViewSpy)
-//        let signUpViewModel = makeSignUpViewModel(categoryType: .computers)
-//        let exp = expectation(description: "waiting")
-//        alertViewSpy.observer {viewModel in
-//            XCTAssertEqual(viewModel, nil)
-//            exp.fulfill()
-//        }
-//
-//        sut.signUp(viewModel: signUpViewModel)
-//        wait(for: [exp], timeout: 1)
-//    }
+    func test_signup_should_show_success_message_when_getCookie_succeeds() throws {
+        let alertViewSpy = AlertViewSpy()
+        let getCookieSpy = GetCookieSpy()
+        let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observer {[weak self] viewModel in
+            XCTAssertEqual(viewModel, self?.makeSuccessAlertViewModel(message: "CooKie has been received"))
+            exp.fulfill()
+        }
+
+        sut.signUp(viewModel: makeSignUpViewModel(categoryType: .all))
+        getCookieSpy.completeWithCookie(makeCookieModel())
+        wait(for: [exp], timeout: 1)
+    }
 
     func test_signup_should_call_getCookie_with_no_errors() throws {
         let getCookieSpy = GetCookieSpy()
@@ -104,6 +105,10 @@ extension SignUpPresenterTests {
         return AlertViewModel(title: "Error", message: message)
     }
     
+    func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
+        return AlertViewModel(title: "Success", message: message)
+    }
+    
     func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpViewModel {
         return SignUpViewModel(category: categoryType)
     }
@@ -130,6 +135,10 @@ class GetCookieSpy: GetCookie {
     
     func completeWithError(_ error: DomainError) {
         completion?(.failure(error))
+    }
+    
+    func completeWithCookie(_ cookie: CookieModel   ) {
+        completion?(.success(cookie))
     }
 }
 
