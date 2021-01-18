@@ -44,6 +44,7 @@
 		1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */; };
 		1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */; };
 		1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
+		1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1E4E625B630E90011D8AD /* TestExtensions.swift */; };
 		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
 		1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */; };
 		1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */; };
@@ -212,6 +213,7 @@
 		1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		1A9BBDC125B291FC007A8B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		1AD1E4E625B630E90011D8AD /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -570,6 +572,47 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		1AD1E4B525B630470011D8AD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAF1B825B5FFFF006BB08A /* SignUpViewController.swift */,
+				1A5B4A5225B6089400F3F525 /* SignUp.storyboard */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1AD1E4B625B6305F0011D8AD /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1AFAF13625B5FC82006BB08A /* SignUpViewControllerTests.swift */,
+			);
+			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1AD1E4CD25B630770011D8AD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1AD1E4B525B630470011D8AD /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1AD1E4CE25B630AF0011D8AD /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1AD1E4B625B6305F0011D8AD /* SignUp */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		1AD1E4CF25B630B60011D8AD /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1AD1E4E625B630E90011D8AD /* TestExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1ADA4E8F24D8B8500078B01F = {
 			isa = PBXGroup;
 			children = (
@@ -693,9 +736,8 @@
 		1AFAF12A25B5FC82006BB08A /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				1AD1E4CD25B630770011D8AD /* Scenes */,
 				1AFAF12C25B5FC82006BB08A /* Info.plist */,
-				1AFAF1B825B5FFFF006BB08A /* SignUpViewController.swift */,
-				1A5B4A5225B6089400F3F525 /* SignUp.storyboard */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -703,7 +745,8 @@
 		1AFAF13525B5FC82006BB08A /* UITests */ = {
 			isa = PBXGroup;
 			children = (
-				1AFAF13625B5FC82006BB08A /* SignUpViewControllerTests.swift */,
+				1AD1E4CF25B630B60011D8AD /* Helpers */,
+				1AD1E4CE25B630AF0011D8AD /* Scenes */,
 				1AFAF13825B5FC82006BB08A /* Info.plist */,
 			);
 			path = UITests;
@@ -1312,6 +1355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AFAF13725B5FC82006BB08A /* SignUpViewControllerTests.swift in Sources */,
+				1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
