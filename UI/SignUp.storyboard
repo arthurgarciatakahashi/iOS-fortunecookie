@@ -24,6 +24,12 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="99v-RX-NFj">
+                                <rect key="frame" x="159" y="185" width="97" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="W5G-vC-7eL"/>
                         <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -33,6 +39,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="categoryTextField" destination="99v-RX-NFj" id="XKM-2C-k0j"/>
                         <outlet property="loadingIndicator" destination="9ir-ZB-aBI" id="9uw-r1-4gG"/>
                         <outlet property="saveButton" destination="qW9-V9-egD" id="36U-d9-mTG"/>
                     </connections>

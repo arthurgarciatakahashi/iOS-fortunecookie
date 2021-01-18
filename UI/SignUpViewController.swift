@@ -1,10 +1,13 @@
 import Foundation
 import UIKit
 import Presentation
+import Domain
 
 class SignUpViewController: UIViewController {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
+    @IBOutlet weak var categoryTextField: UITextField!
+
     
     var signUp: ((SignUpViewModel) -> Void)?
     
@@ -18,7 +21,9 @@ class SignUpViewController: UIViewController {
     }
     
     @objc private func saveButtonTapped() {
-        signUp?(SignUpViewModel(category: nil))
+        let categoryType = CategoryType(rawValue: categoryTextField.text!)
+        
+        signUp?(SignUpViewModel(category: categoryType))
     }
 }
 
