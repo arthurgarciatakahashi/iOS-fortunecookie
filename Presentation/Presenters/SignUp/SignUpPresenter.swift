@@ -17,7 +17,11 @@ public class SignUpPresenter {
             alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
-            //let getCookieModel = GetCookieModel(category: viewModel.category)
+            /*
+             let getCookieModel = SignUpMapper.toAddCookieModel(viewModel: viewModel)
+             
+             but it is not been used cause .get not receive an model to execute
+             */
             getCookie.get() { [weak self] result in
                 guard let self = self else { return }
                 switch result {
