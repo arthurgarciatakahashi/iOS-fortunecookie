@@ -50,6 +50,7 @@
 		1ADA4EB624D8B8520078B01F /* fortunecookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */; };
 		1ADA4EC124D8B8520078B01F /* fortunecookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */; };
 		1AEB4B9F25B4FF900087C4F9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB4B9E25B4FF900087C4F9 /* LoadingView.swift */; };
+		1AEB4BAC25B511140087C4F9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB4BAB25B511140087C4F9 /* SignUpViewModel.swift */; };
 		1AF5789F24DBBAE60065B002 /* Data.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AF5789E24DBBAE60065B002 /* Data.swift */; };
 /* End PBXBuildFile section */
 
@@ -189,6 +190,7 @@
 		1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortunecookieUITests.swift; sourceTree = "<group>"; };
 		1ADA4EC224D8B8520078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AEB4B9E25B4FF900087C4F9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
+		1AEB4BAB25B511140087C4F9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		1AF5789E24DBBAE60065B002 /* Data.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Data.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -426,7 +428,7 @@
 		1A75C9F125B38AAF00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */,
+				1AEB4BAA25B510FA0087C4F9 /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -571,6 +573,15 @@
 				1ADA4EC224D8B8520078B01F /* Info.plist */,
 			);
 			path = fortunecookieUITests;
+			sourceTree = "<group>";
+		};
+		1AEB4BAA25B510FA0087C4F9 /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */,
+				1AEB4BAB25B511140087C4F9 /* SignUpViewModel.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1045,6 +1056,7 @@
 			files = (
 				1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */,
 				1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */,
+				1AEB4BAC25B511140087C4F9 /* SignUpViewModel.swift in Sources */,
 				1AEB4B9F25B4FF900087C4F9 /* LoadingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
