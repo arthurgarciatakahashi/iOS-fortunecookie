@@ -40,6 +40,7 @@
 		1A9BBDBB25B291FC007A8B5B /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; };
 		1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */; };
 		1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */; };
+		1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1ADA4E9C24D8B8500078B01F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9B24D8B8500078B01F /* AppDelegate.swift */; };
 		1ADA4E9E24D8B8500078B01F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9D24D8B8500078B01F /* SceneDelegate.swift */; };
 		1ADA4EA124D8B8500078B01F /* fortunecookie.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4E9F24D8B8500078B01F /* fortunecookie.xcdatamodeld */; };
@@ -49,6 +50,10 @@
 		1ADA4EAB24D8B8510078B01F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1ADA4EA924D8B8510078B01F /* LaunchScreen.storyboard */; };
 		1ADA4EB624D8B8520078B01F /* fortunecookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EB524D8B8520078B01F /* fortunecookieTests.swift */; };
 		1ADA4EC124D8B8520078B01F /* fortunecookieUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */; };
+		1ADB120B25B51607003195F2 /* AlertViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB120A25B51607003195F2 /* AlertViewSpy.swift */; };
+		1ADB122225B5166C003195F2 /* GetCookieSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB122125B5166C003195F2 /* GetCookieSpy.swift */; };
+		1ADB123825B516B5003195F2 /* LoadingViewSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB123725B516B5003195F2 /* LoadingViewSpy.swift */; };
+		1ADB124525B51749003195F2 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB124425B51749003195F2 /* TestFactories.swift */; };
 		1AEB4B9F25B4FF900087C4F9 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB4B9E25B4FF900087C4F9 /* LoadingView.swift */; };
 		1AEB4BAC25B511140087C4F9 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB4BAB25B511140087C4F9 /* SignUpViewModel.swift */; };
 		1AEB4BB825B511820087C4F9 /* SignUpMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AEB4BB725B511820087C4F9 /* SignUpMapper.swift */; };
@@ -190,6 +195,10 @@
 		1ADA4EBC24D8B8520078B01F /* fortunecookieUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fortunecookieUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		1ADA4EC024D8B8520078B01F /* fortunecookieUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fortunecookieUITests.swift; sourceTree = "<group>"; };
 		1ADA4EC224D8B8520078B01F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1ADB120A25B51607003195F2 /* AlertViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertViewSpy.swift; sourceTree = "<group>"; };
+		1ADB122125B5166C003195F2 /* GetCookieSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookieSpy.swift; sourceTree = "<group>"; };
+		1ADB123725B516B5003195F2 /* LoadingViewSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingViewSpy.swift; sourceTree = "<group>"; };
+		1ADB124425B51749003195F2 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		1AEB4B9E25B4FF900087C4F9 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		1AEB4BAB25B511140087C4F9 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		1AEB4BB725B511820087C4F9 /* SignUpMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpMapper.swift; sourceTree = "<group>"; };
@@ -438,7 +447,7 @@
 		1A75C9FC25B3A29B00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */,
+				1AB61AD425B5140300AE391E /* SignUp */,
 			);
 			path = Presenters;
 			sourceTree = "<group>";
@@ -490,10 +499,21 @@
 		1A9BBDBE25B291FC007A8B5B /* PresentationTests */ = {
 			isa = PBXGroup;
 			children = (
+				1ADB124325B51738003195F2 /* Helpers */,
+				1ADB122025B5165E003195F2 /* UseCases */,
+				1ADB120925B515F6003195F2 /* Views */,
 				1A75C9FC25B3A29B00E3D086 /* Presenters */,
 				1A9BBDC125B291FC007A8B5B /* Info.plist */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		1AB61AD425B5140300AE391E /* SignUp */ = {
+			isa = PBXGroup;
+			children = (
+				1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */,
+			);
+			path = SignUp;
 			sourceTree = "<group>";
 		};
 		1ADA4E8F24D8B8500078B01F = {
@@ -575,6 +595,31 @@
 				1ADA4EC224D8B8520078B01F /* Info.plist */,
 			);
 			path = fortunecookieUITests;
+			sourceTree = "<group>";
+		};
+		1ADB120925B515F6003195F2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				1ADB120A25B51607003195F2 /* AlertViewSpy.swift */,
+				1ADB123725B516B5003195F2 /* LoadingViewSpy.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		1ADB122025B5165E003195F2 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				1ADB122125B5166C003195F2 /* GetCookieSpy.swift */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		1ADB124325B51738003195F2 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1ADB124425B51749003195F2 /* TestFactories.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		1AEB4BAA25B510FA0087C4F9 /* SignUp */ = {
@@ -1069,7 +1114,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1ADB120B25B51607003195F2 /* AlertViewSpy.swift in Sources */,
 				1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */,
+				1ADB123825B516B5003195F2 /* LoadingViewSpy.swift in Sources */,
+				1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */,
+				1ADB122225B5166C003195F2 /* GetCookieSpy.swift in Sources */,
+				1ADB124525B51749003195F2 /* TestFactories.swift in Sources */,
 				1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

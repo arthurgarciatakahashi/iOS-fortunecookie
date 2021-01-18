@@ -9,8 +9,8 @@ class SignUpPresenterTests: XCTestCase {
         let alertViewSpy = AlertViewSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy)
         let exp = expectation(description: "waiting")
-        alertViewSpy.observer { [weak self] viewModel in
-            XCTAssertEqual(viewModel, self?.makeRequiredAlertViewModel(fieldName: "category"))
+        alertViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "category"))
             exp.fulfill()
         }
         
@@ -23,8 +23,8 @@ class SignUpPresenterTests: XCTestCase {
         let getCookieSpy = GetCookieSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
         let exp = expectation(description: "waiting")
-        alertViewSpy.observer {[weak self] viewModel in
-            XCTAssertEqual(viewModel, self?.makeSuccessAlertViewModel(message: "CooKie has been received"))
+        alertViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, makeSuccessAlertViewModel(message: "CooKie has been received"))
             exp.fulfill()
         }
 
@@ -47,8 +47,8 @@ class SignUpPresenterTests: XCTestCase {
         let signUpViewModel = makeSignUpViewModel(categoryType: .all)
         let exp = expectation(description: "waiting")
 
-        alertViewSpy.observer { [weak self] viewModel in
-            XCTAssertEqual(viewModel,self?.makeErrorAlertViewModel(message:"unexpected error, try again in a few minutes"))
+        alertViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message:"unexpected error, try again in a few minutes"))
             exp.fulfill()
         }
         
@@ -88,68 +88,10 @@ extension SignUpPresenterTests {
     
     func makeSut(alertViewSpy: AlertViewSpy = AlertViewSpy(),getCookieSpy: GetCookieSpy = GetCookieSpy(), loadingView: LoadingViewSpy = LoadingViewSpy()) -> SignUpPresenter {
         let sut = SignUpPresenter(alertView: alertViewSpy, getCookie: getCookieSpy, loadingView: loadingView)
-        
+        checkMemoryLeak(for: sut)
         return sut
     }
-    
-    func makeInvalidAlertViewModel(fieldName: String) -> AlertViewModel {
-        //CategoryType will never be invalid cause its a enum
-        return AlertViewModel(title: "Validation Failed", message: "\(fieldName) is invalid")
-    }
-    
-    func makeRequiredAlertViewModel(fieldName: String) -> AlertViewModel {
-        return AlertViewModel(title: "Validation Failed", message: "\(fieldName) is required")
-    }
-    
-    func makeErrorAlertViewModel(message: String) -> AlertViewModel {
-        return AlertViewModel(title: "Error", message: message)
-    }
-    
-    func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
-        return AlertViewModel(title: "Success", message: message)
-    }
-    
-    func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpViewModel {
-        return SignUpViewModel(category: categoryType)
-    }
-    
-    class AlertViewSpy: AlertView {
-        var emit: ((AlertViewModel) -> Void)?
-        
-        func observer(completion: @escaping (AlertViewModel) -> Void) {
-            self.emit = completion
-        }
-        func showMessage(viewModel: AlertViewModel) {
-            self.emit?(viewModel)
-        }
-    }
-}
 
-class GetCookieSpy: GetCookie {
-    let getCookieModel = GetCookieModel(category: .all)
-    var completion: ((Result<CookieModel, DomainError>) -> Void)?
     
-    func get(completion: @escaping (Result<CookieModel, DomainError>) -> Void) {
-        self.completion = completion
-    }
-    
-    func completeWithError(_ error: DomainError) {
-        completion?(.failure(error))
-    }
-    
-    func completeWithCookie(_ cookie: CookieModel   ) {
-        completion?(.success(cookie))
-    }
-}
 
-class LoadingViewSpy: LoadingView {
-    var emit: ((LoadingViewModel) -> Void)?
-    
-    func observer(completion: @escaping (LoadingViewModel) -> Void) {
-        self.emit = completion
-    }
-    
-    func display(viewModel: LoadingViewModel) {
-        self.emit?(viewModel)
-    }
 }
