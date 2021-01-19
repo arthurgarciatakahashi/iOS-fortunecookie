@@ -2,6 +2,7 @@ import XCTest
 import UIKit
 import Presentation
 @testable import UI
+import Domain
 
 class SignUpViewControllerTests: XCTestCase {
 
@@ -21,15 +22,15 @@ class SignUpViewControllerTests: XCTestCase {
         var signUpViewModel: SignUpViewModel?
         let sut = makeSut(signUpSpy: { signUpViewModel = $0})
         sut.saveButton?.simulateTap()
-        let categoryType = sut.categoryTextField?.text
-        XCTAssertEqual(signUpViewModel, SignUpViewModel(category: nil))
+        let categoryType = CategoryType(rawValue: (sut.categoryTextField?.text)!)
+        
+        XCTAssertEqual(signUpViewModel, SignUpViewModel(category: categoryType))
     }
 }
 
 extension SignUpViewControllerTests {
     func makeSut(signUpSpy: ((SignUpViewModel) -> Void)? = nil) -> SignUpViewController {
-        let sb = UIStoryboard(name: "SignUp", bundle: Bundle(for: SignUpViewController.self))
-        let sut = sb.instantiateViewController(identifier: "SignUpViewController") as! SignUpViewController
+        let sut = SignUpViewController.instanciate()
         sut.signUp = signUpSpy
         sut.loadViewIfNeeded()
         
