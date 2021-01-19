@@ -32,6 +32,7 @@
 		1A6A8FE125B162CE0025FDB4 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
 		1A6A8FE925B166000025FDB4 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1A6A8FF125B166040025FDB4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */; };
+		1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75B70425B6877000ED45CF /* UIViewControllerExtensions.swift */; };
 		1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75C9E525B38A6A00E3D086 /* AlertView.swift */; };
 		1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
 		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
@@ -199,6 +200,7 @@
 		1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		1A6A8FD025B162550025FDB4 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
 		1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieModelFactory.swift; sourceTree = "<group>"; };
+		1A75B70425B6877000ED45CF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		1A75C9E525B38A6A00E3D086 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bone-crack-1.wav"; sourceTree = "<group>"; };
@@ -483,6 +485,14 @@
 			path = Http;
 			sourceTree = "<group>";
 		};
+		1A75B6EB25B6871A00ED45CF /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				1A75B70425B6877000ED45CF /* UIViewControllerExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		1A75C9E425B38A5100E3D086 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -592,6 +602,7 @@
 		1AD1E4CD25B630770011D8AD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A75B6EB25B6871A00ED45CF /* Helpers */,
 				1AD1E4B525B630470011D8AD /* SignUp */,
 			);
 			path = Scenes;
@@ -1346,6 +1357,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */,
 				1AFAF1B925B5FFFF006BB08A /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
