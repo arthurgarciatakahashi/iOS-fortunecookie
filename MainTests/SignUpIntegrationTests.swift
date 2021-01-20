@@ -3,7 +3,7 @@ import Main
 
 class SignUpIntegrationTests: XCTestCase {
 
-    func test_() throws {
+    func test_ui_presentation_integration() throws {
         debugPrint("===============================")
         debugPrint(Environment.variable(.apiBaseURl))
         debugPrint("===============================")

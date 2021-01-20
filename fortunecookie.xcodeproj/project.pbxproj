@@ -542,9 +542,9 @@
 		1A08BB2F25B8C44700B42263 /* Env */ = {
 			isa = PBXGroup;
 			children = (
+				1A08BB4C25B8C53000B42263 /* Environment.swift */,
 				1A08BB3025B8C45A00B42263 /* Debug.xcconfig */,
 				1A08BB3125B8C4C600B42263 /* Release.xcconfig */,
-				1A08BB4C25B8C53000B42263 /* Environment.swift */,
 			);
 			path = Env;
 			sourceTree = "<group>";
