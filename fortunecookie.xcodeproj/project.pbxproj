@@ -33,6 +33,7 @@
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
 		1A3E179125B8CFDE00573BE3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB124425B51749003195F2 /* TestFactories.swift */; };
+		1A3E17AE25B8D46200573BE3 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E17AD25B8D46200573BE3 /* MainQueueDispatchDecorator.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
 		1A402D4725B12F1300B43A06 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
 		1A402D4825B12F1300B43A06 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -319,6 +320,7 @@
 		1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookieTests.swift; sourceTree = "<group>"; };
 		1A22A93525B0EB1C004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookie.swift; sourceTree = "<group>"; };
+		1A3E17AD25B8D46200573BE3 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		1A402D1725B12CDE00B43A06 /* GetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookie.swift; sourceTree = "<group>"; };
 		1A402D2525B12EB800B43A06 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A402D2825B12EB800B43A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -551,6 +553,7 @@
 		1A11A55325B6F994007EE973 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1A3E17AC25B8D44B00573BE3 /* Decorators */,
 				1A08BB2F25B8C44700B42263 /* Env */,
 				1A08BB1225B8C18700B42263 /* Proxies */,
 				1AAB0D8725B8AC8F008761A3 /* Composers */,
@@ -619,6 +622,14 @@
 				1A22A93525B0EB1C004049BE /* Info.plist */,
 			);
 			path = DataTests;
+			sourceTree = "<group>";
+		};
+		1A3E17AC25B8D44B00573BE3 /* Decorators */ = {
+			isa = PBXGroup;
+			children = (
+				1A3E17AD25B8D46200573BE3 /* MainQueueDispatchDecorator.swift */,
+			);
+			path = Decorators;
 			sourceTree = "<group>";
 		};
 		1A402D2625B12EB800B43A06 /* Domain */ = {
@@ -1659,6 +1670,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1AAB0D7825B8AC1B008761A3 /* UseCasesFactory.swift in Sources */,
+				1A3E17AE25B8D46200573BE3 /* MainQueueDispatchDecorator.swift in Sources */,
 				1A08BB4D25B8C53000B42263 /* Environment.swift in Sources */,
 				1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */,
 				1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */,
