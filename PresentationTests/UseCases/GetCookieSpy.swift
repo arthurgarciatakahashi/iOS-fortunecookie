@@ -13,7 +13,7 @@ class GetCookieSpy: GetCookie {
         completion?(.failure(error))
     }
     
-    func completeWithCookie(_ cookie: CookieModel   ) {
+    func completeWithCookie(_ cookie: CookieModel) {
         completion?(.success(cookie))
     }
 }
