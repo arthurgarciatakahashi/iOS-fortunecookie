@@ -13,7 +13,6 @@
 		1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55625B6F994007EE973 /* SceneDelegate.swift */; };
 		1A11A55E25B6F9BB007EE973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55D25B6F9BB007EE973 /* Assets.xcassets */; };
 		1A11A56125B6F9BB007EE973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55F25B6F9BB007EE973 /* LaunchScreen.storyboard */; };
-		1A11A56C25B6F9C1007EE973 /* MainTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A56B25B6F9C1007EE973 /* MainTests.swift */; };
 		1A11A5BE25B6FAF8007EE973 /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A11A5BF25B6FAF8007EE973 /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A11A5C225B6FAF8007EE973 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
@@ -33,6 +32,7 @@
 		1A22A92F25B0EB1C004049BE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
+		1A3E179125B8CFDE00573BE3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB124425B51749003195F2 /* TestFactories.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
 		1A402D4725B12F1300B43A06 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
 		1A402D4825B12F1300B43A06 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -306,7 +306,6 @@
 		1A11A56025B6F9BB007EE973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A11A56225B6F9BC007EE973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A11A56725B6F9C1007EE973 /* MainTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MainTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		1A11A56B25B6F9C1007EE973 /* MainTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTests.swift; sourceTree = "<group>"; };
 		1A11A56D25B6F9C1007EE973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A19626125B4E87F008734DC /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		1A22A8F825B0E5A5004049BE /* Infra.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Infra.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -569,7 +568,6 @@
 			isa = PBXGroup;
 			children = (
 				1AC9A29725B8CC84004D468B /* Composers */,
-				1A11A56B25B6F9C1007EE973 /* MainTests.swift */,
 				1A11A56D25B6F9C1007EE973 /* Info.plist */,
 			);
 			path = MainTests;
@@ -1675,7 +1673,7 @@
 			files = (
 				1AA62D4625B8B4D800EA9EFD /* SignUpComposerTests.swift in Sources */,
 				1AA62D7F25B8B52A00EA9EFD /* TextExtensions.swift in Sources */,
-				1A11A56C25B6F9C1007EE973 /* MainTests.swift in Sources */,
+				1A3E179125B8CFDE00573BE3 /* TestFactories.swift in Sources */,
 				1AA62D8E25B8B64000EA9EFD /* GetCookieSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
