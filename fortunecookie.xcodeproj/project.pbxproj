@@ -69,7 +69,7 @@
 		1A9BBDBB25B291FC007A8B5B /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; };
 		1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */; };
 		1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */; };
-		1AA62D4625B8B4D800EA9EFD /* SignUpIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB0D9825B8AE4C008761A3 /* SignUpIntegrationTests.swift */; };
+		1AA62D4625B8B4D800EA9EFD /* SignUpComposerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB0D9825B8AE4C008761A3 /* SignUpComposerTests.swift */; };
 		1AA62D7F25B8B52A00EA9EFD /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1AA62D8E25B8B64000EA9EFD /* GetCookieSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB122125B5166C003195F2 /* GetCookieSpy.swift */; };
 		1AAB0D7825B8AC1B008761A3 /* UseCasesFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB0D7725B8AC1B008761A3 /* UseCasesFactory.swift */; };
@@ -358,7 +358,7 @@
 		1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
 		1AAB0D7725B8AC1B008761A3 /* UseCasesFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseCasesFactory.swift; sourceTree = "<group>"; };
 		1AAB0D8825B8AC9D008761A3 /* SignUpComposer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposer.swift; sourceTree = "<group>"; };
-		1AAB0D9825B8AE4C008761A3 /* SignUpIntegrationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntegrationTests.swift; sourceTree = "<group>"; };
+		1AAB0D9825B8AE4C008761A3 /* SignUpComposerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpComposerTests.swift; sourceTree = "<group>"; };
 		1AB7DB5225B6983C00C4E44F /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		1AD1E4E625B630E90011D8AD /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -554,7 +554,7 @@
 			children = (
 				1A08BB2F25B8C44700B42263 /* Env */,
 				1A08BB1225B8C18700B42263 /* Proxies */,
-				1AAB0D8725B8AC8F008761A3 /* Composer */,
+				1AAB0D8725B8AC8F008761A3 /* Composers */,
 				1A11A5E525B6FBDE007EE973 /* Factories */,
 				1A11A55425B6F994007EE973 /* AppDelegate.swift */,
 				1A11A55625B6F994007EE973 /* SceneDelegate.swift */,
@@ -568,7 +568,7 @@
 		1A11A56A25B6F9C1007EE973 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				1AAB0D9825B8AE4C008761A3 /* SignUpIntegrationTests.swift */,
+				1AC9A29725B8CC84004D468B /* Composers */,
 				1A11A56B25B6F9C1007EE973 /* MainTests.swift */,
 				1A11A56D25B6F9C1007EE973 /* Info.plist */,
 			);
@@ -835,12 +835,12 @@
 			path = PresentationTests;
 			sourceTree = "<group>";
 		};
-		1AAB0D8725B8AC8F008761A3 /* Composer */ = {
+		1AAB0D8725B8AC8F008761A3 /* Composers */ = {
 			isa = PBXGroup;
 			children = (
 				1AAB0D8825B8AC9D008761A3 /* SignUpComposer.swift */,
 			);
-			path = Composer;
+			path = Composers;
 			sourceTree = "<group>";
 		};
 		1AB61AD425B5140300AE391E /* SignUp */ = {
@@ -849,6 +849,14 @@
 				1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */,
 			);
 			path = SignUp;
+			sourceTree = "<group>";
+		};
+		1AC9A29725B8CC84004D468B /* Composers */ = {
+			isa = PBXGroup;
+			children = (
+				1AAB0D9825B8AE4C008761A3 /* SignUpComposerTests.swift */,
+			);
+			path = Composers;
 			sourceTree = "<group>";
 		};
 		1AD1E4B525B630470011D8AD /* SignUp */ = {
@@ -1665,7 +1673,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1AA62D4625B8B4D800EA9EFD /* SignUpIntegrationTests.swift in Sources */,
+				1AA62D4625B8B4D800EA9EFD /* SignUpComposerTests.swift in Sources */,
 				1AA62D7F25B8B52A00EA9EFD /* TextExtensions.swift in Sources */,
 				1A11A56C25B6F9C1007EE973 /* MainTests.swift in Sources */,
 				1AA62D8E25B8B64000EA9EFD /* GetCookieSpy.swift in Sources */,
