@@ -22,7 +22,14 @@ public final class RemoteGetCookie: GetCookie {
                 } else {
                     completion(.failure(.unexpected))
                 }
-            case .failure: completion(.failure(.unexpected))
+            case .failure(let error):
+                switch error {
+                case .forbidden:
+                    completion(.failure(.apiInUse))
+
+                default:
+                    completion(.failure(.unexpected))
+                }
             }
         }
     }
