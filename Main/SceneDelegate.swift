@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
@@ -18,7 +19,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(windowScene: windowScene)
         let httpClient = makeAlamofireAdapter()
         let getCookie = makeRemoteGetCookie(httpClient: httpClient)
-        window?.rootViewController = makeSignUpController(getCookie: getCookie)
+        let signUpController = makeSignUpController(getCookie: getCookie)
+        let nav = NavigationController(rootViewController: signUpController )
+
+        window?.rootViewController =
         window?.makeKeyAndVisible()
     }
 }

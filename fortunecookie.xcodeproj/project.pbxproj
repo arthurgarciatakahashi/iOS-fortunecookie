@@ -32,6 +32,7 @@
 		1A22A92F25B0EB1C004049BE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
+		1A3B838225BB693D0043E910 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3B838125BB693D0043E910 /* NavigationController.swift */; };
 		1A3E179125B8CFDE00573BE3 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ADB124425B51749003195F2 /* TestFactories.swift */; };
 		1A3E17AE25B8D46200573BE3 /* MainQueueDispatchDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A3E17AD25B8D46200573BE3 /* MainQueueDispatchDecorator.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
@@ -367,6 +368,7 @@
 		1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookieTests.swift; sourceTree = "<group>"; };
 		1A22A93525B0EB1C004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookie.swift; sourceTree = "<group>"; };
+		1A3B838125BB693D0043E910 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
 		1A3E17AD25B8D46200573BE3 /* MainQueueDispatchDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainQueueDispatchDecorator.swift; sourceTree = "<group>"; };
 		1A402D1725B12CDE00B43A06 /* GetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookie.swift; sourceTree = "<group>"; };
 		1A402D2525B12EB800B43A06 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -689,6 +691,22 @@
 				1A22A93525B0EB1C004049BE /* Info.plist */,
 			);
 			path = DataTests;
+			sourceTree = "<group>";
+		};
+		1A3B838F25BB69580043E910 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				1A3B838125BB693D0043E910 /* NavigationController.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		1A3B839025BB69680043E910 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				1AD1E4B525B630470011D8AD /* SignUp */,
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 		1A3E17AC25B8D44B00573BE3 /* Decorators */ = {
@@ -1040,7 +1058,8 @@
 			isa = PBXGroup;
 			children = (
 				1A75B6EB25B6871A00ED45CF /* Helpers */,
-				1AD1E4B525B630470011D8AD /* SignUp */,
+				1A3B838F25BB69580043E910 /* Components */,
+				1A3B839025BB69680043E910 /* Scenes */,
 			);
 			path = Scenes;
 			sourceTree = "<group>";
@@ -2000,6 +2019,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */,
+				1A3B838225BB693D0043E910 /* NavigationController.swift in Sources */,
 				1AFAF1B925B5FFFF006BB08A /* SignUpViewController.swift in Sources */,
 				1A75B71225B6894200ED45CF /* Storyboarded.swift in Sources */,
 			);

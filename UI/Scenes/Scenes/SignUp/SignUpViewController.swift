@@ -17,6 +17,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
+        title = "Fortune Cookie"
         saveButton?.layer.cornerRadius = 5
         saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
