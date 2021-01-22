@@ -17,7 +17,7 @@ public final class MainQueueDispatchDecorator<T> {
 }
 
 extension MainQueueDispatchDecorator: GetCookie where T: GetCookie {
-    public func get(completion: @escaping (Result<CookieModel, DomainError>) -> Void) {
+    public func get(completion: @escaping (GetCookie.Result) -> Void) {
         instance.get() { [weak self] result in
             self?.dispatch {
                 completion(result)

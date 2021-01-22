@@ -51,7 +51,7 @@ class RemoteGetCookieTests: XCTestCase {
     func test_should_not_complete_if_sut_has_been_deallocated() {
         let httpClientSpy = HttpClientSpy()
         var sut: RemoteGetCookie? = RemoteGetCookie(url: makeURL(), httpClient: httpClientSpy)
-        var result: Result<CookieModel, DomainError>?
+        var result: GetCookie.Result?
         
         sut?.get() { result = $0 }
         sut = nil
@@ -75,7 +75,7 @@ extension RemoteGetCookieTests {
         return Data("any_fortune".utf8)
     }
     
-    func expect(_ sut: RemoteGetCookie, completeWith expectResult: Result<CookieModel, DomainError>, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
+    func expect(_ sut: RemoteGetCookie, completeWith expectResult: GetCookie.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.get() { receivedResult in
             switch (expectResult, receivedResult) {
