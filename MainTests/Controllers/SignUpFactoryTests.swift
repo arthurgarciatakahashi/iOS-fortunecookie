@@ -18,7 +18,7 @@ class SignUpComposerTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
     func test_signUp_compose_with_correct_validations() {
-        let validation = SignUpComposer.makeValidations()
+        let validation = makeSignUpValidations()
         XCTAssertEqual(validation[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "category", fieldLabel: "Category"))
         
         XCTAssertEqual(validation[1] as! CompareFieldsValidation, CompareFieldsValidation(fieldName: "password", fieldNameToCompare: "passwordConfirmation", fieldLabel: "Password"))
@@ -30,7 +30,7 @@ class SignUpComposerTests: XCTestCase {
 extension SignUpComposerTests {
     func makeSut() -> (sut: SignUpViewController, getCookieSpy: GetCookieSpy) {
         let getCookieSpy = GetCookieSpy()
-        let sut = SignUpComposer.composeControllerWith(getCookie: MainQueueDispatchDecorator( getCookieSpy))
+        let sut = makeSignUpController(getCookie: MainQueueDispatchDecorator( getCookieSpy))
         checkMemoryLeak(for: sut)
         checkMemoryLeak(for: getCookieSpy)
         return (sut, getCookieSpy)

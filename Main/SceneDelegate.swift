@@ -16,7 +16,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = SignUpComposer.composeControllerWith(getCookie: UseCaseFactory.makeRemoteGetCookie())
+        let httpClient = makeAlamofireAdapter()
+        let getCookie = makeRemoteGetCookie(httpClient: httpClient)
+        window?.rootViewController = makeSignUpController(getCookie: getCookie)
         window?.makeKeyAndVisible()
     }
 }
