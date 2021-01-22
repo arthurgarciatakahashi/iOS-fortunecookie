@@ -5,16 +5,20 @@ public class SignUpPresenter {
     private let alertView: AlertView
     private let loadingView: LoadingView
     private let getCookie : GetCookie
+    private let validation: Validation
     
-    public init(alertView: AlertView, getCookie: GetCookie, loadingView: LoadingView) {
+    public init(alertView: AlertView, getCookie: GetCookie, loadingView: LoadingView, validation: Validation) {
         self.alertView = alertView
         self.getCookie = getCookie
         self.loadingView = loadingView
+        self.validation = validation
     }
     
     public func signUp(viewModel: SignUpViewModel) {
-        if let message = validate(viewModel: viewModel) {
-            alertView.showMessage(viewModel: AlertViewModel(title: "Validation Failed", message: message))
+        
+            
+        if let message = validation.validate(data: viewModel.toJson()) {
+            alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: message))
         } else {
             loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             /*
@@ -33,12 +37,5 @@ public class SignUpPresenter {
 
             }
         }
-    }
-    
-    private func validate(viewModel: SignUpViewModel) -> String? {
-        if viewModel.category == nil {
-            return "category is required"
-        }
-        return nil
     }
 }
