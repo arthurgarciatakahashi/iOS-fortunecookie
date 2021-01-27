@@ -10,7 +10,7 @@ public final class RemoteGetCookie: GetCookie {
         self.httpClient = httpClient
     }
     
-    public func get(completion: @escaping (Result<CookieModel, DomainError>) -> Void) {
+    public func get(completion: @escaping (GetCookie.Result) -> Void) {
         self.httpClient.get(from: url) { [weak self] result in
             
             guard self != nil else { return }
@@ -22,7 +22,14 @@ public final class RemoteGetCookie: GetCookie {
                 } else {
                     completion(.failure(.unexpected))
                 }
-            case .failure: completion(.failure(.unexpected))
+            case .failure(let error):
+                switch error {
+                case .forbidden:
+                    completion(.failure(.apiInUse))
+
+                default:
+                    completion(.failure(.unexpected))
+                }
             }
         }
     }

@@ -1,7 +1,8 @@
 import Foundation
 
 public protocol GetCookie {
-    func get(completion:  @escaping (Result<CookieModel, DomainError>) -> Void)
+    typealias Result = Swift.Result<CookieModel, DomainError>
+    func get(completion:  @escaping (Result) -> Void)
 }
 
 public struct GetCookieModel: Model {

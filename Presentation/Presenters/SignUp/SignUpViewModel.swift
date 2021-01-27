@@ -7,4 +7,11 @@ public struct SignUpViewModel: Model {
     }
     
     public var category: CategoryType?
+    
+    public func toGetCookieModel() -> GetCookieModel {
+        guard self.category != nil else {
+            return GetCookieModel()
+        }
+        return GetCookieModel(category: category)
+    }
 }
