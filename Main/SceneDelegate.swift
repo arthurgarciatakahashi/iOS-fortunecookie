@@ -22,7 +22,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let signUpController = makeSignUpController(getCookie: getCookie)
         let nav = NavigationController(rootViewController: signUpController )
 
-        window?.rootViewController =
+        window?.rootViewController = nav
         window?.makeKeyAndVisible()
     }
 }
