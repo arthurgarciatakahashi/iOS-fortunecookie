@@ -16,6 +16,7 @@
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
 		1A32DF1225C8E33A0008BDDA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32DF1125C8E33A0008BDDA /* Authentication.swift */; };
 		1A32DF2025C8E4310008BDDA /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32DF1F25C8E4310008BDDA /* AccountModel.swift */; };
+		1A32DF2E25C8E5020008BDDA /* RemoteAuthenticationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32DF2D25C8E5020008BDDA /* RemoteAuthenticationTests.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
 		1A402D4725B12F1300B43A06 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
 		1A402D4825B12F1300B43A06 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -52,6 +53,9 @@
 		1A9BBDBB25B291FC007A8B5B /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; };
 		1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */; };
 		1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */; };
+		1AB6097625C8E6F300050328 /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6097525C8E6F300050328 /* RemoteAuthentication.swift */; };
+		1AB6098425C8E7C500050328 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6098325C8E7C500050328 /* HttpPostClient.swift */; };
+		1AB6099225C8E96600050328 /* HttpPostClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6099125C8E96600050328 /* HttpPostClientSpy.swift */; };
 		1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1AB7DB5325B6983C00C4E44F /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7DB5225B6983C00C4E44F /* EmailValidatorAdapter.swift */; };
 		1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1E4E625B630E90011D8AD /* TestExtensions.swift */; };
@@ -222,6 +226,7 @@
 		1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookie.swift; sourceTree = "<group>"; };
 		1A32DF1125C8E33A0008BDDA /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
 		1A32DF1F25C8E4310008BDDA /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
+		1A32DF2D25C8E5020008BDDA /* RemoteAuthenticationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationTests.swift; sourceTree = "<group>"; };
 		1A402D1725B12CDE00B43A06 /* GetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookie.swift; sourceTree = "<group>"; };
 		1A402D2525B12EB800B43A06 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A402D2825B12EB800B43A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -258,6 +263,9 @@
 		1A9BBDBF25B291FC007A8B5B /* SignUpPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenterTests.swift; sourceTree = "<group>"; };
 		1A9BBDC125B291FC007A8B5B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A9BBDD325B29296007A8B5B /* SignUpPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpPresenter.swift; sourceTree = "<group>"; };
+		1AB6097525C8E6F300050328 /* RemoteAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
+		1AB6098325C8E7C500050328 /* HttpPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
+		1AB6099125C8E96600050328 /* HttpPostClientSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClientSpy.swift; sourceTree = "<group>"; };
 		1AB7DB5225B6983C00C4E44F /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		1AD1E4E625B630E90011D8AD /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -492,6 +500,7 @@
 			isa = PBXGroup;
 			children = (
 				1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */,
+				1AB6097525C8E6F300050328 /* RemoteAuthentication.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -500,6 +509,7 @@
 			isa = PBXGroup;
 			children = (
 				1A402D6C25B1360300B43A06 /* HttpGetClient.swift */,
+				1AB6098325C8E7C500050328 /* HttpPostClient.swift */,
 				1A402DA825B145E800B43A06 /* HttpError.swift */,
 			);
 			path = Http;
@@ -509,6 +519,7 @@
 			isa = PBXGroup;
 			children = (
 				1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */,
+				1A32DF2D25C8E5020008BDDA /* RemoteAuthenticationTests.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -543,6 +554,7 @@
 			isa = PBXGroup;
 			children = (
 				1A6A8FD025B162550025FDB4 /* HttpClientSpy.swift */,
+				1AB6099125C8E96600050328 /* HttpPostClientSpy.swift */,
 			);
 			path = Http;
 			sourceTree = "<group>";
@@ -1424,6 +1436,8 @@
 				1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */,
 				1A6A8FA625B155160025FDB4 /* ExtensionHelpers.swift in Sources */,
 				1A402DA925B145E800B43A06 /* HttpError.swift in Sources */,
+				1AB6097625C8E6F300050328 /* RemoteAuthentication.swift in Sources */,
+				1AB6098425C8E7C500050328 /* HttpPostClient.swift in Sources */,
 				1A402D6D25B1360300B43A06 /* HttpGetClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1437,6 +1451,8 @@
 				1A6A8FB725B161710025FDB4 /* TextExtensions.swift in Sources */,
 				1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */,
 				1A6A8FE125B162CE0025FDB4 /* CookieModelFactory.swift in Sources */,
+				1AB6099225C8E96600050328 /* HttpPostClientSpy.swift in Sources */,
+				1A32DF2E25C8E5020008BDDA /* RemoteAuthenticationTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

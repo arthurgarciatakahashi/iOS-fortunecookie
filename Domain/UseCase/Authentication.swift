@@ -1,7 +1,7 @@
 import Foundation
 
 public protocol Authentication {
-    func add(authenticationModel: AuthenticationModel, completion:  @escaping (Result<AccountModel, DomainError>) -> Void)
+    func auth(authenticationModel: AuthenticationModel, completion:  @escaping (Result<AccountModel, DomainError>) -> Void)
 }
 
 public struct AuthenticationModel: Model {
