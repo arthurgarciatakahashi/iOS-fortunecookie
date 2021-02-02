@@ -22,7 +22,14 @@ public final class RemoteAuthentication {
                 } else {
                     completion(.failure(.unexpected))
                 }
-            case .failure: completion(.failure(.unexpected))
+            case .failure(let error):
+                switch error {
+                case .unauthorized:
+                    completion(.failure(.expiredSession))
+
+                default:
+                    completion(.failure(.unexpected))
+                }
             }
         }
     }
