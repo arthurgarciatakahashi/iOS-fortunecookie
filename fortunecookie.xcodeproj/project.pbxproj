@@ -55,6 +55,7 @@
 		1A64128C25C90387001B57CD /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A64129B25C903BC001B57CD /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A64129C25C903BC001B57CD /* Data.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		1A6412B625C90CCF001B57CD /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */; };
 		1A6A8FA625B155160025FDB4 /* ExtensionHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FA525B155160025FDB4 /* ExtensionHelpers.swift */; };
 		1A6A8FB725B161710025FDB4 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1A6A8FC725B161FD0025FDB4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */; };
@@ -425,6 +426,7 @@
 		1A41416825BB6F5B00ABF3C8 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		1A41417625BB70C100ABF3C8 /* UIColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColorExtensions.swift; sourceTree = "<group>"; };
 		1A5B4A5225B6089400F3F525 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		1A6A8FA525B155160025FDB4 /* ExtensionHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionHelpers.swift; sourceTree = "<group>"; };
 		1A6A8FB625B161710025FDB4 /* TextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
 		1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
@@ -1267,6 +1269,7 @@
 			isa = PBXGroup;
 			children = (
 				1ADB122125B5166C003195F2 /* GetCookieSpy.swift */,
+				1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -2074,6 +2077,7 @@
 				1ADB122225B5166C003195F2 /* GetCookieSpy.swift in Sources */,
 				1ADB124525B51749003195F2 /* TestFactories.swift in Sources */,
 				1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */,
+				1A6412B625C90CCF001B57CD /* AuthenticationSpy.swift in Sources */,
 				1A7ECBAB25BA740F009F8457 /* ValidatorSpy.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

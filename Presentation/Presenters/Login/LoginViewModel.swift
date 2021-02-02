@@ -10,7 +10,7 @@ public struct LoginViewModel: Model {
         self.password = password
     }
     
-//    public func toAuthenticationModel() -> AuthenticationModel {
-//        return AuthenticationModel(email: email!, password: password!)
-//    }
+    public func toAuthenticationModel() -> AuthenticationModel {
+        return AuthenticationModel(email: email!, password: password!)
+    }
 }
