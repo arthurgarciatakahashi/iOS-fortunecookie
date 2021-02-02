@@ -14,7 +14,7 @@ class AuthenticationSpy: Authentication {
         completion?(.failure(error))
     }
     
-//    func completeWithCookie(_ cookie: AuthenticationModel) {
-//        completion?(.success(cookie))
-//    }
+    func completeWithAccount(_ account: AccountModel) {
+        completion?(.success(account))
+    }
 }

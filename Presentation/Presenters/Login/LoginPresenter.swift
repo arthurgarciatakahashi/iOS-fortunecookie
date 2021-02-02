@@ -30,7 +30,7 @@ public class LoginPresenter {
                         default:
                             self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Unexpected error, try again in a few minutes"))
                         }
-                    case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Authentication OK"))
+                    case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Login successful"))
                     
                     }
                     //self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
