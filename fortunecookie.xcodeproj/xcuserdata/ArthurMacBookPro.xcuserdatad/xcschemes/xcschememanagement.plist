@@ -12,7 +12,7 @@
 		<key>Core.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>7</integer>
+			<integer>8</integer>
 		</dict>
 		<key>Data.xcscheme_^#shared#^_</key>
 		<dict>
@@ -32,7 +32,7 @@
 		<key>Main.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>8</integer>
+			<integer>7</integer>
 		</dict>
 		<key>Presentation.xcscheme_^#shared#^_</key>
 		<dict>
@@ -42,7 +42,7 @@
 		<key>UI.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>6</integer>
+			<integer>9</integer>
 		</dict>
 		<key>UseCasesIntegrationTests.xcscheme_^#shared#^_</key>
 		<dict>
@@ -52,7 +52,7 @@
 		<key>Validation.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>9</integer>
+			<integer>6</integer>
 		</dict>
 		<key>Validator.xcscheme_^#shared#^_</key>
 		<dict>
@@ -67,6 +67,16 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>1A11A55125B6F994007EE973</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A11A56625B6F9C1007EE973</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1A22A8F725B0E5A5004049BE</key>
 		<dict>
 			<key>primary</key>
@@ -92,6 +102,16 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>1A75B73025B68F5000ED45CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1A75B73825B68F5100ED45CF</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>1A9BBD8525B28CE9007A8B5B</key>
 		<dict>
 			<key>primary</key>
@@ -103,6 +123,11 @@
 			<true/>
 		</dict>
 		<key>1A9BBDB925B291FC007A8B5B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>1AFAF12825B5FC82006BB08A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
