@@ -20,7 +20,20 @@ public class LoginPresenter {
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: message))
         } else {
-            authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { _ in
+            authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
+                    guard let self = self else { return }
+                    switch result {
+                    case .failure(let error):
+                        switch error {
+                        case .apiInUse:
+                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "API is busy, try again in a few minutes"))
+                        default:
+                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
+                        }
+                    case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Authentication OK"))
+                    
+                    }
+                    //self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
                 
             }
         }
