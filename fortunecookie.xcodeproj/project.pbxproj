@@ -14,6 +14,8 @@
 		1A22A92F25B0EB1C004049BE /* Data.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A22A92625B0EB1C004049BE /* Data.framework */; };
 		1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */; };
 		1A22A94C25B0EBB1004049BE /* RemoteGetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */; };
+		1A32DF1225C8E33A0008BDDA /* Authentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32DF1125C8E33A0008BDDA /* Authentication.swift */; };
+		1A32DF2025C8E4310008BDDA /* AccountModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A32DF1F25C8E4310008BDDA /* AccountModel.swift */; };
 		1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A402D1725B12CDE00B43A06 /* GetCookie.swift */; };
 		1A402D4725B12F1300B43A06 /* Domain.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; };
 		1A402D4825B12F1300B43A06 /* Domain.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A402D2525B12EB800B43A06 /* Domain.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -218,6 +220,8 @@
 		1A22A93325B0EB1C004049BE /* RemoteGetCookieTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookieTests.swift; sourceTree = "<group>"; };
 		1A22A93525B0EB1C004049BE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A22A94B25B0EBB1004049BE /* RemoteGetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteGetCookie.swift; sourceTree = "<group>"; };
+		1A32DF1125C8E33A0008BDDA /* Authentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Authentication.swift; sourceTree = "<group>"; };
+		1A32DF1F25C8E4310008BDDA /* AccountModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModel.swift; sourceTree = "<group>"; };
 		1A402D1725B12CDE00B43A06 /* GetCookie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCookie.swift; sourceTree = "<group>"; };
 		1A402D2525B12EB800B43A06 /* Domain.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Domain.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A402D2825B12EB800B43A06 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -468,6 +472,7 @@
 			isa = PBXGroup;
 			children = (
 				1A402D1725B12CDE00B43A06 /* GetCookie.swift */,
+				1A32DF1125C8E33A0008BDDA /* Authentication.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -476,6 +481,7 @@
 			isa = PBXGroup;
 			children = (
 				1A402D5325B12FD800B43A06 /* CookieModel.swift */,
+				1A32DF1F25C8E4310008BDDA /* AccountModel.swift */,
 				1A402D5C25B1350B00B43A06 /* Model.swift */,
 				1A19626125B4E87F008734DC /* CategoryType.swift */,
 			);
@@ -1440,9 +1446,11 @@
 			files = (
 				1A402D5D25B1350B00B43A06 /* Model.swift in Sources */,
 				1A402D3525B12EC300B43A06 /* GetCookie.swift in Sources */,
+				1A32DF2025C8E4310008BDDA /* AccountModel.swift in Sources */,
 				1A402D9125B13B3400B43A06 /* DomainError.swift in Sources */,
 				1A19626225B4E87F008734DC /* CategoryType.swift in Sources */,
 				1A402D5425B12FD800B43A06 /* CookieModel.swift in Sources */,
+				1A32DF1225C8E33A0008BDDA /* Authentication.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
