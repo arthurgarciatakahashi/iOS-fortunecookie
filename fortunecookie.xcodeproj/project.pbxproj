@@ -56,6 +56,9 @@
 		1AB6097625C8E6F300050328 /* RemoteAuthentication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6097525C8E6F300050328 /* RemoteAuthentication.swift */; };
 		1AB6098425C8E7C500050328 /* HttpPostClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6098325C8E7C500050328 /* HttpPostClient.swift */; };
 		1AB6099225C8E96600050328 /* HttpPostClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB6099125C8E96600050328 /* HttpPostClientSpy.swift */; };
+		1AB609A125C8F9E300050328 /* LoginPresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB609A025C8F9E300050328 /* LoginPresenterTests.swift */; };
+		1AB609C825C8FC2B00050328 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB609C725C8FC2B00050328 /* LoginViewModel.swift */; };
+		1AB609D625C8FCC300050328 /* LoginPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB609D525C8FCC300050328 /* LoginPresenter.swift */; };
 		1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1AB7DB5325B6983C00C4E44F /* EmailValidatorAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AB7DB5225B6983C00C4E44F /* EmailValidatorAdapter.swift */; };
 		1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AD1E4E625B630E90011D8AD /* TestExtensions.swift */; };
@@ -266,6 +269,9 @@
 		1AB6097525C8E6F300050328 /* RemoteAuthentication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthentication.swift; sourceTree = "<group>"; };
 		1AB6098325C8E7C500050328 /* HttpPostClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClient.swift; sourceTree = "<group>"; };
 		1AB6099125C8E96600050328 /* HttpPostClientSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClientSpy.swift; sourceTree = "<group>"; };
+		1AB609A025C8F9E300050328 /* LoginPresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginPresenterTests.swift; sourceTree = "<group>"; };
+		1AB609C725C8FC2B00050328 /* LoginViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
+		1AB609D525C8FCC300050328 /* LoginPresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginPresenter.swift; sourceTree = "<group>"; };
 		1AB7DB5225B6983C00C4E44F /* EmailValidatorAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidatorAdapter.swift; sourceTree = "<group>"; };
 		1AD1E4E625B630E90011D8AD /* TestExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestExtensions.swift; sourceTree = "<group>"; };
 		1ADA4E9824D8B8500078B01F /* fortunecookie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = fortunecookie.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -606,6 +612,7 @@
 		1A75C9F125B38AAF00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1AB609C625C8FC0E00050328 /* Login */,
 				1AEB4BAA25B510FA0087C4F9 /* SignUp */,
 			);
 			path = Presenters;
@@ -614,6 +621,7 @@
 		1A75C9FC25B3A29B00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1AB6099F25C8F9C900050328 /* Login */,
 				1AB61AD425B5140300AE391E /* SignUp */,
 			);
 			path = Presenters;
@@ -674,6 +682,23 @@
 				1A9BBDC125B291FC007A8B5B /* Info.plist */,
 			);
 			path = PresentationTests;
+			sourceTree = "<group>";
+		};
+		1AB6099F25C8F9C900050328 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1AB609A025C8F9E300050328 /* LoginPresenterTests.swift */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1AB609C625C8FC0E00050328 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1AB609C725C8FC2B00050328 /* LoginViewModel.swift */,
+				1AB609D525C8FCC300050328 /* LoginPresenter.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 		1AB61AD425B5140300AE391E /* SignUp */ = {
@@ -1498,12 +1523,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AB609D625C8FCC300050328 /* LoginPresenter.swift in Sources */,
 				1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */,
 				1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */,
 				1AEB4BB825B511820087C4F9 /* SignUpMapper.swift in Sources */,
 				1AEB4BAC25B511140087C4F9 /* SignUpViewModel.swift in Sources */,
 				1AEB4B9F25B4FF900087C4F9 /* LoadingView.swift in Sources */,
 				1A75B72025B68EC600ED45CF /* EmailValidator.swift in Sources */,
+				1AB609C825C8FC2B00050328 /* LoginViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1512,6 +1539,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1ADB120B25B51607003195F2 /* AlertViewSpy.swift in Sources */,
+				1AB609A125C8F9E300050328 /* LoginPresenterTests.swift in Sources */,
 				1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */,
 				1ADB123825B516B5003195F2 /* LoadingViewSpy.swift in Sources */,
 				1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */,
