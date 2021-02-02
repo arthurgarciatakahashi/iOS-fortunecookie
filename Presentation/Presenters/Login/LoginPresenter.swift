@@ -25,10 +25,10 @@ public class LoginPresenter {
                     switch result {
                     case .failure(let error):
                         switch error {
-                        case .apiInUse:
-                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "API is busy, try again in a few minutes"))
+                        case .expiredSession:
+                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Incorrect email or password"))
                         default:
-                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
+                            self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Unexpected error, try again in a few minutes"))
                         }
                     case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Authentication OK"))
                     
