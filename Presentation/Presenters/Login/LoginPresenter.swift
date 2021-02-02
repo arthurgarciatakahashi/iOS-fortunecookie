@@ -3,14 +3,13 @@ import Domain
 
 public class LoginPresenter {
     private let alertView: AlertView
-//    private let loadingView: LoadingView
+    private let loadingView: LoadingView
     private let validation: Validation
     private let authentication: Authentication
     
-    public init(alertView: AlertView, authentication: Authentication, validation: Validation) {
+    public init(alertView: AlertView, authentication: Authentication, validation: Validation, loadingView: LoadingView) {
         self.alertView = alertView
-//        self.getCookie = getCookie
-//        self.loadingView = loadingView
+        self.loadingView = loadingView
         self.validation = validation
         self.authentication = authentication
 
@@ -20,6 +19,7 @@ public class LoginPresenter {
         if let message = validation.validate(data: viewModel.toJson()) {
             alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: message))
         } else {
+            loadingView.display(viewModel: LoadingViewModel(isLoading: true))
             authentication.auth(authenticationModel: viewModel.toAuthenticationModel()) { [weak self] result in
                     guard let self = self else { return }
                     switch result {
@@ -33,8 +33,7 @@ public class LoginPresenter {
                     case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Login successful"))
                     
                     }
-                    //self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
-                
+                    self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))
             }
         }
     }

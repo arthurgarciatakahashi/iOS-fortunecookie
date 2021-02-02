@@ -74,12 +74,33 @@ class LoginPresenterTests: XCTestCase {
         authenticationSpy.completeWithAccount(makeAccountModel())
         wait(for: [exp], timeout: 1)
     }
+    
+    func test_login_should_show_loading_before_and_after_call_authentication() throws {
+        let loadingViewSpy = LoadingViewSpy()
+        let authenticationSpy = AuthenticationSpy()
+        let sut = makeSut(authentication: authenticationSpy, loadingView: loadingViewSpy)
+        let exp = expectation(description: "waiting")
+        loadingViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+        sut.login(viewModel: makeLoginViewModel())
+        wait(for: [exp], timeout: 1)
+        let exp2 = expectation(description: "waiting")
+        loadingViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+        
+        authenticationSpy.completeWithError(.unexpected)
+        wait(for: [exp2], timeout: 1)
+    }
 
 }
 
 extension LoginPresenterTests {
-    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), authentication: AuthenticationSpy = AuthenticationSpy(), validation: ValidationSpy = ValidationSpy(), file: StaticString = #filePath, line: UInt = #line) -> LoginPresenter {
-        let sut = LoginPresenter(alertView: alertView, authentication: authentication, validation: validation)
+    func makeSut(alertView: AlertViewSpy = AlertViewSpy(), authentication: AuthenticationSpy = AuthenticationSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), validation: ValidationSpy = ValidationSpy(), file: StaticString = #filePath, line: UInt = #line) -> LoginPresenter {
+        let sut = LoginPresenter(alertView: alertView, authentication: authentication, validation: validation, loadingView: loadingView)
         checkMemoryLeak(for: sut, file: file, line: line)
 
         return sut
