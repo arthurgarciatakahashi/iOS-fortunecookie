@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="bGE-Zg-e98">
+            <objects>
+                <viewController id="Nag-b2-7yi" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hlL-p0-d5l">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-78-MCA">
+                                <rect key="frame" x="25" y="224" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="363-Po-tYx"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jSe-HS-HVx">
+                                <rect key="frame" x="25" y="310" width="364" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="w5W-zF-OuI"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnG-Ka-SRJ">
+                                <rect key="frame" x="25" y="413" width="364" height="70"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="Hjk-Li-X5O"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="44"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1bp-6P-66w"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="jSe-HS-HVx" firstAttribute="top" secondItem="FcX-78-MCA" secondAttribute="bottom" constant="36" id="Ez2-qf-cWq"/>
+                            <constraint firstItem="1bp-6P-66w" firstAttribute="bottom" secondItem="ZnG-Ka-SRJ" secondAttribute="bottom" constant="379" id="GbT-pl-mI5"/>
+                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="top" secondItem="jSe-HS-HVx" secondAttribute="bottom" constant="53" id="GxL-GB-Vk5"/>
+                            <constraint firstItem="jSe-HS-HVx" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="RDP-9o-J4I"/>
+                            <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="ZnG-Ka-SRJ" secondAttribute="trailing" constant="25" id="Y3e-PU-6Vk"/>
+                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="ZPE-Lw-gZ6"/>
+                            <constraint firstItem="FcX-78-MCA" firstAttribute="top" secondItem="1bp-6P-66w" secondAttribute="top" constant="180" id="pYS-MZ-bVE"/>
+                            <constraint firstItem="FcX-78-MCA" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="t5m-hr-19h"/>
+                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="centerY" secondItem="hlL-p0-d5l" secondAttribute="centerY" id="uBd-Yq-TXZ"/>
+                            <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="FcX-78-MCA" secondAttribute="trailing" constant="25" id="zAe-oy-qxb"/>
+                            <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="jSe-HS-HVx" secondAttribute="trailing" constant="25" id="zqx-Bu-Pk0"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A7l-0e-Zpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-186" y="29"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
