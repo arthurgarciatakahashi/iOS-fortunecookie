@@ -9,10 +9,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login-->
         <scene sceneID="bGE-Zg-e98">
             <objects>
-                <viewController id="Nag-b2-7yi" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="LoginViewController" id="Nag-b2-7yi" userLabel="Login" customClass="LoginViewController" customModule="UI" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hlL-p0-d5l">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -34,7 +34,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZnG-Ka-SRJ">
-                                <rect key="frame" x="25" y="413" width="364" height="70"/>
+                                <rect key="frame" x="25" y="450" width="364" height="65"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="Hjk-Li-X5O"/>
@@ -49,23 +49,34 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="N8P-6A-Odc">
+                                <rect key="frame" x="337" y="464" width="37" height="37"/>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="1bp-6P-66w"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="N8P-6A-Odc" firstAttribute="trailing" secondItem="ZnG-Ka-SRJ" secondAttribute="trailing" constant="-15" id="17Z-7z-GaC"/>
                             <constraint firstItem="jSe-HS-HVx" firstAttribute="top" secondItem="FcX-78-MCA" secondAttribute="bottom" constant="36" id="Ez2-qf-cWq"/>
-                            <constraint firstItem="1bp-6P-66w" firstAttribute="bottom" secondItem="ZnG-Ka-SRJ" secondAttribute="bottom" constant="379" id="GbT-pl-mI5"/>
-                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="top" secondItem="jSe-HS-HVx" secondAttribute="bottom" constant="53" id="GxL-GB-Vk5"/>
+                            <constraint firstItem="1bp-6P-66w" firstAttribute="bottom" secondItem="ZnG-Ka-SRJ" secondAttribute="bottom" constant="340" id="GbT-pl-mI5"/>
+                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="top" secondItem="jSe-HS-HVx" secondAttribute="bottom" constant="90" id="GgO-m6-y9j"/>
                             <constraint firstItem="jSe-HS-HVx" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="RDP-9o-J4I"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="ZnG-Ka-SRJ" secondAttribute="trailing" constant="25" id="Y3e-PU-6Vk"/>
                             <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="ZPE-Lw-gZ6"/>
+                            <constraint firstItem="N8P-6A-Odc" firstAttribute="centerY" secondItem="ZnG-Ka-SRJ" secondAttribute="centerY" id="juP-Fg-fIZ"/>
                             <constraint firstItem="FcX-78-MCA" firstAttribute="top" secondItem="1bp-6P-66w" secondAttribute="top" constant="180" id="pYS-MZ-bVE"/>
                             <constraint firstItem="FcX-78-MCA" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="t5m-hr-19h"/>
-                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="centerY" secondItem="hlL-p0-d5l" secondAttribute="centerY" id="uBd-Yq-TXZ"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="FcX-78-MCA" secondAttribute="trailing" constant="25" id="zAe-oy-qxb"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="jSe-HS-HVx" secondAttribute="trailing" constant="25" id="zqx-Bu-Pk0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="email" destination="FcX-78-MCA" id="Ovq-VU-qAv"/>
+                        <outlet property="loadingIndicator" destination="N8P-6A-Odc" id="s3E-9M-5bR"/>
+                        <outlet property="password" destination="jSe-HS-HVx" id="leK-kj-sWM"/>
+                        <outlet property="signIn" destination="ZnG-Ka-SRJ" id="hos-ic-r95"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7l-0e-Zpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
