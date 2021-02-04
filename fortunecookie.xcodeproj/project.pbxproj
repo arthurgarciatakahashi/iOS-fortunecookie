@@ -698,7 +698,7 @@
 		1A11A56A25B6F9C1007EE973 /* MainTests */ = {
 			isa = PBXGroup;
 			children = (
-				1AC9A29725B8CC84004D468B /* Controllers */,
+				1AC9A29725B8CC84004D468B /* Factories */,
 				1A11A56D25B6F9C1007EE973 /* Info.plist */,
 			);
 			path = MainTests;
@@ -1129,12 +1129,12 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
-		1AC9A29725B8CC84004D468B /* Controllers */ = {
+		1AC9A29725B8CC84004D468B /* Factories */ = {
 			isa = PBXGroup;
 			children = (
 				1AAB0D9825B8AE4C008761A3 /* SignUpFactoryTests.swift */,
 			);
-			path = Controllers;
+			path = Factories;
 			sourceTree = "<group>";
 		};
 		1AD1E4B525B630470011D8AD /* SignUp */ = {
