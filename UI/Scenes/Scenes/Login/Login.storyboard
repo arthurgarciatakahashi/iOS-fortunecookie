@@ -20,7 +20,7 @@
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FcX-78-MCA">
                                 <rect key="frame" x="25" y="224" width="364" height="50"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="50" id="363-Po-tYx"/>
+                                    <constraint firstAttribute="height" constant="50" id="dVr-ot-Lk9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -37,7 +37,7 @@
                                 <rect key="frame" x="25" y="450" width="364" height="65"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="70" id="Hjk-Li-X5O"/>
+                                    <constraint firstAttribute="height" constant="65" id="dWh-sc-qve"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="44"/>
                                 <state key="normal" title="Sign In">
@@ -58,24 +58,23 @@
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="N8P-6A-Odc" firstAttribute="trailing" secondItem="ZnG-Ka-SRJ" secondAttribute="trailing" constant="-15" id="17Z-7z-GaC"/>
-                            <constraint firstItem="jSe-HS-HVx" firstAttribute="top" secondItem="FcX-78-MCA" secondAttribute="bottom" constant="36" id="Ez2-qf-cWq"/>
-                            <constraint firstItem="1bp-6P-66w" firstAttribute="bottom" secondItem="ZnG-Ka-SRJ" secondAttribute="bottom" constant="340" id="GbT-pl-mI5"/>
-                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="top" secondItem="jSe-HS-HVx" secondAttribute="bottom" constant="90" id="GgO-m6-y9j"/>
+                            <constraint firstItem="FcX-78-MCA" firstAttribute="top" secondItem="1bp-6P-66w" secondAttribute="top" constant="180" id="ME6-Qb-ftK"/>
                             <constraint firstItem="jSe-HS-HVx" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="RDP-9o-J4I"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="ZnG-Ka-SRJ" secondAttribute="trailing" constant="25" id="Y3e-PU-6Vk"/>
                             <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="ZPE-Lw-gZ6"/>
                             <constraint firstItem="N8P-6A-Odc" firstAttribute="centerY" secondItem="ZnG-Ka-SRJ" secondAttribute="centerY" id="juP-Fg-fIZ"/>
-                            <constraint firstItem="FcX-78-MCA" firstAttribute="top" secondItem="1bp-6P-66w" secondAttribute="top" constant="180" id="pYS-MZ-bVE"/>
+                            <constraint firstItem="ZnG-Ka-SRJ" firstAttribute="top" secondItem="jSe-HS-HVx" secondAttribute="bottom" constant="90" id="kGU-Cq-xRD"/>
                             <constraint firstItem="FcX-78-MCA" firstAttribute="leading" secondItem="1bp-6P-66w" secondAttribute="leading" constant="25" id="t5m-hr-19h"/>
+                            <constraint firstItem="jSe-HS-HVx" firstAttribute="top" secondItem="FcX-78-MCA" secondAttribute="bottom" constant="36" id="wgv-7W-eCH"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="FcX-78-MCA" secondAttribute="trailing" constant="25" id="zAe-oy-qxb"/>
                             <constraint firstItem="1bp-6P-66w" firstAttribute="trailing" secondItem="jSe-HS-HVx" secondAttribute="trailing" constant="25" id="zqx-Bu-Pk0"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="email" destination="FcX-78-MCA" id="Ovq-VU-qAv"/>
+                        <outlet property="emailTextField" destination="FcX-78-MCA" id="9sS-vq-4sz"/>
                         <outlet property="loadingIndicator" destination="N8P-6A-Odc" id="s3E-9M-5bR"/>
-                        <outlet property="password" destination="jSe-HS-HVx" id="leK-kj-sWM"/>
-                        <outlet property="signIn" destination="ZnG-Ka-SRJ" id="hos-ic-r95"/>
+                        <outlet property="loginButton" destination="ZnG-Ka-SRJ" id="fky-yH-ASP"/>
+                        <outlet property="passwordTextField" destination="jSe-HS-HVx" id="CTd-4v-TVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7l-0e-Zpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

@@ -4,14 +4,12 @@ import Presentation
 import Domain
 
 public final class LoginViewController: UIViewController, Storyboarded {
-    public var login: ((SignUpViewModel) -> Void)?
+    public var login: ((LoginViewModel) -> Void)?
 
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    
-    @IBOutlet weak var email: UITextField!
-    @IBOutlet weak var password: UITextField!
-    
-    @IBOutlet weak var signIn: UIButton!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,7 +18,14 @@ public final class LoginViewController: UIViewController, Storyboarded {
     
     private func configure() {
         title = "Login"
+        loginButton?.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
+    }
+    
+    @objc private func loginButtonTapped() {
+        let viewModel = LoginViewModel(email: emailTextField?.text, password: passwordTextField?.text)
+        
+        login?(viewModel)
     }
 }
    

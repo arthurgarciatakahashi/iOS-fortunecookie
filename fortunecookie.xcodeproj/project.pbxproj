@@ -96,6 +96,7 @@
 		1A7ECCC525BA943E009F8457 /* ValidationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ECCC425BA943E009F8457 /* ValidationSpy.swift */; };
 		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
 		1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */; };
+		1A90B3B025CBA60400CCB65E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1A9BBD5325B28688007A8B5B /* AlamofireAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBD5225B28688007A8B5B /* AlamofireAdapter.swift */; };
 		1A9BBD7325B28701007A8B5B /* UrlProtocolStub.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBD7225B28701007A8B5B /* UrlProtocolStub.swift */; };
 		1A9BBD8925B28CE9007A8B5B /* GetCookieIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A9BBD8825B28CE9007A8B5B /* GetCookieIntegrationTests.swift */; };
@@ -2155,6 +2156,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A90B3B025CBA60400CCB65E /* TextExtensions.swift in Sources */,
 				1AD7BDF625CB9A92002B8088 /* LoginViewControllerTests.swift in Sources */,
 				1AFAF13725B5FC82006BB08A /* SignUpViewControllerTests.swift in Sources */,
 				1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */,
