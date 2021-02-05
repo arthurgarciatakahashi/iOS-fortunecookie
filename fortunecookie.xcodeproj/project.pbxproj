@@ -98,6 +98,9 @@
 		1A8292AC25CCB4D900E14CFE /* RemoteAuthenticationFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8292AB25CCB4D900E14CFE /* RemoteAuthenticationFactory.swift */; };
 		1A8292B925CCB52800E14CFE /* LoginControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8292B825CCB52800E14CFE /* LoginControllerFactory.swift */; };
 		1A8292C525CCB67600E14CFE /* AuthenticationSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */; };
+		1A8292D325CCBC0400E14CFE /* WelcomeControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8292D225CCBC0400E14CFE /* WelcomeControllerTests.swift */; };
+		1A8292EB25CCBD2900E14CFE /* WelcomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8292EA25CCBD2900E14CFE /* WelcomeViewController.swift */; };
+		1A8292F925CCE4B300E14CFE /* Welcome.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A8292F825CCE4B300E14CFE /* Welcome.storyboard */; };
 		1A8B5C2424F5FBEC00FDE954 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */; };
 		1A8B5C2624F6018A00FDE954 /* bone-crack-1.wav in Resources */ = {isa = PBXBuildFile; fileRef = 1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */; };
 		1A90B3B025CBA60400CCB65E /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
@@ -468,6 +471,9 @@
 		1A82929E25CCB33E00E14CFE /* LoginControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactoryTests.swift; sourceTree = "<group>"; };
 		1A8292AB25CCB4D900E14CFE /* RemoteAuthenticationFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAuthenticationFactory.swift; sourceTree = "<group>"; };
 		1A8292B825CCB52800E14CFE /* LoginControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginControllerFactory.swift; sourceTree = "<group>"; };
+		1A8292D225CCBC0400E14CFE /* WelcomeControllerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerTests.swift; sourceTree = "<group>"; };
+		1A8292EA25CCBD2900E14CFE /* WelcomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeViewController.swift; sourceTree = "<group>"; };
+		1A8292F825CCE4B300E14CFE /* Welcome.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Welcome.storyboard; sourceTree = "<group>"; };
 		1A8B5C2324F5FBEC00FDE954 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 		1A8B5C2524F6018A00FDE954 /* bone-crack-1.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "bone-crack-1.wav"; sourceTree = "<group>"; };
 		1A9BBD5225B28688007A8B5B /* AlamofireAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlamofireAdapter.swift; sourceTree = "<group>"; };
@@ -774,6 +780,7 @@
 		1A3B839025BB69680043E910 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A8292F725CCE46300E14CFE /* Welcome */,
 				1A6412C225C91894001B57CD /* Login */,
 				1AD1E4B525B630470011D8AD /* SignUp */,
 			);
@@ -1055,6 +1062,23 @@
 			path = Protocols;
 			sourceTree = "<group>";
 		};
+		1A8292D125CCBBF700E14CFE /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1A8292D225CCBC0400E14CFE /* WelcomeControllerTests.swift */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
+		1A8292F725CCE46300E14CFE /* Welcome */ = {
+			isa = PBXGroup;
+			children = (
+				1A8292EA25CCBD2900E14CFE /* WelcomeViewController.swift */,
+				1A8292F825CCE4B300E14CFE /* Welcome.storyboard */,
+			);
+			path = Welcome;
+			sourceTree = "<group>";
+		};
 		1A8B5C2724F6024F00FDE954 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -1177,6 +1201,7 @@
 		1AD1E4CE25B630AF0011D8AD /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				1A8292D125CCBBF700E14CFE /* Welcome */,
 				1AD7BDF425CB9A7C002B8088 /* Login */,
 				1AD1E4B625B6305F0011D8AD /* SignUp */,
 			);
@@ -1949,6 +1974,7 @@
 			files = (
 				1A6412E725C9FC6C001B57CD /* Login.storyboard in Resources */,
 				1A5B4A5325B6089400F3F525 /* SignUp.storyboard in Resources */,
+				1A8292F925CCE4B300E14CFE /* Welcome.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2157,6 +2183,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1A6412F425CB148C001B57CD /* LoginViewController.swift in Sources */,
+				1A8292EB25CCBD2900E14CFE /* WelcomeViewController.swift in Sources */,
 				1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */,
 				1A3B838225BB693D0043E910 /* NavigationController.swift in Sources */,
 				1AFAF1B925B5FFFF006BB08A /* SignUpViewController.swift in Sources */,
@@ -2172,6 +2199,7 @@
 			files = (
 				1A90B3B025CBA60400CCB65E /* TextExtensions.swift in Sources */,
 				1AD7BDF625CB9A92002B8088 /* LoginViewControllerTests.swift in Sources */,
+				1A8292D325CCBC0400E14CFE /* WelcomeControllerTests.swift in Sources */,
 				1AFAF13725B5FC82006BB08A /* SignUpViewControllerTests.swift in Sources */,
 				1AD1E4E725B630E90011D8AD /* TestExtensions.swift in Sources */,
 			);
