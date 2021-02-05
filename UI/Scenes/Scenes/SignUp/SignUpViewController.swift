@@ -9,7 +9,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var categoryTextField: UITextField!
 
     
-    public var signUp: ((SignUpViewModel) -> Void)?
+    public var signUp: ((SignUpRequest) -> Void)?
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,7 +26,7 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @objc private func saveButtonTapped() {
         let categoryType = CategoryType(rawValue: categoryTextField.text!)
         
-        signUp?(SignUpViewModel(category: categoryType))
+        signUp?(SignUpRequest(category: categoryType))
     }
 }
 
