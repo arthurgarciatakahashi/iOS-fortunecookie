@@ -4,6 +4,10 @@ import UI
 import Presentation
 import Validation
 
+public func makeLoginController() -> LoginViewController {
+    makeLoginController(authentication: makeRemoteAuthentication())
+}
+
 public func makeLoginController(authentication: Authentication) -> LoginViewController {
     let controller = LoginViewController.instanciate()
     let validationComposite = ValidationComposite(validations: makeLoginValidations())
@@ -13,6 +17,7 @@ public func makeLoginController(authentication: Authentication) -> LoginViewCont
     
     return controller
 }
+
 
 public func makeLoginValidations() -> [Validation] {
     return [

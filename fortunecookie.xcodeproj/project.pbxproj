@@ -74,6 +74,7 @@
 		1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
 		1A7AFF0025D2328A00060472 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */; };
 		1A7AFF0D25D238AA00060472 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */; };
+		1A7AFF1A25D2475A00060472 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */; };
 		1A7BA89625BB544100A52497 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */; };
 		1A7BA8B125BB551700A52497 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */; };
 		1A7ECB7E25BA72BF009F8457 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ECB7D25BA72BF009F8457 /* Validation.swift */; };
@@ -458,6 +459,7 @@
 		1A75C9E525B38A6A00E3D086 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
+		1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		1A7ECB7D25BA72BF009F8457 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -990,6 +992,7 @@
 			children = (
 				1AAB0D8825B8AC9D008761A3 /* SignUpControllerFactory.swift */,
 				1A8292B825CCB52800E14CFE /* LoginControllerFactory.swift */,
+				1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -2002,6 +2005,7 @@
 				1AAB0D7825B8AC1B008761A3 /* RemoteGetCookieFactory.swift in Sources */,
 				1A3E17AE25B8D46200573BE3 /* MainQueueDispatchDecorator.swift in Sources */,
 				1A08BB4D25B8C53000B42263 /* Environment.swift in Sources */,
+				1A7AFF1A25D2475A00060472 /* WelcomeControllerFactory.swift in Sources */,
 				1A7BA89625BB544100A52497 /* ApiUrlFactory.swift in Sources */,
 				1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */,
 				1A8292AC25CCB4D900E14CFE /* RemoteAuthenticationFactory.swift in Sources */,

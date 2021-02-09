@@ -4,6 +4,10 @@ import UI
 import Presentation
 import Validation
 
+public func makeSignUpController() -> SignUpViewController {
+    makeSignUpController(getCookie: makeRemoteGetCookie())
+}
+
 public func makeSignUpController(getCookie: GetCookie) -> SignUpViewController {
     let controller = SignUpViewController.instanciate()
     let validationComposite = ValidationComposite(validations: makeSignUpValidations())
