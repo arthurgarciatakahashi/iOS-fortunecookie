@@ -73,6 +73,7 @@
 		1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75C9E525B38A6A00E3D086 /* AlertView.swift */; };
 		1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
 		1A7AFF0025D2328A00060472 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */; };
+		1A7AFF0D25D238AA00060472 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */; };
 		1A7BA89625BB544100A52497 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */; };
 		1A7BA8B125BB551700A52497 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */; };
 		1A7ECB7E25BA72BF009F8457 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ECB7D25BA72BF009F8457 /* Validation.swift */; };
@@ -456,6 +457,7 @@
 		1A75B74025B68F5100ED45CF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A75C9E525B38A6A00E3D086 /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
 		1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
+		1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		1A7ECB7D25BA72BF009F8457 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -1078,6 +1080,7 @@
 			children = (
 				1A8292EA25CCBD2900E14CFE /* WelcomeViewController.swift */,
 				1A8292F825CCE4B300E14CFE /* Welcome.storyboard */,
+				1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */,
 			);
 			path = Welcome;
 			sourceTree = "<group>";
@@ -2185,6 +2188,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7AFF0D25D238AA00060472 /* WelcomeRouter.swift in Sources */,
 				1A6412F425CB148C001B57CD /* LoginViewController.swift in Sources */,
 				1A8292EB25CCBD2900E14CFE /* WelcomeViewController.swift in Sources */,
 				1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */,
