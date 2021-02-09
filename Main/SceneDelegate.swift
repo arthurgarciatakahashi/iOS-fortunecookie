@@ -12,18 +12,29 @@ import UI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
+    private let signUpFactory: () -> SignUpViewController = {
+        let alamoFireAdapter = makeAlamofireAdapter()
+        let remoteGetCookie = makeRemoteGetCookie(httpClient: alamoFireAdapter)
+        return makeSignUpController(getCookie: remoteGetCookie)
+    }
+
+    private let loginFactory: () -> LoginViewController = {
+        let alamoFireAdapter = makeAlamofireAdapter()
+        let remoteAuthentication = makeRemoteAuthentication(httpClient: alamoFireAdapter)
+        return makeLoginController(authentication: remoteAuthentication)
+    }
+    
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
         window = UIWindow(windowScene: windowScene)
         let nav = NavigationController()
-        let httpClient = makeAlamofireAdapter()
-        let authentication = makeRemoteAuthentication(httpClient: httpClient)
-        //let loginController = makeLoginController(authentication: authentication)
-        let getCookie = makeRemoteGetCookie(httpClient: httpClient)
-        let signUpController = makeSignUpController(getCookie: getCookie)
-        nav.setRootViewController(signUpController)
+        let welcomeRouter = WelcomeRouter(nav: nav, loginFactory: loginFactory, signUpFactory: signUpFactory)
+        let welcomeViewController = WelcomeViewController.instanciate()
+        welcomeViewController.signUp = welcomeRouter.goToSignUp
+        welcomeViewController.login = welcomeRouter.goToLogin
+        nav.setRootViewController(welcomeViewController)
 
         window?.rootViewController = nav
         window?.makeKeyAndVisible()

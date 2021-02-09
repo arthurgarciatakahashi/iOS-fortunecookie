@@ -12,10 +12,10 @@ public final class WelcomeRouter {
     }
     
     public func goToLogin() {
-        nav.pushViewController(loginFactory(), animated: true)
+        nav.pushViewController(loginFactory())
     }
     
     public func goToSignUp() {
-        nav.pushViewController(signUpFactory(), animated: true)
+        nav.pushViewController(signUpFactory())
     }
 }
