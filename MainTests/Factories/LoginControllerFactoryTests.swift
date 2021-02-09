@@ -32,7 +32,7 @@ class LoginControllerFactoryTests: XCTestCase {
 extension LoginControllerFactoryTests {
     func makeSut() -> (sut: LoginViewController, authenticationSpy: AuthenticationSpy) {
         let authenticationSpy = AuthenticationSpy()
-        let sut = makeLoginController(authentication: MainQueueDispatchDecorator(authenticationSpy))
+        let sut = makeLoginControllerWith(authentication: MainQueueDispatchDecorator(authenticationSpy))
         checkMemoryLeak(for: sut)
         checkMemoryLeak(for: authenticationSpy)
         return (sut, authenticationSpy)

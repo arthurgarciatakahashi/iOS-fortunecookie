@@ -30,7 +30,7 @@ class SignUpControllerFactoryTests: XCTestCase {
 extension SignUpControllerFactoryTests {
     func makeSut() -> (sut: SignUpViewController, getCookieSpy: GetCookieSpy) {
         let getCookieSpy = GetCookieSpy()
-        let sut = makeSignUpController(getCookie: MainQueueDispatchDecorator( getCookieSpy))
+        let sut = makeSignUpControllerWith(getCookie: MainQueueDispatchDecorator( getCookieSpy))
         checkMemoryLeak(for: sut)
         checkMemoryLeak(for: getCookieSpy)
         return (sut, getCookieSpy)

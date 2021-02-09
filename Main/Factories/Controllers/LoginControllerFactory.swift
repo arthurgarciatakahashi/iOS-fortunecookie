@@ -5,10 +5,10 @@ import Presentation
 import Validation
 
 public func makeLoginController() -> LoginViewController {
-    makeLoginController(authentication: makeRemoteAuthentication())
+    makeLoginControllerWith(authentication: makeRemoteAuthentication())
 }
 
-public func makeLoginController(authentication: Authentication) -> LoginViewController {
+public func makeLoginControllerWith(authentication: Authentication) -> LoginViewController {
     let controller = LoginViewController.instanciate()
     let validationComposite = ValidationComposite(validations: makeLoginValidations())
     let presenter = LoginPresenter(alertView: WeakVarProxy(controller), authentication: authentication, validation: validationComposite, loadingView: WeakVarProxy(controller))

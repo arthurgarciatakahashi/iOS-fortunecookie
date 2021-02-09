@@ -5,10 +5,10 @@ import Presentation
 import Validation
 
 public func makeSignUpController() -> SignUpViewController {
-    makeSignUpController(getCookie: makeRemoteGetCookie())
+    makeSignUpControllerWith(getCookie: makeRemoteGetCookie())
 }
 
-public func makeSignUpController(getCookie: GetCookie) -> SignUpViewController {
+public func makeSignUpControllerWith(getCookie: GetCookie) -> SignUpViewController {
     let controller = SignUpViewController.instanciate()
     let validationComposite = ValidationComposite(validations: makeSignUpValidations())
     let presenter = SignUpPresenter(alertView: WeakVarProxy(controller), getCookie: getCookie, loadingView: WeakVarProxy(controller), validation: validationComposite)
