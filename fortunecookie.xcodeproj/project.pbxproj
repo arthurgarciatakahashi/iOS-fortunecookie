@@ -75,6 +75,7 @@
 		1A7AFF0025D2328A00060472 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */; };
 		1A7AFF0D25D238AA00060472 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */; };
 		1A7AFF1A25D2475A00060472 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */; };
+		1A7AFF2825D249E700060472 /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF2725D249E700060472 /* ValidationBuilder.swift */; };
 		1A7BA89625BB544100A52497 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */; };
 		1A7BA8B125BB551700A52497 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */; };
 		1A7ECB7E25BA72BF009F8457 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ECB7D25BA72BF009F8457 /* Validation.swift */; };
@@ -460,6 +461,7 @@
 		1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouterTests.swift; sourceTree = "<group>"; };
 		1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeRouter.swift; sourceTree = "<group>"; };
 		1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
+		1A7AFF2725D249E700060472 /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		1A7ECB7D25BA72BF009F8457 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -701,6 +703,7 @@
 		1A11A55325B6F994007EE973 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				1A7AFF2625D249D400060472 /* Builders */,
 				1A3E17AC25B8D44B00573BE3 /* Decorators */,
 				1A08BB2F25B8C44700B42263 /* Env */,
 				1A08BB1225B8C18700B42263 /* Proxies */,
@@ -975,6 +978,14 @@
 				1AB61AD425B5140300AE391E /* SignUp */,
 			);
 			path = Presenters;
+			sourceTree = "<group>";
+		};
+		1A7AFF2625D249D400060472 /* Builders */ = {
+			isa = PBXGroup;
+			children = (
+				1A7AFF2725D249E700060472 /* ValidationBuilder.swift */,
+			);
+			path = Builders;
 			sourceTree = "<group>";
 		};
 		1A7BA8A325BB54B000A52497 /* Http */ = {
@@ -2001,6 +2012,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A7AFF2825D249E700060472 /* ValidationBuilder.swift in Sources */,
 				1A7BA8B125BB551700A52497 /* AlamofireAdapterFactory.swift in Sources */,
 				1AAB0D7825B8AC1B008761A3 /* RemoteGetCookieFactory.swift in Sources */,
 				1A3E17AE25B8D46200573BE3 /* MainQueueDispatchDecorator.swift in Sources */,
