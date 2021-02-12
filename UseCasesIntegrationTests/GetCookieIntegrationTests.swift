@@ -15,6 +15,8 @@ class GetCookieIntegrationTests: XCTestCase {
 
     func test_get_cookie() throws {
         let url = URL(string: "http://yerkee.com/api/fortune/all")!
+        //let url_signUp = URL(string: "http: //fordevs.herokuapp.com/api/signup")!
+        //let url_login = URL(string: "http: //fordevs.herokuapp.com/api/login")!
         let alamofireAdapter = AlamofireAdapter()
         let sut = RemoteGetCookie(url: url, httpClient: alamofireAdapter)
         let exp = expectation(description: "waiting")

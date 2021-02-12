@@ -16,3 +16,11 @@ func makeCookieModel() -> CookieModel {
 func makeGetCookieModel() -> GetCookieModel {
     return GetCookieModel(category: .all)
 }
+
+func makeAuthenticationModel() -> AuthenticationModel {
+    return AuthenticationModel(email: "any@any.com", password: "any_password")
+}
+
+func makeAccountModel() -> AccountModel {
+    return AccountModel(accessToken: "accessToken")
+}

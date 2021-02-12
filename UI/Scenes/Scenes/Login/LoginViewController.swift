@@ -3,13 +3,13 @@ import UIKit
 import Presentation
 import Domain
 
-public final class SignUpViewController: UIViewController, Storyboarded {
-    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
-    @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var categoryTextField: UITextField!
+public final class LoginViewController: UIViewController, Storyboarded {
+    public var login: ((LoginRequest) -> Void)?
 
-    
-    public var signUp: ((SignUpRequest) -> Void)?
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var loginButton: UIButton!
     
     public override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,20 +17,19 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     private func configure() {
-        title = "Fortune Cookie"
-        saveButton?.layer.cornerRadius = 5
-        saveButton?.addTarget(self, action: #selector(saveButtonTapped), for: .touchUpInside)
+        title = "Login"
+        loginButton?.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         hideKeyboardOnTap()
     }
     
-    @objc private func saveButtonTapped() {
-        let categoryType = CategoryType(rawValue: categoryTextField.text!)
+    @objc private func loginButtonTapped() {
+        let viewModel = LoginRequest(email: emailTextField?.text, password: passwordTextField?.text)
         
-        signUp?(SignUpRequest(category: categoryType))
+        login?(viewModel)
     }
 }
-
-extension SignUpViewController: LoadingView {
+   
+extension LoginViewController: LoadingView {
     public func display(viewModel: LoadingViewModel) {
         if viewModel.isLoading {
             view.isUserInteractionEnabled = false
@@ -42,7 +41,7 @@ extension SignUpViewController: LoadingView {
     }
 }
 
-extension SignUpViewController: AlertView {
+extension LoginViewController: AlertView {
     public func showMessage(viewModel: AlertViewModel) {
         let alert = UIAlertController(title: viewModel.title, message: viewModel.message, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default))
@@ -50,4 +49,3 @@ extension SignUpViewController: AlertView {
         present(alert, animated: true)
     }
 }
-

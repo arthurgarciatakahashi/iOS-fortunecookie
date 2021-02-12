@@ -27,6 +27,10 @@ func makeSuccessAlertViewModel(message: String) -> AlertViewModel {
     return AlertViewModel(title: "Success", message: message)
 }
 
-func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpViewModel {
-    return SignUpViewModel(category: categoryType)
+func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpRequest {
+    return SignUpRequest(category: categoryType)
+}
+
+func makeLoginViewModel(email: String? = "any@any.com", password: String? = "any_password") -> LoginRequest {
+    return LoginRequest(email: email, password: password)
 }

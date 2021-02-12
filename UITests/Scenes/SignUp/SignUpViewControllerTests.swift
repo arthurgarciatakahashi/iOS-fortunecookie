@@ -19,21 +19,22 @@ class SignUpViewControllerTests: XCTestCase {
     }
     
     func test_saveButton_calls_signup_on_tap() {
-        var signUpViewModel: SignUpViewModel?
+        var signUpViewModel: SignUpRequest?
         let sut = makeSut(signUpSpy: { signUpViewModel = $0})
         sut.saveButton?.simulateTap()
         let categoryType = CategoryType(rawValue: (sut.categoryTextField?.text)!)
         
-        XCTAssertEqual(signUpViewModel, SignUpViewModel(category: categoryType))
+        XCTAssertEqual(signUpViewModel, SignUpRequest(category: categoryType))
     }
 }
 
 extension SignUpViewControllerTests {
-    func makeSut(signUpSpy: ((SignUpViewModel) -> Void)? = nil) -> SignUpViewController {
+    func makeSut(signUpSpy: ((SignUpRequest) -> Void)? = nil) -> SignUpViewController {
         let sut = SignUpViewController.instanciate()
         sut.signUp = signUpSpy
         sut.loadViewIfNeeded()
-        
+        checkMemoryLeak(for: sut)
+
         return sut
     }
 }

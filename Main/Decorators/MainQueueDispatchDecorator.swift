@@ -25,3 +25,13 @@ extension MainQueueDispatchDecorator: GetCookie where T: GetCookie {
         }
     }
 }
+
+extension MainQueueDispatchDecorator: Authentication where T: Authentication {
+    public func auth(authenticationModel: AuthenticationModel, completion: @escaping (Authentication.Result) -> Void) {
+        instance.auth(authenticationModel: authenticationModel) { [weak self] result in
+            self?.dispatch {
+                completion(result)
+            }
+        }
+    }
+}
