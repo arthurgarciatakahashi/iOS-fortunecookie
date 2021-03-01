@@ -24,3 +24,7 @@ func makeAuthenticationModel() -> AuthenticationModel {
 func makeAccountModel() -> AccountModel {
     return AccountModel(accessToken: "accessToken")
 }
+
+func makeAddAccountModel() -> AddAccountModel {
+    return AddAccountModel(name: "any_name", email: "any@any.com", password: "any_password", confirmPassword: "any_pasword")
+}
