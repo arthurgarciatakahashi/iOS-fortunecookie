@@ -10,15 +10,14 @@ import Foundation
 import Data
 import Domain
 
-class HttpPostClientSpy: HttpPostClient {
+class HttpAuthClientSpy: HttpPostClient {
     var urls = [URL]()
     var data: Data?
     var completion: ((Result<Data?, HttpError>) -> Void)?
     
     func post(from url: URL, with: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.urls.append(url)
-        self.data = Data("{\"email\":\"any@any.com\",\"password\":\"any_password\",\"name\":\"any_name\",\"confirmPassword\":\"any_password\"}".utf8)
-        
+        self.data = Data("{\"email\":\"any@any.com\",\"password\":\"any_password\"}".utf8)
         self.completion = completion
     }
     

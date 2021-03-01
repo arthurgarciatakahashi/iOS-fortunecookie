@@ -4,27 +4,28 @@ import Domain
 
 class RemoteAddAccountTests: XCTestCase {
 
-    func test_add_should_call_httpGetClient_with_correct_url() {
+    func test_add_should_call_httpPostClient_with_correct_url() {
         let url = makeURL()
         let (sut, httpClientSpy) = makeSut(url: url)
         sut.add(addAccountModel: makeAddAccountModel()) { _ in }
         XCTAssertEqual(httpClientSpy.urls, [url])
     }
-//
-//    func test_auth_should_call_httpClient_with_a_correct_data() {
-//        let (sut, httpClientSpy) = makeSut()
-//        let authenticationModel = makeAuthenticationModel()
-//        sut.auth(authenticationModel: authenticationModel) { _ in }
-//        XCTAssertEqual(httpClientSpy.data, authenticationModel.toData())
-//    }
-//
-//    func test_auth_should_complete_with_error_if_client_completes_with_error() {
-//        let (sut, httpClientSpy) = makeSut()
-//        expect(sut, completeWith: .failure(.unexpected), when: {
-//            httpClientSpy.completeWithError(.noConnectivity)
-//        })
-//    }
-//
+
+    func test_add_should_call_httpClient_with_a_correct_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let addAccountModel = makeAddAccountModel()
+        sut.add(addAccountModel: addAccountModel) { _ in }
+
+        XCTAssertEqual(httpClientSpy.data, addAccountModel.toData())
+    }
+
+    func test_add_should_complete_with_error_if_client_completes_with_error() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithError(.noConnectivity)
+        })
+    }
+
 //    func test_auth_should_complete_with_expired_error_if_client_completes_with_unauthorized() {
 //        let (sut, httpClientSpy) = makeSut()
 //        expect(sut, completeWith: .failure(.expiredSession)) {
@@ -62,7 +63,7 @@ class RemoteAddAccountTests: XCTestCase {
 
 extension RemoteAddAccountTests {
     
-    func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteAddAccount, httpClientSpy: HttpPostClientSpy) {
+    func makeSut(url: URL = URL(string: "http://fordevs.herokuapp.com/api/signup")!) -> (sut: RemoteAddAccount, httpClientSpy: HttpPostClientSpy) {
         let httpClientSpy = HttpPostClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut)

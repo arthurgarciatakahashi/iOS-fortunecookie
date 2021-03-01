@@ -48,7 +48,7 @@ class RemoteAuthenticationTests: XCTestCase {
     }
     
     func test_auth_should_not_complete_if_sut_has_been_deallocated() {
-        let httpClientSpy = HttpPostClientSpy()
+        let httpClientSpy = HttpAuthClientSpy()
         var sut: RemoteAuthentication? = RemoteAuthentication(url: makeURL(), httpClient: httpClientSpy)
         var result: Authentication.Result?
         
@@ -62,8 +62,8 @@ class RemoteAuthenticationTests: XCTestCase {
 
 extension RemoteAuthenticationTests {
     
-    func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteAuthentication, httpClientSpy: HttpPostClientSpy) {
-        let httpClientSpy = HttpPostClientSpy()
+    func makeSut(url: URL = URL(string: "http://yerkee.com/api/fortune/all")!) -> (sut: RemoteAuthentication, httpClientSpy: HttpAuthClientSpy) {
+        let httpClientSpy = HttpAuthClientSpy()
         let sut = RemoteAuthentication(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut)
         checkMemoryLeak(for: httpClientSpy)
