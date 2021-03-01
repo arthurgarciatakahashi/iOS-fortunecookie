@@ -58,7 +58,6 @@ class RemoteAddAccountTests: XCTestCase {
         httpClientSpy.completeWithError(.noConnectivity)
         XCTAssertNil(result)
     }
-
 }
 
 extension RemoteAddAccountTests {
@@ -71,6 +70,7 @@ extension RemoteAddAccountTests {
 
         return (sut, httpClientSpy)
     }
+    
     func expect(_ sut: RemoteAddAccount, completeWith expectResult: AddAccount.Result, when action: () -> Void, file: StaticString = #filePath, line: UInt = #line) {
         let exp = expectation(description: "waiting")
         sut.add(addAccountModel: makeAddAccountModel()) { receivedResult in
