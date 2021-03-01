@@ -32,21 +32,21 @@ class RemoteAddAccountTests: XCTestCase {
             httpClientSpy.completeWithError(.unauthorized)
         }
     }
-//
-//    func test_auth_should_complete_with_account_if_client_completes_with_valid_data() {
-//        let (sut, httpClientSpy) = makeSut()
-//        let account = makeAccountModel()
-//        expect(sut, completeWith: .success(account), when: {
-//            httpClientSpy.completeWithData(account.toData()!)
-//        })
-//    }
-//
-//    func test_auth_should_complete_with_error_if_client_completes_with_invalid_data() {
-//        let (sut, httpClientSpy) = makeSut()
-//        expect(sut, completeWith: .failure(.unexpected), when: {
-//            httpClientSpy.completeWithData(makeInvalidData())
-//        })
-//    }
+
+    func test_add_should_complete_with_account_if_client_completes_with_valid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        let account = makeAccountModel()
+        expect(sut, completeWith: .success(account), when: {
+            httpClientSpy.completeWithData(account.toData()!)
+        })
+    }
+
+    func test_add_should_complete_with_error_if_client_completes_with_invalid_data() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.unexpected), when: {
+            httpClientSpy.completeWithData(makeInvalidData())
+        })
+    }
 //
 //    func test_auth_should_not_complete_if_sut_has_been_deallocated() {
 //        let httpClientSpy = HttpPostClientSpy()
