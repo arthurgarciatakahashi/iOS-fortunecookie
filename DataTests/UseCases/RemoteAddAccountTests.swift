@@ -26,12 +26,12 @@ class RemoteAddAccountTests: XCTestCase {
         })
     }
 
-//    func test_auth_should_complete_with_expired_error_if_client_completes_with_unauthorized() {
-//        let (sut, httpClientSpy) = makeSut()
-//        expect(sut, completeWith: .failure(.expiredSession)) {
-//            httpClientSpy.completeWithError(.unauthorized)
-//        }
-//    }
+    func test_add_should_complete_with_expired_error_if_client_completes_with_unauthorized() {
+        let (sut, httpClientSpy) = makeSut()
+        expect(sut, completeWith: .failure(.expiredSession)) {
+            httpClientSpy.completeWithError(.unauthorized)
+        }
+    }
 //
 //    func test_auth_should_complete_with_account_if_client_completes_with_valid_data() {
 //        let (sut, httpClientSpy) = makeSut()
