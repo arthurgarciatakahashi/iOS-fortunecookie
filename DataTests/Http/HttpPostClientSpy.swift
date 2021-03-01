@@ -17,7 +17,7 @@ class HttpPostClientSpy: HttpPostClient {
     
     func post(from url: URL, with: Data?, completion: @escaping (Result<Data?, HttpError>) -> Void) {
         self.urls.append(url)
-        self.data = Data("{\"email\":\"any@any.com\",\"password\":\"any_password\",\"name\":\"any_name\",\"confirmPassword\":\"any_password\"}".utf8)
+        self.data = Data("{\"email\":\"any@any.com\",\"password\":\"any_password\",\"name\":\"any_name\",\"passwordConfirmation\":\"any_password\"}".utf8)
         
         self.completion = completion
     }

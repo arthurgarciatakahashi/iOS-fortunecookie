@@ -9,13 +9,13 @@ public struct AddAccountModel: Model {
     public var name: String?
     public var email: String?
     public var password: String?
-    public var confirmPassword: String?
+    public var passwordConfirmation: String?
     
-    public init(name: String?, email: String?, password: String?, confirmPassword: String?) {
+    public init(name: String?, email: String?, password: String?, passwordConfirmation: String?) {
         self.name = name
         self.email = email
         self.password = password
-        self.confirmPassword = confirmPassword
+        self.passwordConfirmation = passwordConfirmation
     }
     
 

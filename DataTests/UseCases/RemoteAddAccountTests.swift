@@ -62,7 +62,7 @@ class RemoteAddAccountTests: XCTestCase {
 
 extension RemoteAddAccountTests {
     
-    func makeSut(url: URL = URL(string: "http://fordevs.herokuapp.com/api/signup")!) -> (sut: RemoteAddAccount, httpClientSpy: HttpPostClientSpy) {
+    func makeSut(url: URL = URL(string: "https://fordevs.herokuapp.com/api/signup")!) -> (sut: RemoteAddAccount, httpClientSpy: HttpPostClientSpy) {
         let httpClientSpy = HttpPostClientSpy()
         let sut = RemoteAddAccount(url: url, httpClient: httpClientSpy)
         checkMemoryLeak(for: sut)
