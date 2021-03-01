@@ -11,19 +11,21 @@ import Data
 import Infra
 import Domain
 
-class GetCookieIntegrationTests: XCTestCase {
+class AddAccountIntegrationTests: XCTestCase {
 
-    func test_get_cookie() throws {
-        let url = URL(string: "http://yerkee.com/api/fortune/all")!
+    func test_add_account() throws {
+        let url = URL(string: "https://fordevs.herokuapp.com/api/signup")!
+        //let url_login = URL(string: "http: //fordevs.herokuapp.com/api/login")!
         let alamofireAdapter = AlamofireAdapter()
-        let sut = RemoteGetCookie(url: url, httpClient: alamofireAdapter)
+        let accountModel = makeAddAccountModel()
+        let sut = RemoteAddAccount(url: url, httpClient: alamofireAdapter)
         let exp = expectation(description: "waiting")
         
-        sut.get() { result in
+        sut.add(addAccountModel: accountModel) { result in
             switch result {
             case .failure: XCTFail("Expect success got \(result) instead")
-            case .success(let cookie):
-                XCTAssertNotNil(cookie.fortune)
+            case .success(let token):
+                XCTAssertNotNil(token.accessToken)
             }
             exp.fulfill()
         }

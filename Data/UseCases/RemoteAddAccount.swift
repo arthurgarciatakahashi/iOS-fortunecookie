@@ -20,10 +20,12 @@ public final class RemoteAddAccount: AddAccount {
                 if let model : AccountModel = data?.toModel() {
                     completion(.success(model))
                 } else {
-                    completion(.failure(.unexpected))
+                    completion(.failure(.unexpectedReturn))
                 }
             case .failure(let error):
                 switch error {
+                case .forbidden:
+                    completion(.failure(.emailInUse))
                 case .unauthorized:
                     completion(.failure(.expiredSession))
 

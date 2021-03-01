@@ -52,6 +52,8 @@
 		1A4B58E125ED7B1E00C67411 /* AddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B58E025ED7B1E00C67411 /* AddAccount.swift */; };
 		1A4B58EE25ED7B3100C67411 /* RemoteAddAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B58ED25ED7B3000C67411 /* RemoteAddAccount.swift */; };
 		1A4B590625ED878800C67411 /* HttpPostClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B590525ED878800C67411 /* HttpPostClientSpy.swift */; };
+		1A4B591325ED902B00C67411 /* AddAccountIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4B591225ED902B00C67411 /* AddAccountIntegrationTests.swift */; };
+		1A4B591F25ED90FF00C67411 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* ModelFactory.swift */; };
 		1A5B4A5325B6089400F3F525 /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A5B4A5225B6089400F3F525 /* SignUp.storyboard */; };
 		1A5B4A6025B60DD300F3F525 /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; };
 		1A5B4A6125B60DD300F3F525 /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -66,7 +68,7 @@
 		1A6A8FB725B161710025FDB4 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1A6A8FC725B161FD0025FDB4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */; };
 		1A6A8FD125B162550025FDB4 /* HttpClientSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FD025B162550025FDB4 /* HttpClientSpy.swift */; };
-		1A6A8FE125B162CE0025FDB4 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
+		1A6A8FE125B162CE0025FDB4 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* ModelFactory.swift */; };
 		1A6A8FE925B166000025FDB4 /* TextExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FB625B161710025FDB4 /* TextExtensions.swift */; };
 		1A6A8FF125B166040025FDB4 /* TestFactories.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */; };
 		1A75B70525B6877000ED45CF /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75B70425B6877000ED45CF /* UIViewControllerExtensions.swift */; };
@@ -75,7 +77,7 @@
 		1A75B75525B68F6700ED45CF /* Presentation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; };
 		1A75B75625B68F6700ED45CF /* Presentation.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 1A9BBDB225B291FB007A8B5B /* Presentation.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A75C9E525B38A6A00E3D086 /* AlertView.swift */; };
-		1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */; };
+		1A75CA0725B3ABEE00E3D086 /* ModelFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A6A8FE025B162CE0025FDB4 /* ModelFactory.swift */; };
 		1A7AFF0025D2328A00060472 /* WelcomeRouterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFEFF25D2328A00060472 /* WelcomeRouterTests.swift */; };
 		1A7AFF0D25D238AA00060472 /* WelcomeRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF0C25D238AA00060472 /* WelcomeRouter.swift */; };
 		1A7AFF1A25D2475A00060472 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */; };
@@ -448,6 +450,7 @@
 		1A4B58E025ED7B1E00C67411 /* AddAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccount.swift; sourceTree = "<group>"; };
 		1A4B58ED25ED7B3000C67411 /* RemoteAddAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAddAccount.swift; sourceTree = "<group>"; };
 		1A4B590525ED878800C67411 /* HttpPostClientSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpPostClientSpy.swift; sourceTree = "<group>"; };
+		1A4B591225ED902B00C67411 /* AddAccountIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountIntegrationTests.swift; sourceTree = "<group>"; };
 		1A5B4A5225B6089400F3F525 /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
 		1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticationSpy.swift; sourceTree = "<group>"; };
 		1A6412E625C9FC6C001B57CD /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
@@ -456,7 +459,7 @@
 		1A6A8FB625B161710025FDB4 /* TextExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextExtensions.swift; sourceTree = "<group>"; };
 		1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestFactories.swift; sourceTree = "<group>"; };
 		1A6A8FD025B162550025FDB4 /* HttpClientSpy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpClientSpy.swift; sourceTree = "<group>"; };
-		1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CookieModelFactory.swift; sourceTree = "<group>"; };
+		1A6A8FE025B162CE0025FDB4 /* ModelFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelFactory.swift; sourceTree = "<group>"; };
 		1A75B70425B6877000ED45CF /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		1A75B71125B6894200ED45CF /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
 		1A75B71F25B68EC600ED45CF /* EmailValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailValidator.swift; sourceTree = "<group>"; };
@@ -911,7 +914,7 @@
 			children = (
 				1A6A8FB625B161710025FDB4 /* TextExtensions.swift */,
 				1A6A8FC625B161FD0025FDB4 /* TestFactories.swift */,
-				1A6A8FE025B162CE0025FDB4 /* CookieModelFactory.swift */,
+				1A6A8FE025B162CE0025FDB4 /* ModelFactory.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -1140,6 +1143,7 @@
 			isa = PBXGroup;
 			children = (
 				1A9BBD8825B28CE9007A8B5B /* GetCookieIntegrationTests.swift */,
+				1A4B591225ED902B00C67411 /* AddAccountIntegrationTests.swift */,
 				1A9BBD8A25B28CE9007A8B5B /* Info.plist */,
 			);
 			path = UseCasesIntegrationTests;
@@ -2099,7 +2103,7 @@
 				1A6A8FB725B161710025FDB4 /* TextExtensions.swift in Sources */,
 				1A4B58C925ED707D00C67411 /* RemoteAddAccountTests.swift in Sources */,
 				1A22A93425B0EB1C004049BE /* RemoteGetCookieTests.swift in Sources */,
-				1A6A8FE125B162CE0025FDB4 /* CookieModelFactory.swift in Sources */,
+				1A6A8FE125B162CE0025FDB4 /* ModelFactory.swift in Sources */,
 				1AB6099225C8E96600050328 /* HttpAuthClientSpy.swift in Sources */,
 				1A32DF2E25C8E5020008BDDA /* RemoteAuthenticationTests.swift in Sources */,
 				1A4B590625ED878800C67411 /* HttpPostClientSpy.swift in Sources */,
@@ -2151,7 +2155,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A4B591325ED902B00C67411 /* AddAccountIntegrationTests.swift in Sources */,
 				1A9BBD8925B28CE9007A8B5B /* GetCookieIntegrationTests.swift in Sources */,
+				1A4B591F25ED90FF00C67411 /* ModelFactory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2176,7 +2182,7 @@
 			files = (
 				1ADB120B25B51607003195F2 /* AlertViewSpy.swift in Sources */,
 				1AB609A125C8F9E300050328 /* LoginPresenterTests.swift in Sources */,
-				1A75CA0725B3ABEE00E3D086 /* CookieModelFactory.swift in Sources */,
+				1A75CA0725B3ABEE00E3D086 /* ModelFactory.swift in Sources */,
 				1ADB123825B516B5003195F2 /* LoadingViewSpy.swift in Sources */,
 				1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */,
 				1ADB122225B5166C003195F2 /* GetCookieSpy.swift in Sources */,
