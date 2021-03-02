@@ -13,13 +13,15 @@ import Domain
 
 public final class FortuneViewController: UIViewController, UIPickerViewDataSource, UIPickerViewDelegate, Storyboarded {
     public func numberOfComponents(in pickerView: UIPickerView) -> Int {
-        self.pickerDataCategories.count
-    }
-    
-    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return 1
     }
     
+    public func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return self.pickerDataCategories.count
+    }
+    public func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return self.pickerDataCategories[row]
+    }
     public func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         self.categoryType = pickerDataCategories[row]
     }

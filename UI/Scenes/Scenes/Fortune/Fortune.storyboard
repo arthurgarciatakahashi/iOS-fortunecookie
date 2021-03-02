@@ -24,7 +24,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="opx-lk-8md" userLabel="FortuneMessage">
-                                <rect key="frame" x="25" y="224" width="364" height="150"/>
+                                <rect key="frame" x="25" y="155.5" width="364" height="150"/>
                                 <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="KKK-rN-tOG"/>
@@ -34,10 +34,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4aO-iR-gtz">
-                                <rect key="frame" x="47" y="404" width="320" height="216"/>
+                                <rect key="frame" x="47" y="336" width="320" height="216"/>
                             </pickerView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ieW-eH-CRW">
-                                <rect key="frame" x="25" y="670" width="364" height="60"/>
+                                <rect key="frame" x="25" y="561.5" width="364" height="60"/>
                                 <color key="backgroundColor" systemColor="systemIndigoColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="60" id="7Yg-6v-FjK"/>
@@ -47,14 +47,9 @@
                                 <state key="normal" title="Break Open">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
                             </button>
                             <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="NuE-TN-B45">
-                                <rect key="frame" x="322" y="681.5" width="37" height="37"/>
+                                <rect key="frame" x="322" y="573" width="37" height="37"/>
                                 <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </activityIndicatorView>
                         </subviews>
@@ -67,8 +62,8 @@
                             <constraint firstItem="NuE-TN-B45" firstAttribute="centerY" secondItem="ieW-eH-CRW" secondAttribute="centerY" id="FjZ-Dr-a63"/>
                             <constraint firstItem="4aO-iR-gtz" firstAttribute="top" secondItem="opx-lk-8md" secondAttribute="bottom" constant="30" id="If6-u0-isC"/>
                             <constraint firstItem="NuE-TN-B45" firstAttribute="trailing" secondItem="ieW-eH-CRW" secondAttribute="trailing" constant="-30" id="PWw-6T-4lM"/>
-                            <constraint firstItem="opx-lk-8md" firstAttribute="top" secondItem="wnz-tR-Z7n" secondAttribute="bottom" constant="78.5" id="T4h-kS-3ey"/>
-                            <constraint firstItem="ieW-eH-CRW" firstAttribute="top" secondItem="4aO-iR-gtz" secondAttribute="bottom" constant="50" id="fr3-rQ-tgz"/>
+                            <constraint firstItem="opx-lk-8md" firstAttribute="top" secondItem="wnz-tR-Z7n" secondAttribute="bottom" constant="10" id="T4h-kS-3ey"/>
+                            <constraint firstItem="ieW-eH-CRW" firstAttribute="top" secondItem="4aO-iR-gtz" secondAttribute="bottom" constant="10" id="fr3-rQ-tgz"/>
                             <constraint firstItem="wnz-tR-Z7n" firstAttribute="leading" secondItem="Zwn-7Y-oMX" secondAttribute="leading" constant="25" id="gbC-0d-GiX"/>
                             <constraint firstItem="opx-lk-8md" firstAttribute="leading" secondItem="Zwn-7Y-oMX" secondAttribute="leading" constant="25" id="idH-OJ-dJt"/>
                             <constraint firstItem="wnz-tR-Z7n" firstAttribute="top" secondItem="Zwn-7Y-oMX" secondAttribute="top" constant="44" id="pvp-Dq-kmD"/>

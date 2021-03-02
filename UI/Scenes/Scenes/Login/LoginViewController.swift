@@ -5,6 +5,7 @@ import Domain
 
 public final class LoginViewController: UIViewController, Storyboarded {
     public var login: ((LoginRequest) -> Void)?
+    public var fortune: (() -> Void)?
 
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var emailTextField: UITextField!
@@ -26,6 +27,15 @@ public final class LoginViewController: UIViewController, Storyboarded {
         let viewModel = LoginRequest(email: emailTextField?.text, password: passwordTextField?.text)
         
         login?(viewModel)
+        performSegue(withIdentifier: "goToFortune", sender: nil)
+    }
+    
+    public override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "goToFortune" {
+            guard segue.destination is FortuneViewController else {
+                return
+            }
+        }
     }
 }
    
