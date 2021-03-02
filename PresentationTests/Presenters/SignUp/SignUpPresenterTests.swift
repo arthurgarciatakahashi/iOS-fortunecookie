@@ -86,29 +86,29 @@ class SignUpPresenterTests: XCTestCase {
         addAccountSpy.completeWithError(.unexpected)
         wait(for: [exp2], timeout: 1)
     }
-//
-//    func test_signUp_should_call_validation_with_correct_values() {
-//        let validationSpy = ValidationSpy()
-//        let viewModel = makeSignUpViewModel()
-//        let sut = makeSut(validation: validationSpy)
-//        sut.signUp(viewModel: viewModel)
-//
-//        XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
-//    }
-//
-//    func test_signup_should_show_error_message_if_validation_fails() throws {
-//        let alertViewSpy = AlertViewSpy()
-//        let validationSpy = ValidationSpy()
-//        let sut = makeSut(alertViewSpy: alertViewSpy, validation: validationSpy)
-//        let exp = expectation(description: "waiting")
-//        alertViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message: "Error"))
-//            exp.fulfill()
-//        }
-//        validationSpy.simulateError()
-//        sut.signUp(viewModel: makeSignUpViewModel())
-//        wait(for: [exp], timeout: 1)
-//    }
+
+    func test_signUp_should_call_validation_with_correct_values() {
+        let validationSpy = ValidationSpy()
+        let viewModel = makeSignUpViewModel()
+        let sut = makeSut(validation: validationSpy)
+        sut.signUp(viewModel: viewModel)
+
+        XCTAssertTrue(NSDictionary(dictionary: validationSpy.data!).isEqual(to: viewModel.toJson()!))
+    }
+
+    func test_signup_should_show_error_message_if_validation_fails() throws {
+        let alertViewSpy = AlertViewSpy()
+        let validationSpy = ValidationSpy()
+        let sut = makeSut(alertViewSpy: alertViewSpy, validation: validationSpy)
+        let exp = expectation(description: "waiting")
+        alertViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message: "Error"))
+            exp.fulfill()
+        }
+        validationSpy.simulateError()
+        sut.signUp(viewModel: makeSignUpViewModel())
+        wait(for: [exp], timeout: 1)
+    }
 }
 
 extension SignUpPresenterTests {
