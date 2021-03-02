@@ -60,32 +60,32 @@ class SignUpPresenterTests: XCTestCase {
         addAccountSpy.completeWithError(.emailInUse)
         wait(for: [exp], timeout: 1)
     }
-//
-//    func test_signup_should_show_loading_before_and_after_call_getCookie() throws {
-//        let loadingViewSpy = LoadingViewSpy()
-//        let getCookieSpy = GetCookieSpy()
-//        let sut = makeSut(getCookieSpy: getCookieSpy, loadingView: loadingViewSpy)
-//
-//        let exp = expectation(description: "waiting")
-//
-//        loadingViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
-//            exp.fulfill()
-//        }
-//
-//        sut.signUp(viewModel: makeSignUpViewModel(categoryType: .all))
-//        wait(for: [exp], timeout: 1)
-//
-//        let exp2 = expectation(description: "waiting")
-//
-//        loadingViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
-//            exp2.fulfill()
-//        }
-//
-//        getCookieSpy.completeWithError(.unexpected)
-//        wait(for: [exp2], timeout: 1)
-//    }
+
+    func test_signup_should_show_loading_before_and_after_call_addAccount() throws {
+        let loadingViewSpy = LoadingViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(addAccountSpy: addAccountSpy, loadingView: loadingViewSpy)
+
+        let exp = expectation(description: "waiting")
+
+        loadingViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: true))
+            exp.fulfill()
+        }
+
+        sut.signUp(viewModel: makeSignUpViewModel())
+        wait(for: [exp], timeout: 1)
+
+        let exp2 = expectation(description: "waiting")
+
+        loadingViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, LoadingViewModel(isLoading: false))
+            exp2.fulfill()
+        }
+
+        addAccountSpy.completeWithError(.unexpected)
+        wait(for: [exp2], timeout: 1)
+    }
 //
 //    func test_signUp_should_call_validation_with_correct_values() {
 //        let validationSpy = ValidationSpy()
