@@ -4,19 +4,6 @@ import Domain
 import Data
 
 class SignUpPresenterTests: XCTestCase {
-
-//    func test_signup_should_show_error_message_if_category_is_not_provided() throws {
-//        let alertViewSpy = AlertViewSpy()
-//        let sut = makeSut(alertViewSpy: alertViewSpy)
-//        let exp = expectation(description: "waiting")
-//        alertViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "category"))
-//            exp.fulfill()
-//        }
-//
-//        sut.signUp(viewModel: makeSignUpViewModel())
-//        wait(for: [exp], timeout: 1)
-//    }
     
     func test_signup_should_show_success_message_when_getCookie_succeeds() throws {
         let alertViewSpy = AlertViewSpy()
