@@ -83,6 +83,7 @@
 		1A7AFF1A25D2475A00060472 /* WelcomeControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */; };
 		1A7AFF2825D249E700060472 /* ValidationBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7AFF2725D249E700060472 /* ValidationBuilder.swift */; };
 		1A7B5F3825EDB928000EAD2A /* SignInIntegrationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5F3725EDB928000EAD2A /* SignInIntegrationTests.swift */; };
+		1A7B5F4625EDD116000EAD2A /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5F4525EDD116000EAD2A /* AddAccountSpy.swift */; };
 		1A7BA89625BB544100A52497 /* ApiUrlFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */; };
 		1A7BA8B125BB551700A52497 /* AlamofireAdapterFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */; };
 		1A7ECB7E25BA72BF009F8457 /* Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7ECB7D25BA72BF009F8457 /* Validation.swift */; };
@@ -475,6 +476,7 @@
 		1A7AFF1925D2475A00060472 /* WelcomeControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeControllerFactory.swift; sourceTree = "<group>"; };
 		1A7AFF2725D249E700060472 /* ValidationBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationBuilder.swift; sourceTree = "<group>"; };
 		1A7B5F3725EDB928000EAD2A /* SignInIntegrationTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInIntegrationTests.swift; sourceTree = "<group>"; };
+		1A7B5F4525EDD116000EAD2A /* AddAccountSpy.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddAccountSpy.swift; sourceTree = "<group>"; };
 		1A7BA89525BB544100A52497 /* ApiUrlFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiUrlFactory.swift; sourceTree = "<group>"; };
 		1A7BA8B025BB551700A52497 /* AlamofireAdapterFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireAdapterFactory.swift; sourceTree = "<group>"; };
 		1A7ECB7D25BA72BF009F8457 /* Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Validation.swift; sourceTree = "<group>"; };
@@ -982,6 +984,7 @@
 		1A75C9F125B38AAF00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1A7B5F4425EDCFF0000EAD2A /* Lucky */,
 				1AB609C625C8FC0E00050328 /* Login */,
 				1AEB4BAA25B510FA0087C4F9 /* SignUp */,
 			);
@@ -1003,6 +1006,13 @@
 				1A7AFF2725D249E700060472 /* ValidationBuilder.swift */,
 			);
 			path = Builders;
+			sourceTree = "<group>";
+		};
+		1A7B5F4425EDCFF0000EAD2A /* Lucky */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Lucky;
 			sourceTree = "<group>";
 		};
 		1A7BA8A325BB54B000A52497 /* Http */ = {
@@ -1370,6 +1380,7 @@
 			children = (
 				1ADB122125B5166C003195F2 /* GetCookieSpy.swift */,
 				1A6412B525C90CCF001B57CD /* AuthenticationSpy.swift */,
+				1A7B5F4525EDD116000EAD2A /* AddAccountSpy.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -2186,6 +2197,7 @@
 			files = (
 				1ADB120B25B51607003195F2 /* AlertViewSpy.swift in Sources */,
 				1AB609A125C8F9E300050328 /* LoginPresenterTests.swift in Sources */,
+				1A7B5F4625EDD116000EAD2A /* AddAccountSpy.swift in Sources */,
 				1A75CA0725B3ABEE00E3D086 /* ModelFactory.swift in Sources */,
 				1ADB123825B516B5003195F2 /* LoadingViewSpy.swift in Sources */,
 				1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */,
