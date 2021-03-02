@@ -6,8 +6,10 @@ import Domain
 public final class SignUpViewController: UIViewController, Storyboarded {
     @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var saveButton: UIButton!
-    @IBOutlet weak var categoryTextField: UITextField!
-
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
     
     public var signUp: ((SignUpRequest) -> Void)?
     
@@ -24,7 +26,9 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     @objc private func saveButtonTapped() {
-        let categoryType = CategoryType(rawValue: categoryTextField.text!)
+        let categoryType = CategoryType(rawValue: nameTextField.text!)
+        //let categoryType = CategoryType(rawValue: nameTextField.text!)
+
         
         signUp?(SignUpRequest(category: categoryType))
     }

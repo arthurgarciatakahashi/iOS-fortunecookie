@@ -2,7 +2,7 @@ import Foundation
 import Domain
 
 public final class SignUpMapper {
-    static func toGetCookieModel(viewModel: SignUpRequest) -> GetCookieModel {
-        return GetCookieModel(category: viewModel.category)
+    public func toAddAccountModel(viewModel: SignUpRequest) -> AddAccountModel {
+        return AddAccountModel(name: viewModel.name, email: viewModel.email, password: viewModel.password, passwordConfirmation: viewModel.passwordConfirmation)
     }
 }

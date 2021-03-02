@@ -22,7 +22,7 @@ class SignUpViewControllerTests: XCTestCase {
         var signUpViewModel: SignUpRequest?
         let sut = makeSut(signUpSpy: { signUpViewModel = $0})
         sut.saveButton?.simulateTap()
-        let categoryType = CategoryType(rawValue: (sut.categoryTextField?.text)!)
+        let categoryType = CategoryType(rawValue: (sut.nameTextField?.text)!)
         
         XCTAssertEqual(signUpViewModel, SignUpRequest(category: categoryType))
     }
