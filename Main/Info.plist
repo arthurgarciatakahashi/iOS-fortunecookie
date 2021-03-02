@@ -6,6 +6,8 @@
 	<string>Fortune Cookie</string>
 	<key>API_BASE_URL</key>
 	<string>${API_BASE_URL}</string>
+	<key>API_SIGNUP_URL</key>
+	<string>$(API_SIGNUP_URL)</string>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>
