@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		1A08BB1425B8C1A600B42263 /* WeakVarProxy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08BB1325B8C1A600B42263 /* WeakVarProxy.swift */; };
 		1A08BB4D25B8C53000B42263 /* Environment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A08BB4C25B8C53000B42263 /* Environment.swift */; };
+		1A0F4DD025EDD56700D498EB /* FortunePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DCF25EDD56700D498EB /* FortunePresenter.swift */; };
+		1A0F4DDD25EDD57600D498EB /* FortuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DDC25EDD57600D498EB /* FortuneRequest.swift */; };
+		1A0F4DEA25EDD58200D498EB /* FortuneMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DE925EDD58200D498EB /* FortuneMapper.swift */; };
 		1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55425B6F994007EE973 /* AppDelegate.swift */; };
 		1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55625B6F994007EE973 /* SceneDelegate.swift */; };
 		1A11A55E25B6F9BB007EE973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55D25B6F9BB007EE973 /* Assets.xcassets */; };
@@ -413,6 +416,9 @@
 		1A08BB3025B8C45A00B42263 /* Debug.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Debug.xcconfig; sourceTree = "<group>"; };
 		1A08BB3125B8C4C600B42263 /* Release.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Release.xcconfig; sourceTree = "<group>"; };
 		1A08BB4C25B8C53000B42263 /* Environment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Environment.swift; sourceTree = "<group>"; };
+		1A0F4DCF25EDD56700D498EB /* FortunePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunePresenter.swift; sourceTree = "<group>"; };
+		1A0F4DDC25EDD57600D498EB /* FortuneRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneRequest.swift; sourceTree = "<group>"; };
+		1A0F4DE925EDD58200D498EB /* FortuneMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneMapper.swift; sourceTree = "<group>"; };
 		1A11A55225B6F994007EE973 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A11A55425B6F994007EE973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A11A55625B6F994007EE973 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -715,6 +721,16 @@
 			path = Env;
 			sourceTree = "<group>";
 		};
+		1A0F4DCE25EDD53200D498EB /* Fortune */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F4DCF25EDD56700D498EB /* FortunePresenter.swift */,
+				1A0F4DDC25EDD57600D498EB /* FortuneRequest.swift */,
+				1A0F4DE925EDD58200D498EB /* FortuneMapper.swift */,
+			);
+			path = Fortune;
+			sourceTree = "<group>";
+		};
 		1A11A55325B6F994007EE973 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -984,7 +1000,7 @@
 		1A75C9F125B38AAF00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
-				1A7B5F4425EDCFF0000EAD2A /* Lucky */,
+				1A0F4DCE25EDD53200D498EB /* Fortune */,
 				1AB609C625C8FC0E00050328 /* Login */,
 				1AEB4BAA25B510FA0087C4F9 /* SignUp */,
 			);
@@ -1006,13 +1022,6 @@
 				1A7AFF2725D249E700060472 /* ValidationBuilder.swift */,
 			);
 			path = Builders;
-			sourceTree = "<group>";
-		};
-		1A7B5F4425EDCFF0000EAD2A /* Lucky */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Lucky;
 			sourceTree = "<group>";
 		};
 		1A7BA8A325BB54B000A52497 /* Http */ = {
@@ -2180,8 +2189,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0F4DEA25EDD58200D498EB /* FortuneMapper.swift in Sources */,
 				1AB609D625C8FCC300050328 /* LoginPresenter.swift in Sources */,
+				1A0F4DDD25EDD57600D498EB /* FortuneRequest.swift in Sources */,
 				1A9BBDD425B29296007A8B5B /* SignUpPresenter.swift in Sources */,
+				1A0F4DD025EDD56700D498EB /* FortunePresenter.swift in Sources */,
 				1A75C9E625B38A6A00E3D086 /* AlertView.swift in Sources */,
 				1AEB4BB825B511820087C4F9 /* SignUpMapper.swift in Sources */,
 				1AEB4BAC25B511140087C4F9 /* SignUpRequest.swift in Sources */,
