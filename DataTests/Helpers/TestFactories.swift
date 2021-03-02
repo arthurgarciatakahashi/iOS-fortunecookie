@@ -20,8 +20,12 @@ public func makeEmptyData() -> Data {
     return Data()
 }
 
-public func makeValidData() -> Data {
+public func makeGetCookieValidData() -> Data {
     return Data("{\"fortune\":\"any_fortune\"}".utf8)
+}
+
+public func makeSignUpValidData() -> Data {
+    return Data("{\"email\":\"any@any.com\",\"password\":\"any_password\",\"name\":\"any_name\",\"passwordConfirmation\":\"any_password\"}".utf8)
 }
 
 public func makeError() -> NSError {

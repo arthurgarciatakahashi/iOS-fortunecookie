@@ -32,9 +32,9 @@ class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_get_should_complete_with_error_on_all_invalid_cases() {
-        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: makeHttpResponse(), error: makeError()))
-        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: makeError()))
-        expectResult(.failure(.noConnectivity), when: (data: makeValidData(), response: nil, error: nil))
+        expectResult(.failure(.noConnectivity), when: (data: makeGetCookieValidData(), response: makeHttpResponse(), error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeGetCookieValidData(), response: nil, error: makeError()))
+        expectResult(.failure(.noConnectivity), when: (data: makeGetCookieValidData(), response: nil, error: nil))
         expectResult(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: makeError()))
         expectResult(.failure(.noConnectivity), when: (data: nil, response: makeHttpResponse(), error: nil))
         expectResult(.failure(.noConnectivity), when: (data: nil, response: nil, error: nil))
@@ -42,13 +42,13 @@ class AlamofireAdapterTests: XCTestCase {
     }
     
     func test_get_should_complete_with_data_when_request_completes_with_ok_200() {
-        expectResult(.success(makeValidData()), when: (data: makeValidData(), response: makeHttpResponse(), error: nil))
+        expectResult(.success(makeGetCookieValidData()), when: (data: makeGetCookieValidData(), response: makeHttpResponse(), error: nil))
     }
     
     func test_get_should_complete_with_no_data_when_request_completes_with_ok_204() {
         expectResult(.success(nil), when: (data: nil, response: makeHttpResponse(statusCode: 204), error: nil))
         expectResult(.success(nil), when: (data: makeEmptyData(), response: makeHttpResponse(statusCode: 204), error: nil))
-        expectResult(.success(nil), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 204), error: nil))
+        expectResult(.success(nil), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 204), error: nil))
 
     }
     
@@ -66,30 +66,18 @@ class AlamofireAdapterTests: XCTestCase {
          invalid    X       OK          X
          invalid    X       X           X
                                             */
-        expectResult(.failure(.badRequest), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 400), error: nil))
-        expectResult(.failure(.badRequest), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 450), error: nil))
-        expectResult(.failure(.badRequest), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 404), error: nil))
-        expectResult(.failure(.badRequest), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 499), error: nil))
-        expectResult(.failure(.serverError), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 500), error: nil))
-        expectResult(.failure(.unauthorized), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 401), error: nil))
-        expectResult(.failure(.forbidden), when: (data: makeValidData(), response: makeHttpResponse(statusCode: 403), error: nil))
+        expectResult(.failure(.badRequest), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 400), error: nil))
+        expectResult(.failure(.badRequest), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 450), error: nil))
+        expectResult(.failure(.badRequest), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 404), error: nil))
+        expectResult(.failure(.badRequest), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 499), error: nil))
+        expectResult(.failure(.serverError), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 500), error: nil))
+        expectResult(.failure(.unauthorized), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 401), error: nil))
+        expectResult(.failure(.forbidden), when: (data: makeGetCookieValidData(), response: makeHttpResponse(statusCode: 403), error: nil))
     }
     
-    func expectResult(_ expectedResult: Result<Data?, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) {
-        let sut = makeSut()
-        UrlProtocolStub.simulate(data: stub.data, response: stub.response, error: stub.error)
-        let exp = expectation(description: "waiting")
-        sut.get(from: makeURL()) { receivedResult in
-            switch (expectedResult, receivedResult) {
-            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
-            case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
-            default: XCTFail("Expect \(expectedResult) got \(receivedResult) instead")
-            }
-            exp.fulfill()
-        }
-        wait(for: [exp], timeout: 1)
+    func test_add_should_complete_with_data_when_request_completes_with_ok_200() {
+        expectPostResult(.success(makeSignUpValidData()), when: (data: makeSignUpValidData(), response: makeHttpResponse(), error: nil))
     }
-    
 }
 
 extension AlamofireAdapterTests {
@@ -111,6 +99,36 @@ extension AlamofireAdapterTests {
         UrlProtocolStub.observerRequest{ request = $0 }
         wait(for: [exp], timeout: 1)
         action(request!)
+    }
+    
+    func expectResult(_ expectedResult: Result<Data?, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) {
+        let sut = makeSut()
+        UrlProtocolStub.simulate(data: stub.data, response: stub.response, error: stub.error)
+        let exp = expectation(description: "waiting")
+        sut.get(from: makeURL()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
+            default: XCTFail("Expect \(expectedResult) got \(receivedResult) instead")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
+    }
+    
+    func expectPostResult(_ expectedResult: Result<Data?, HttpError>, when stub: (data: Data?, response: HTTPURLResponse?, error: Error?), file: StaticString = #filePath, line: UInt = #line) {
+        let sut = makeSut()
+        UrlProtocolStub.simulate(data: stub.data, response: stub.response, error: stub.error)
+        let exp = expectation(description: "waiting")
+        sut.post(from: makeURL(), with: makeSignUpValidData()) { receivedResult in
+            switch (expectedResult, receivedResult) {
+            case (.failure(let expectedError), .failure(let receivedError)): XCTAssertEqual(expectedError, receivedError, file: file, line: line)
+            case (.success(let expectedData), .success(let receivedData)): XCTAssertEqual(expectedData, receivedData, file: file, line: line)
+            default: XCTFail("Expect \(expectedResult) got \(receivedResult) instead")
+            }
+            exp.fulfill()
+        }
+        wait(for: [exp], timeout: 1)
     }
 }
 
