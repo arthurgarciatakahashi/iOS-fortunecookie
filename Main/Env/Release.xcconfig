@@ -1,1 +1,2 @@
 API_BASE_URL = http:/$()/yerkee.com/api/fortune
+API_SIGNUP_URL = https:/$()/fordevs.herokuapp.com/api

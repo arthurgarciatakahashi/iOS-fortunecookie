@@ -26,12 +26,12 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     }
     
     @objc private func saveButtonTapped() {
-        let categoryType = CategoryType(rawValue: nameTextField.text!)
-        //let categoryType = CategoryType(rawValue: nameTextField.text!)
+        let name = nameTextField.text!
+        let email = emailTextField.text!
+        let password = passwordTextField.text!
+        let passwordConfirmation = confirmPasswordTextField.text!
         
-
-        
-        signUp?(SignUpRequest()
+        signUp?(SignUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation))
     }
 }
 

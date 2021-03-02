@@ -22,9 +22,13 @@ class SignUpViewControllerTests: XCTestCase {
         var signUpViewModel: SignUpRequest?
         let sut = makeSut(signUpSpy: { signUpViewModel = $0})
         sut.saveButton?.simulateTap()
-        let categoryType = CategoryType(rawValue: (sut.nameTextField?.text)!)
         
-        XCTAssertEqual(signUpViewModel, SignUpRequest(category: categoryType))
+        let name = sut.nameTextField?.text!
+        let email = sut.emailTextField.text!
+        let password = sut.passwordTextField.text!
+        let passwordConfirmation = sut.confirmPasswordTextField.text!
+
+        XCTAssertEqual(signUpViewModel, SignUpRequest(name: name, email: email, password: password, passwordConfirmation: passwordConfirmation))
     }
 }
 

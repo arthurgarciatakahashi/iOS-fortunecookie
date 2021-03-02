@@ -1,5 +1,11 @@
 import Foundation
 
 func makeApiUrl(path: String) -> URL {
-    return URL(string: "\(Environment.variable(.apiBaseURl))/\(path)")!
+    switch path {
+    case "login"
+    case "signup"
+        return URL(string: "\(Environment.variable(.apiSignUpURl))/\(path)")!
+    default
+        return URL(string: "\(Environment.variable(.apiBaseURl))/\(path)")!
+    }
 }

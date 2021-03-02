@@ -19,6 +19,7 @@
 		1A0F4E5A25EE84EE00D498EB /* FortuneControllerFactoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E5925EE84EE00D498EB /* FortuneControllerFactoryTests.swift */; };
 		1A0F4E7225EE88F000D498EB /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E7125EE88F000D498EB /* RemoteAddAccountFactory.swift */; };
 		1A0F4E7F25EEA3CC00D498EB /* FortuneControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E7E25EEA3CC00D498EB /* FortuneControllerFactory.swift */; };
+		1A0F4E8B25EEBE5B00D498EB /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5F4525EDD116000EAD2A /* AddAccountSpy.swift */; };
 		1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55425B6F994007EE973 /* AppDelegate.swift */; };
 		1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55625B6F994007EE973 /* SceneDelegate.swift */; };
 		1A11A55E25B6F9BB007EE973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55D25B6F9BB007EE973 /* Assets.xcassets */; };
@@ -2120,6 +2121,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A0F4E8B25EEBE5B00D498EB /* AddAccountSpy.swift in Sources */,
 				1AA62D4625B8B4D800EA9EFD /* SignUpControllerFactoryTests.swift in Sources */,
 				1AA62D7F25B8B52A00EA9EFD /* TextExtensions.swift in Sources */,
 				1A0F4E5A25EE84EE00D498EB /* FortuneControllerFactoryTests.swift in Sources */,

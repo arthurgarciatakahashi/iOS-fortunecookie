@@ -6,12 +6,12 @@ import Validation
 class SignUpControllerFactoryTests: XCTestCase {
 
     func test_background_request_should_complete_on_main_thread() throws {
-        let (sut, getCookieSpy) = makeSut()
+        let (sut, addAccountSpy) = makeSut()
         let exp = expectation(description: "waiting")
         sut.loadViewIfNeeded()
         sut.signUp?(makeSignUpViewModel())
         DispatchQueue.global().async {
-            getCookieSpy.completeWithError(.unexpected)
+            addAccountSpy.completeWithError(.unexpected)
             exp.fulfill()
         }
         checkMemoryLeak(for: sut)
@@ -19,7 +19,7 @@ class SignUpControllerFactoryTests: XCTestCase {
     }
     func test_signUp_compose_with_correct_validations() {
         let validation = makeSignUpValidations()
-        XCTAssertEqual(validation[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "category", fieldLabel: "Category"))
+        XCTAssertEqual(validation[0] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "name", fieldLabel: "Name"))
         
         XCTAssertEqual(validation[1] as! RequiredFieldValidation, RequiredFieldValidation(fieldName: "email", fieldLabel: "Email"))
         
@@ -34,11 +34,11 @@ class SignUpControllerFactoryTests: XCTestCase {
 }
 
 extension SignUpControllerFactoryTests {
-    func makeSut() -> (sut: SignUpViewController, getCookieSpy: GetCookieSpy) {
-        let getCookieSpy = GetCookieSpy()
-        let sut = makeSignUpControllerWith(getCookie: MainQueueDispatchDecorator( getCookieSpy))
+    func makeSut() -> (sut: SignUpViewController, addAccountSpy: AddAccountSpy) {
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSignUpControllerWith(addAccount: MainQueueDispatchDecorator(addAccountSpy))
         checkMemoryLeak(for: sut)
-        checkMemoryLeak(for: getCookieSpy)
-        return (sut, getCookieSpy)
+        checkMemoryLeak(for: addAccountSpy)
+        return (sut, addAccountSpy)
     }
 }
