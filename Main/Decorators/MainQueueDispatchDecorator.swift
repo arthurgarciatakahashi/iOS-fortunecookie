@@ -16,6 +16,16 @@ public final class MainQueueDispatchDecorator<T> {
     }
 }
 
+extension MainQueueDispatchDecorator: AddAccount where T: AddAccount {
+    public func add(addAccountModel: AddAccountModel, completion: @escaping (AddAccount.Result) -> Void) {
+        instance.add(addAccountModel: addAccountModel) { [weak self] result in
+            self?.dispatch {
+                completion(result)
+            }
+        }
+    }
+}
+
 extension MainQueueDispatchDecorator: GetCookie where T: GetCookie {
     public func get(completion: @escaping (GetCookie.Result) -> Void) {
         instance.get() { [weak self] result in
