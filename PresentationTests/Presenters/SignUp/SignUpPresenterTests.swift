@@ -5,9 +5,9 @@ import Data
 
 class SignUpPresenterTests: XCTestCase {
     
-    func test_signup_should_show_success_message_when_getCookie_succeeds() throws {
+    func test_signup_should_show_success_message_when_addAccount_succeeds() throws {
         let alertViewSpy = AlertViewSpy()
-        let getCookieSpy = GetCookieSpy()
+        let addAccount = AddAccountSpy()
         let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
         let exp = expectation(description: "waiting")
         alertViewSpy.observer { viewModel in
@@ -113,8 +113,8 @@ class SignUpPresenterTests: XCTestCase {
 
 extension SignUpPresenterTests {
     
-    func makeSut(alertViewSpy: AlertViewSpy = AlertViewSpy(),getCookieSpy: GetCookieSpy = GetCookieSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), validation: ValidationSpy = ValidationSpy()) -> SignUpPresenter {
-        let sut = SignUpPresenter(alertView: alertViewSpy, getCookie: getCookieSpy, loadingView: loadingView, validation: validation)
+    func makeSut(alertViewSpy: AlertViewSpy = AlertViewSpy(), addAccountSpy: AddAccountSpy = AddAccountSpy(), loadingView: LoadingViewSpy = LoadingViewSpy(), validation: ValidationSpy = ValidationSpy()) -> SignUpPresenter {
+        let sut = SignUpPresenter(alertView: alertViewSpy, addAccount: addAccountSpy, loadingView: loadingView, validation: validation)
         checkMemoryLeak(for: sut)
         return sut
     }

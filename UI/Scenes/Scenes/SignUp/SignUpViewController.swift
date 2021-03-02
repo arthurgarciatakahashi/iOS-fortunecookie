@@ -28,9 +28,10 @@ public final class SignUpViewController: UIViewController, Storyboarded {
     @objc private func saveButtonTapped() {
         let categoryType = CategoryType(rawValue: nameTextField.text!)
         //let categoryType = CategoryType(rawValue: nameTextField.text!)
+        
 
         
-        signUp?(SignUpRequest(category: categoryType))
+        signUp?(SignUpRequest()
     }
 }
 
