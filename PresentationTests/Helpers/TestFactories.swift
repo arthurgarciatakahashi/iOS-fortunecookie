@@ -31,6 +31,10 @@ func makeSignUpViewModel(categoryType: CategoryType? = nil) -> SignUpRequest {
     return SignUpRequest(category: categoryType)
 }
 
+func makeFortuneViewModel(categoryType: CategoryType? = nil) -> FortuneRequest {
+    return FortuneRequest(category: categoryType)
+}
+
 func makeLoginViewModel(email: String? = "any@any.com", password: String? = "any_password") -> LoginRequest {
     return LoginRequest(email: email, password: password)
 }

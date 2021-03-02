@@ -12,6 +12,7 @@
 		1A0F4DD025EDD56700D498EB /* FortunePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DCF25EDD56700D498EB /* FortunePresenter.swift */; };
 		1A0F4DDD25EDD57600D498EB /* FortuneRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DDC25EDD57600D498EB /* FortuneRequest.swift */; };
 		1A0F4DEA25EDD58200D498EB /* FortuneMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4DE925EDD58200D498EB /* FortuneMapper.swift */; };
+		1A0F4E0325EDD69D00D498EB /* FortunePresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E0225EDD69D00D498EB /* FortunePresenterTests.swift */; };
 		1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55425B6F994007EE973 /* AppDelegate.swift */; };
 		1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55625B6F994007EE973 /* SceneDelegate.swift */; };
 		1A11A55E25B6F9BB007EE973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55D25B6F9BB007EE973 /* Assets.xcassets */; };
@@ -419,6 +420,7 @@
 		1A0F4DCF25EDD56700D498EB /* FortunePresenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunePresenter.swift; sourceTree = "<group>"; };
 		1A0F4DDC25EDD57600D498EB /* FortuneRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneRequest.swift; sourceTree = "<group>"; };
 		1A0F4DE925EDD58200D498EB /* FortuneMapper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneMapper.swift; sourceTree = "<group>"; };
+		1A0F4E0225EDD69D00D498EB /* FortunePresenterTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortunePresenterTests.swift; sourceTree = "<group>"; };
 		1A11A55225B6F994007EE973 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A11A55425B6F994007EE973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A11A55625B6F994007EE973 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -731,6 +733,14 @@
 			path = Fortune;
 			sourceTree = "<group>";
 		};
+		1A0F4E0125EDD68B00D498EB /* Fortune */ = {
+			isa = PBXGroup;
+			children = (
+				1A0F4E0225EDD69D00D498EB /* FortunePresenterTests.swift */,
+			);
+			path = Fortune;
+			sourceTree = "<group>";
+		};
 		1A11A55325B6F994007EE973 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -1010,6 +1020,7 @@
 		1A75C9FC25B3A29B00E3D086 /* Presenters */ = {
 			isa = PBXGroup;
 			children = (
+				1A0F4E0125EDD68B00D498EB /* Fortune */,
 				1AB6099F25C8F9C900050328 /* Login */,
 				1AB61AD425B5140300AE391E /* SignUp */,
 			);
@@ -2215,6 +2226,7 @@
 				1AB61ADF25B514E200AE391E /* TextExtensions.swift in Sources */,
 				1ADB122225B5166C003195F2 /* GetCookieSpy.swift in Sources */,
 				1ADB124525B51749003195F2 /* TestFactories.swift in Sources */,
+				1A0F4E0325EDD69D00D498EB /* FortunePresenterTests.swift in Sources */,
 				1A9BBDC025B291FC007A8B5B /* SignUpPresenterTests.swift in Sources */,
 				1A6412B625C90CCF001B57CD /* AuthenticationSpy.swift in Sources */,
 				1A7ECBAB25BA740F009F8457 /* ValidatorSpy.swift in Sources */,
