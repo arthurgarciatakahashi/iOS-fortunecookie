@@ -44,22 +44,22 @@ class SignUpPresenterTests: XCTestCase {
         wait(for: [exp], timeout: 1)
     }
 
-//    func test_signup_should_show_error_message_if_getCookide_returns_api_error() throws {
-//        let alertViewSpy = AlertViewSpy()
-//        let getCookieSpy = GetCookieSpy()
-//        let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
-//        let signUpViewModel = makeSignUpViewModel(categoryType: .all)
-//        let exp = expectation(description: "waiting")
-//
-//        alertViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message:"API is busy, try again in a few minutes"))
-//            exp.fulfill()
-//        }
-//
-//        sut.signUp(viewModel: signUpViewModel)
-//        getCookieSpy.completeWithError(.apiInUse)
-//        wait(for: [exp], timeout: 1)
-//    }
+    func test_signup_should_show_error_message_if_addAccount_returns_api_error() throws {
+        let alertViewSpy = AlertViewSpy()
+        let addAccountSpy = AddAccountSpy()
+        let sut = makeSut(alertViewSpy: alertViewSpy, addAccountSpy: addAccountSpy)
+        let signUpViewModel = makeSignUpViewModel()
+        let exp = expectation(description: "waiting")
+
+        alertViewSpy.observer { viewModel in
+            XCTAssertEqual(viewModel, makeErrorAlertViewModel(message:"Email in use, try another one"))
+            exp.fulfill()
+        }
+
+        sut.signUp(viewModel: signUpViewModel)
+        addAccountSpy.completeWithError(.emailInUse)
+        wait(for: [exp], timeout: 1)
+    }
 //
 //    func test_signup_should_show_loading_before_and_after_call_getCookie() throws {
 //        let loadingViewSpy = LoadingViewSpy()

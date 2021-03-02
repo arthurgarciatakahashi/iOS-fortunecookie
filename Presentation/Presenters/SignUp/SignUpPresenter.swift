@@ -28,7 +28,7 @@ public class SignUpPresenter {
                 case .failure(let error):
                     switch error {
                     case .emailInUse:
-                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "email in use, try another one"))
+                        self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Email in use, try another one"))
                     case .expiredSession:
                         self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "Incorrect email or password"))
                     default:
