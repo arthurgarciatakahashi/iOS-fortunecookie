@@ -48,14 +48,33 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="haW-uf-yQH">
+                                <rect key="frame" x="25" y="645" width="364" height="64"/>
+                                <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="64" id="VRK-Xy-G9t"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="56"/>
+                                <state key="normal" title="Fortune">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="INW-Rc-8bD"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="INW-Rc-8bD" firstAttribute="trailing" secondItem="haW-uf-yQH" secondAttribute="trailing" constant="25" id="6L4-2O-tze"/>
                             <constraint firstItem="INW-Rc-8bD" firstAttribute="trailing" secondItem="wM3-KB-fjG" secondAttribute="trailing" constant="25" id="76E-KN-el6"/>
                             <constraint firstItem="cDF-R7-7YY" firstAttribute="leading" secondItem="INW-Rc-8bD" secondAttribute="leading" constant="25" id="7PL-zZ-7ws"/>
+                            <constraint firstItem="haW-uf-yQH" firstAttribute="leading" secondItem="INW-Rc-8bD" secondAttribute="leading" constant="25" id="FiI-1p-Yrz"/>
                             <constraint firstItem="bi2-v5-ha2" firstAttribute="centerX" secondItem="INW-Rc-8bD" secondAttribute="centerX" id="GZw-RB-ywc"/>
                             <constraint firstItem="3y4-xn-QIU" firstAttribute="top" secondItem="cDF-R7-7YY" secondAttribute="bottom" constant="50" id="QjY-cZ-ONF"/>
+                            <constraint firstItem="haW-uf-yQH" firstAttribute="top" secondItem="wM3-KB-fjG" secondAttribute="bottom" constant="30" id="TqS-lF-9yy"/>
                             <constraint firstItem="3y4-xn-QIU" firstAttribute="leading" secondItem="INW-Rc-8bD" secondAttribute="leading" constant="25" id="UaI-af-iAQ"/>
                             <constraint firstItem="wM3-KB-fjG" firstAttribute="leading" secondItem="INW-Rc-8bD" secondAttribute="leading" constant="25" id="b5e-T5-RFC"/>
                             <constraint firstItem="INW-Rc-8bD" firstAttribute="trailing" secondItem="3y4-xn-QIU" secondAttribute="trailing" constant="25" id="fMR-QZ-7ku"/>
@@ -66,6 +85,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="fortuneButton" destination="haW-uf-yQH" id="oVs-3A-S1k"/>
                         <outlet property="loginButton" destination="3y4-xn-QIU" id="dh2-Dy-jif"/>
                         <outlet property="signInButton" destination="wM3-KB-fjG" id="9pL-Ym-pic"/>
                     </connections>
@@ -82,6 +102,9 @@
         </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemYellowColor">
+            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

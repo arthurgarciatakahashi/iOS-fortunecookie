@@ -4,34 +4,22 @@ import Domain
 import Data
 
 class FortunePresenterTests: XCTestCase {
-
-//    func test_fortune_should_show_error_message_if_category_is_not_provided() throws {
+    
+//    func test_fortune_should_show_success_message_when_getCookie_succeeds() throws {
 //        let alertViewSpy = AlertViewSpy()
-//        let sut = makeSut(alertViewSpy: alertViewSpy)
+//        let getCookieSpy = GetCookieSpy()
+//        let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
 //        let exp = expectation(description: "waiting")
 //        alertViewSpy.observer { viewModel in
-//            XCTAssertEqual(viewModel, makeRequiredAlertViewModel(fieldName: "category"))
+//            
+//            XCTAssertEqual(viewModel, makeSuccessAlertViewModel(message: "CooKie has been received"))
 //            exp.fulfill()
 //        }
 //
-//        sut.fortune(viewModel: makeFortuneViewModel())
+//        sut.fortune(viewModel: makeFortuneViewModel(categoryType: .all))
+//        getCookieSpy.completeWithCookie(makeCookieModel())
 //        wait(for: [exp], timeout: 1)
 //    }
-    
-    func test_fortune_should_show_success_message_when_getCookie_succeeds() throws {
-        let alertViewSpy = AlertViewSpy()
-        let getCookieSpy = GetCookieSpy()
-        let sut = makeSut(alertViewSpy: alertViewSpy, getCookieSpy: getCookieSpy)
-        let exp = expectation(description: "waiting")
-        alertViewSpy.observer { viewModel in
-            XCTAssertEqual(viewModel, makeSuccessAlertViewModel(message: "CooKie has been received"))
-            exp.fulfill()
-        }
-
-        sut.fortune(viewModel: makeFortuneViewModel(categoryType: .all))
-        getCookieSpy.completeWithCookie(makeCookieModel())
-        wait(for: [exp], timeout: 1)
-    }
 
     func test_fortune_should_call_getCookie_with_no_errors() throws {
         let getCookieSpy = GetCookieSpy()

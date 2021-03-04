@@ -29,7 +29,7 @@ public class FortunePresenter {
                     default:
                         self.alertView.showMessage(viewModel: AlertViewModel(title: "Error", message: "unexpected error, try again in a few minutes"))
                     }
-                case .success: self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "CooKie has been received"))
+                case .success (let cookie): self.alertView.showMessage(viewModel: AlertViewModel(title: "Success", message: "Fortune: \(cookie.fortune)"))
                 
                 }
                 self.loadingView.display(viewModel: LoadingViewModel(isLoading: false))

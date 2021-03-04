@@ -62,7 +62,7 @@ public final class FortuneViewController: UIViewController, UIPickerViewDataSour
     }
     
     @objc private func fortuneButtonTapped() {
-        fortune?(FortuneRequest(category: CategoryType(rawValue: categoryType)))
+        fortune?(FortuneRequest(category: CategoryType(rawValue: categoryType))) 
     }
 }
 

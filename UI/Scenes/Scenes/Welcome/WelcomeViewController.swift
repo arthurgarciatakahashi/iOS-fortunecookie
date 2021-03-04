@@ -6,8 +6,10 @@ import Domain
 public final class WelcomeViewController: UIViewController, Storyboarded {
     public var login: (() -> Void)?
     public var signUp: (() -> Void)?
+    public var fortune: (() -> Void)?
 
-    
+
+    @IBOutlet weak var fortuneButton: UIButton!
     @IBOutlet weak var loginButton: UIButton!
     @IBOutlet weak var signInButton: UIButton!
     
@@ -20,6 +22,11 @@ public final class WelcomeViewController: UIViewController, Storyboarded {
         title = "Welcome"
         loginButton?.addTarget(self, action: #selector(loginButtonTapped), for: .touchUpInside)
         signInButton?.addTarget(self, action: #selector(signUpButtonTapped), for: .touchUpInside)
+        fortuneButton?.addTarget(self, action: #selector(fortuneButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc private func fortuneButtonTapped() {
+        fortune?()
     }
     
     @objc private func loginButtonTapped() {

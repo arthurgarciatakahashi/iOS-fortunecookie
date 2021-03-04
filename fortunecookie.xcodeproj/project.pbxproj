@@ -20,6 +20,7 @@
 		1A0F4E7225EE88F000D498EB /* RemoteAddAccountFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E7125EE88F000D498EB /* RemoteAddAccountFactory.swift */; };
 		1A0F4E7F25EEA3CC00D498EB /* FortuneControllerFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4E7E25EEA3CC00D498EB /* FortuneControllerFactory.swift */; };
 		1A0F4E8B25EEBE5B00D498EB /* AddAccountSpy.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A7B5F4525EDD116000EAD2A /* AddAccountSpy.swift */; };
+		1A0F4EBB25F045F300D498EB /* LoginRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A0F4EBA25F045F300D498EB /* LoginRouter.swift */; };
 		1A11A55525B6F994007EE973 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55425B6F994007EE973 /* AppDelegate.swift */; };
 		1A11A55725B6F994007EE973 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A11A55625B6F994007EE973 /* SceneDelegate.swift */; };
 		1A11A55E25B6F9BB007EE973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A11A55D25B6F9BB007EE973 /* Assets.xcassets */; };
@@ -434,6 +435,7 @@
 		1A0F4E5925EE84EE00D498EB /* FortuneControllerFactoryTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneControllerFactoryTests.swift; sourceTree = "<group>"; };
 		1A0F4E7125EE88F000D498EB /* RemoteAddAccountFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RemoteAddAccountFactory.swift; sourceTree = "<group>"; };
 		1A0F4E7E25EEA3CC00D498EB /* FortuneControllerFactory.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FortuneControllerFactory.swift; sourceTree = "<group>"; };
+		1A0F4EBA25F045F300D498EB /* LoginRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginRouter.swift; sourceTree = "<group>"; };
 		1A11A55225B6F994007EE973 /* Main.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Main.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A11A55425B6F994007EE973 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1A11A55625B6F994007EE973 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -957,6 +959,7 @@
 			isa = PBXGroup;
 			children = (
 				1A6412F325CB148C001B57CD /* LoginViewController.swift */,
+				1A0F4EBA25F045F300D498EB /* LoginRouter.swift */,
 				1A6412E625C9FC6C001B57CD /* Login.storyboard */,
 			);
 			path = Login;
@@ -2314,6 +2317,7 @@
 				1A3B838225BB693D0043E910 /* NavigationController.swift in Sources */,
 				1AFAF1B925B5FFFF006BB08A /* SignUpViewController.swift in Sources */,
 				1A41417725BB70C100ABF3C8 /* UIColorExtensions.swift in Sources */,
+				1A0F4EBB25F045F300D498EB /* LoginRouter.swift in Sources */,
 				1A41416925BB6F5B00ABF3C8 /* Color.swift in Sources */,
 				1A75B71225B6894200ED45CF /* Storyboarded.swift in Sources */,
 			);

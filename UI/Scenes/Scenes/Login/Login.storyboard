@@ -75,22 +75,11 @@
                         <outlet property="loadingIndicator" destination="N8P-6A-Odc" id="s3E-9M-5bR"/>
                         <outlet property="loginButton" destination="ZnG-Ka-SRJ" id="fky-yH-ASP"/>
                         <outlet property="passwordTextField" destination="jSe-HS-HVx" id="CTd-4v-TVE"/>
-                        <segue destination="Pgi-WV-rTC" kind="show" identifier="goToFortune" id="iAU-wh-di0"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A7l-0e-Zpb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-186" y="29"/>
-        </scene>
-        <!--FortuneViewController-->
-        <scene sceneID="w56-HL-6g6">
-            <objects>
-                <viewControllerPlaceholder storyboardName="Fortune" referencedIdentifier="FortuneViewController" id="Pgi-WV-rTC" sceneMemberID="viewController">
-                    <navigationItem key="navigationItem" id="aYd-el-g6k"/>
-                </viewControllerPlaceholder>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="evG-1B-Cm9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="481" y="6"/>
         </scene>
     </scenes>
     <resources>

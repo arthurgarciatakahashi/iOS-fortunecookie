@@ -12,18 +12,6 @@ import UI
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     var window: UIWindow?
 
-//    private let signUpFactory: () -> SignUpViewController = {
-//        let alamoFireAdapter = makeAlamofireAdapter()
-//        let remoteGetCookie = makeRemoteGetCookie(httpClient: alamoFireAdapter)
-//        return makeSignUpController(getCookie: remoteGetCookie)
-//    }
-//
-//    private let loginFactory: () -> LoginViewController = {
-//        let alamoFireAdapter = makeAlamofireAdapter()
-//        let remoteAuthentication = makeRemoteAuthentication(httpClient: alamoFireAdapter)
-//        return makeLoginController(authentication: remoteAuthentication)
-//    }
-//
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
